@@ -1,0 +1,235 @@
+.tag-block__header
+  padding-top 10px
+  padding-bottom 5px
+  border-bottom 2px solid $red
+  color $dgray
+  
+.tag-block__title
+  font-size 1.75em
+  line-height 1.2
+
+.tag-block__spinner
+  height 72vh
+  padding-top calc(36vh - 25px)
+  text-align center
+  
+.tag-block__body
+  padding 20px 0 30px
+  min-height 75px
+
+.tag-block__info
+  position absolute
+  
+.tag-block__trending
+  display flex
+  display -webkit-flex
+  flex-flow row wrap
+  width 640px
+  float left
+
+.tag-block__top-post
+  background #fff
+  position relative
+  padding-bottom 64px
+  width 310px
+  float left
+  
+.tag-block__top-post:first-child
+  width 100%
+  margin-bottom 20px
+  float none
+
+.tag-block__top-post:nth-child(2n)
+  margin-right 20px
+  
+.tag-block__recent-post
+  margin-bottom 15px
+  border-bottom 1px solid $bgcolor
+  
+.tag-block__recent-post:last-child
+  border none
+  margin-bottom 0
+ 
+.tag-block__post-image
+  background-size cover !important
+  display block
+  position relative
+  border-bottom 1px solid $bgcolor
+  
+.tag-block__primary-post-image
+  width 100%
+  height 213px
+
+.tag-block__secondary-post-image
+  width 100%
+  height 155px
+  
+.tag-block__top-post-info
+  padding 15px
+  
+.tag-block__top-post:first-child
+  .tag-block__top-post-title
+    font-size 1.375em
+    padding-bottom 10px
+
+.tag-block__top-post-title
+  line-height 1.3
+  padding-bottom 6px
+  overflow hidden
+  text-overflow ellipsis
+
+.tag-block__recent-post-heading
+  line-height 1.3
+  overflow hidden
+  text-overflow ellipsis
+  padding-bottom 5px
+  
+.tag-block__top-post-text
+  font-size 14px
+  color $lgray
+  margin-bottom 10px
+  overflow hidden
+  text-overflow ellipsis
+  
+.tag-block__post-other
+  color $xlgray
+  absolute (auto)
+  clearfix()
+
+.tag-block__top-post-other
+  font-size 13px
+  padding 12px 15px
+  &:before
+    display block
+    content ''
+    absolute(0,15px,auto,15px)
+    height 1px
+    background $bgcolor
+
+.tag-block__recent-post-other
+  font-size 13px
+  position static
+  overflow hidden
+  text-overflow ellipsis
+  padding-bottom 15px
+  
+.tag-block__post-avatar
+  display block
+  float left
+  margin-right 10px
+  width 40px
+  height 40px
+
+.tag-block__post-author
+  color $red
+  &:hover
+    color $dred
+    text-decoration none
+  
+.tag-block__post-data
+  float right
+  font-weight 700
+  padding 7px 0
+  
+.tag-block__post-value
+  font-family $currency-font
+  margin-right 0
+  
+.tag-block__post-replies
+  margin-left 12px
+  
+.tag-block__post-replies-icon
+  display inline-block
+  width 23px
+  height 18px
+  background url('../img/reply.svg') 0 0 no-repeat transparent
+  position relative
+  top 5px
+  
+.tag-block__aside
+  float right
+  width 360px
+  padding-left 30px
+  @media screen and (max-width: 1320px)
+    width 320px
+  
+.tag-block__recent
+  background #fff
+
+.tag-block__recent-header
+  background $xxlgray
+  text-align center
+  padding 11px 0 12px
+  
+.tag-block__recent-heading
+  text-transform uppercase
+  letter-spacing 0.025em
+
+.tag-block__recent-body
+  padding 20px 20px 10px
+  
+
+@media screen and (max-width: 1020px)
+  .tag-block__body
+    padding 20px 0 30px
+  .tag-block__trending
+    width calc(100% - 300px)
+  .tag-block__top-post
+    width calc(50% - 10px)
+  .tag-block__post-data
+    padding 0
+  .tag-block__post-value
+    display block
+    float right
+  .tag-block__post-replies
+    display block
+    float right
+    clear right
+    margin-left 0
+  .tag-block__aside
+    width 300px
+    padding-left 20px
+    
+@media screen and (max-width: 840px)
+  .tag-block__trending
+    width 100%
+    max-width 640px
+  .tag-block__aside
+    display none
+    
+@media screen and (max-width: 620px)
+  .tag-block__title
+    margin-left 10px
+  .tag-block__body
+    padding 10px 10px 15px
+  .tag-block__top-post:first-child
+    margin-bottom 20px
+  .tag-block__top-post-info
+    padding 15px
+  .tag-block__top-post-text
+    font-size 14px
+    margin-bottom 0
+  .tag-block__post-other
+    font-size 13px
+    padding 0 15px 10px
+  .tag-block__top-post
+    width 100%
+    margin-bottom 0
+    &:nth-child(2n)
+      margin-right 0
+      margin-bottom 20px
+  .tag-block__post-image
+    height auto
+    background #fff !important
+  .tag-block__post-avatar
+    display block
+    float left
+    margin-right 8px
+    width 39px
+    height 39px
+    background-color $bgcolor
+    
+@media screen and (max-width: 500px)
+  .tag-block__post-replies-icon
+    width 26px
+    height 17px

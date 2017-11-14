@@ -1,0 +1,23 @@
+{
+  "name": "oneplace",
+  "version": "0.0.2",
+  "repository": "git",
+  "description": "Frontend for OnePlace webapp",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-include": "^2.3.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivan Yudaev",
+  "license": "ISC"
+}

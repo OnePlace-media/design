@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+//= include blocks/head.html
+
+<body>
+
+  <!-- Wrapper -->
+  <div class="wrapper">
+
+    <!-- Header -->
+    //= include blocks/header.html
+    <!-- /Header -->
+
+    <!-- sidebar -->
+    //= include blocks/sidebar.html
+    <!-- /sidebar -->
+
+
+    <!-- Main page -->
+    <section class="main-content">
+
+      <section class="tag-block" id="art">
+        //= include blocks/tag-block.html
+      </section>
+
+      <section class="tag-block" id="bitcoin">
+        <header class="tag-block__header container">
+          <h1 class="h1 tag-block__title">Bitcoin</h1>
+        </header>
+        <section class="tag-block__body">
+          <div class="container">
+          <p class="tag-block__info">No trending posts in this category.</p>
+          </div>
+        </section>
+      </section>
+     
+      <section class="tag-block" id="blockchain">
+        //= include blocks/tag-block.html
+      </section>
+      
+
+    </section>
+    <!-- /Main page -->
+
+    <!-- Footer -->
+    //= include blocks/footer.html
+    <!-- /Footer -->
+
+
+  </div>
+  <!-- /Wrapper -->
+
+  //= include blocks/scripts.html
+
+</body>
+
+</html>

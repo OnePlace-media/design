@@ -1,0 +1,122 @@
+
+
+// Mixins
+
+clearfix()
+  &:before, &:after
+    content ''
+    display table
+  &:after
+    clear both
+
+fixed(t = 0, r = 0, b = 0, l = 0)
+  position fixed
+  top t
+  right r
+  bottom b
+  left l
+  
+absolute(t = 0, r = 0, b = 0, l = 0)
+  position absolute
+  top t
+  right r
+  bottom b
+  left l
+  
+  
+//Imports 
+
+@import 'styl/fonts'
+@import 'styl/variables'
+@import 'styl/general'
+@import 'styl/header'
+@import 'styl/footer'
+@import 'styl/sidebar'
+@import 'styl/tag-block'
+@import 'styl/post-view'
+
+
+
+.wrapper
+  position relative
+  padding-top 90px
+  background $bgcolor
+   
+.main-content
+  min-height calc(100vh - 180px)
+  padding-top 10px
+
+.image--mobile
+  display none
+  
+.nsfw-image
+  display flex
+  color $red
+  font-size 13px
+  padding 70px 0
+  align-content center
+  justify-content center
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  background #fff
+
+.nsfw-warning
+  margin-right 5px
+  position relative
+  top -2px
+  font 12px $font
+  font-weight normal
+  color $red
+  padding 0 5px
+  border 1px solid $red
+  border-radius 3px
+
+.tag-block__top-post:first-child
+  .nsfw-warning
+    font-size 13px
+    top -4px
+  
+.nsfw-warning--recent
+  top 0px
+  
+.payout-declined
+  text-decoration line-through
+
+
+@media screen and (max-width: 1320px)
+  .container
+    margin-left 230px
+    width 960px
+    
+@media screen and (max-width: 1220px)
+  .container
+    margin 0 auto 
+
+@media screen and (max-width: 1020px)
+  body
+    font-size 15px
+  .container
+    width calc(100% - 40px)
+    max-width 950px
+    
+@media screen and (max-width: 620px)
+  body
+    font-size 14px
+  .container
+    width 100%
+  .image--mobile
+    display block
+    margin 0 auto
+    height auto
+    max-width 100%
+    max-height 80vw
+
+    
+@media screen and (max-width: 500px)
+  .wrapper
+    padding-top 60px
+
+

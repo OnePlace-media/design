@@ -1,0 +1,60 @@
+.sidebar
+  position fixed
+  z-index 50
+  overflow-y auto 
+  top 0
+  bottom 0
+  left 0
+  width 240px
+  background $dgray
+  padding-top 90px
+  transition all .3s ease
+  @media screen and (max-width: 1320px)
+    width 200px
+  @media screen and (max-height: 820px)
+    padding-top 30px
+
+.sidebar__nav
+  margin-bottom 30px
+    
+.sidebar__nav-list
+  padding-left 0
+  list-style none
+        
+.sidebar__nav-link
+  display block
+  position relative
+  padding 4px 40px 5px
+  overflow hidden
+  text-overflow ellipsis
+  font-size 15px
+  letter-spacing 0.025em
+  color #fff !important
+  &:hover
+    background $xdgray
+  &:active
+    opacity 0.9
+  &:before
+    display block
+    content ''
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    width 0
+    background $red
+    transition all .3s ease
+  @media screen and (max-width: 1320px)
+    padding 5px 30px 6px
+    font-size 14px
+    
+.sidebar__nav-item--active>.sidebar__nav-link:before
+  width 4px
+  
+@media screen and (max-width: 1220px)
+  .sidebar
+    left -220px
+    z-index 100
+    box-shadow 5px 0 15px rgba(0,0,0,0.4)
+  .sidebar-opened
+    left 0

@@ -1,0 +1,73 @@
+// General styles
+
+html,body
+  height 100%
+  margin 0
+  padding 0
+  border 0
+
+body
+  font 16px/1.5 $font 
+  color $dgray
+  background #fff
+
+*,
+*:after,
+*:before
+  box-sizing border-box
+
+.container
+  width 1000px
+  margin 0 auto
+  transition all .3s ease
+  clearfix()
+
+.avatar
+  border-radius 50%
+  background-position 50% 50%
+  background-size cover
+  overflow hidden
+  
+.btn
+  border none
+  cursor pointer
+  outline none !important
+  box-shadow none !important
+    
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr
+    margin-top 0
+    margin-bottom 0
+    
+.h1
+  font 1.75em $font
+  font-weight 700
+  line-height 1.2
+
+.h2
+  font 1.125em $font
+  font-weight 700
+  line-height 1.2
+
+.h3
+  font 1.125em $font
+  font-weight 700
+  line-height 1.2
+  
+.h4
+  font 14px $font
+  font-weight 700
+  line-height 1.2
+  
+hr
+  border none
+  border-bottom 1px solid $lgray
+  
+.link
+  color inherit
+  transition all .3s ease
+  text-decoration none
+  &:hover, &:focus
+    text-decoration none

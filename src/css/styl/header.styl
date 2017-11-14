@@ -1,0 +1,134 @@
+.header
+  position absolute
+  top 0
+  left 0
+  width 100%
+  padding 16px 0
+  background #fff
+  transform translateY(0)
+
+.header-visible, .header-hidden
+  position fixed
+  top -100px
+  left 0
+  z-index 20
+  height 60px
+  padding 10px 0
+  border-bottom 1px solid $bgcolor
+  transform translateY(100px)
+  transition transform .3s ease
+  .header__logo
+    width 170px
+    height 27px
+    top 6px
+  .header__slogan
+    display none
+  .header__nav-toggle
+    top 2px
+  .header__chain-switch
+    height 39px
+    top 0
+    span, br
+      display none
+      
+.header-hidden
+  transform translateY(0)  
+  
+.header__wrapper
+  position relative
+	display flex
+	justify-content space-between
+  
+.header__nav-toggle
+  display none
+    
+.header__logo
+  position relative
+  width 175px
+  height 28px
+
+.header__options
+  height 59px
+  
+.header__chain-wrapper
+  position absolute
+  right 0
+  bottom 0
+  width 90px
+  display flex
+  justify-content flex-end
+  background $bgcolor
+  border 1px solid $bgcolor
+  border-radius 3px
+
+.header__chain-steem
+  background url('../img/steem.svg') 50% 50% no-repeat transparent
+  
+.header__chain-golos
+  background url('../img/golos.svg') 50% 50% no-repeat transparent
+  
+.header__chain
+  display inline-block
+  width 44px
+  height 36px
+  opacity .5
+  transition all .3s ease
+  background-size 24px 24px  
+  backface-visibility hidden
+  filter grayscale(100%)
+  &:hover
+    opacity 0.8
+    filter grayscale(0%)
+  
+.header__chain--active
+  opacity 1 !important
+  background-color #fff
+  -webkit-filter grayscale(0%)
+  filter grayscale(0%)
+
+@media screen and (max-width: 1220px)
+  .header__chain-switch
+    right 60px
+  .header__nav-toggle
+    display block
+    position absolute
+    top 14px
+    right 0
+    width 32px
+    height 32px
+    background url("../img/nav-toggle.png") no-repeat center !important
+    
+@media screen and (max-width: 1020px)
+  .header__logo
+    width 194px
+    height 31px
+    top 2px
+  .header__slogan
+    font-size 13px
+    letter-spacing 0.032em
+    top 2px 
+
+@media screen and (max-width: 620px)
+  .header__wrapper
+    width calc(100% - 30px)
+    
+@media screen and (max-width: 500px)
+  .header
+    height 60px
+    padding 10px 0
+  .header__logo
+    width 126px !important
+    height 20px !important
+    top 10px !important
+  .header__slogan
+    display none
+  .header__nav-toggle
+    top 2px
+  .header__chain-switch
+    right 50px
+    height 39px
+    top 0
+    span, br
+      display none
+  .header__chain-wrapper
+    width 84px
