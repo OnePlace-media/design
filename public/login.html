@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="">
+
+  <meta name="author" content="">
+
+  <title>OnePlace</title>
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+  <!--[if lt IE 9]>
+
+      <script src="components/html5shiv/dist/html5shiv.js"></script>
+
+      <script src="components/respond/src/respond.js"></script>
+
+    <![endif]-->
+
+</head>
+
+<body>
+
+  <!-- Wrapper -->
+  <div class="wrapper">
+
+  	<div class="login__bg">
+
+  		<div class="login__wrapper">
+
+  			<div class="login__logo">
+
+  				<img src="img/logo.svg" alt="OnePlace" class="img-responsive">
+
+  			</div>
+
+  			<div class="login__block">
+
+  				<header class="login-form__header">
+
+  	    <h1 class="login-form__heading">Log in</h1>
+
+  	  </header>
+
+  	  <div class="login-form__body">
+
+  	    <div class="login-form__item">
+
+  	                  <input type="text" class="login-form__input" placeholder="Username" name="name">
+
+  	                  <div class="login-form__alert">No user with name 'ubik' is registered</div>
+
+  	                </div>
+
+  	                <div class="login-form__item">
+
+  	                  <input type="password" class="login-form__input" placeholder="Posting key" name="key">
+
+  	                  <div class="login-form__alert">Password does not match</div>
+
+  	                </div>
+
+  	                <button type="submit" class="btn login-form__btn">Login</button>
+
+  	  </div>
+
+  			</div>
+
+  		</div>
+
+  	</div>
+
+  </div>
+  <!-- /Wrapper -->
+
+  <script src="components/jquery/dist/jquery.min.js"></script>
+
+  <script src="components/singlepagenav/jquery.singlePageNav.min.js"></script>
+
+  <script src="components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+
+  
+
+      $('.sidebar__nav').singlePageNav({
+
+        speed: 300,
+
+        currentClass: 'sidebar__nav-link-active'
+
+      });
+
+  
+
+      $(document).on('click', '.sidebar__nav-toggle', function () {
+
+        $('.sidebar').toggleClass('sidebar-opened');
+
+      });
+
+  
+
+      $(document).on('click', '.sidebar-opened .sidebar__nav-link', function () {
+
+        $('.sidebar').removeClass('sidebar-opened');
+
+      });
+
+  
+
+      $('.sidebar').swipe({
+
+        swipeLeft: function (event, direction, distance, duration, fingerCount) {
+
+          $('.sidebar').removeClass('sidebar-opened');
+
+        }
+
+      });
+
+  
+
+      function getDocHeight() {
+
+        var D = document;
+
+        return Math.max(
+
+          D.body.scrollHeight, D.documentElement.scrollHeight,
+
+          D.body.offsetHeight, D.documentElement.offsetHeight,
+
+          D.body.clientHeight, D.documentElement.clientHeight
+
+        );
+
+      };
+
+  
+
+      function scrollX() {
+
+        var docElem = document.documentElement;
+
+        return window.pageXOffset || docElem.scrollLeft;
+
+      };
+
+  
+
+      function scrollY() {
+
+        var docElem = document.documentElement;
+
+        return window.pageYOffset || docElem.scrollTop;
+
+      };
+
+  
+
+      function fixedHeader() {
+
+        var didScroll;
+
+        var lastScrollTop = 0;
+
+        var delta = 5;
+
+        hasScrolled();
+
+        window.addEventListener('scroll', didScrollTrue);
+
+  
+
+        function didScrollTrue() {
+
+          didScroll = true;
+
+        }
+
+        setInterval(function () {
+
+          if (didScroll) {
+
+            hasScrolled();
+
+            didScroll = false;
+
+          }
+
+        }, 150);
+
+  
+
+        function hasScrolled() {
+
+          var st = scrollY();
+
+          if (Math.abs(lastScrollTop - st) <= delta)
+
+            return;
+
+          if (st > lastScrollTop && scrollY() >= 90) {
+
+            $('.header').removeClass('header-visible');
+
+            $('.header').addClass('header-hidden');
+
+          } else {
+
+            if (scrollY() <= 90) {
+
+              $('.header').removeClass('header-hidden');
+
+              $('.header').removeClass('header-visible');
+
+            } else {
+
+              $('.header').removeClass('header-hidden');
+
+              $('.header').addClass('header-visible');
+
+            }
+
+          }
+
+          lastScrollTop = st;
+
+        }
+
+      };
+
+  
+
+      fixedHeader();
+
+  
+
+    });
+
+  </script>
+
+  
+
+  <!--<script src="js/scripts.js"></script>-->
+
+</body>
+
+</html>

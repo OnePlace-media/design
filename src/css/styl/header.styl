@@ -3,28 +3,24 @@
   top 0
   left 0
   width 100%
-  padding 16px 0
+  padding 11px 0
   background #fff
   transform translateY(0)
 
 .header-visible, .header-hidden
   position fixed
-  top -100px
+  top -60px
   left 0
   z-index 20
   height 60px
   padding 10px 0
   border-bottom 1px solid $bgcolor
   transform translateY(100px)
-  transition transform .3s ease
+  transition transform .3s ease-out
   .header__logo
     width 170px
     height 27px
     top 6px
-  .header__slogan
-    display none
-  .header__nav-toggle
-    top 2px
   .header__chain-switch
     height 39px
     top 0
@@ -36,24 +32,22 @@
   
 .header__wrapper
   position relative
-	display flex
-	justify-content space-between
-  
-.header__nav-toggle
-  display none
+  display flex
+  justify-content space-between
+  align-items center
     
 .header__logo
   position relative
   width 175px
   height 28px
 
-.header__options
-  height 59px
+.header__right-panel
+  display flex
+  width 825px
+  justify-content flex-end
+  align-items center
   
 .header__chain-wrapper
-  position absolute
-  right 0
-  bottom 0
   width 90px
   display flex
   justify-content flex-end
@@ -86,17 +80,16 @@
   -webkit-filter grayscale(0%)
   filter grayscale(0%)
 
+.header__auth
+  margin-left 20px
+  color $red
+  font-size 14px
+  &:hover
+    color $dred
+
 @media screen and (max-width: 1220px)
   .header__chain-switch
     right 60px
-  .header__nav-toggle
-    display block
-    position absolute
-    top 14px
-    right 0
-    width 32px
-    height 32px
-    background url("../img/nav-toggle.png") no-repeat center !important
     
 @media screen and (max-width: 1020px)
   .header__logo
@@ -122,8 +115,6 @@
     top 10px !important
   .header__slogan
     display none
-  .header__nav-toggle
-    top 2px
   .header__chain-switch
     right 50px
     height 39px

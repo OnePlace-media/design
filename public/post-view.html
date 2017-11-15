@@ -38,12 +38,13 @@
     <header class="header">
       <div class="header__wrapper container">
         <div class="header__logo"><img src="img/logo.svg" alt="OnePlace" class="img-responsive"></div>
-        <button class="header__nav-toggle btn" type="button"></button>
-        <div class="header__options">
+        <!-- <button class="header__nav-toggle btn" type="button"></button> -->
+        <div class="header__right-panel">
           <div class="header__chain-wrapper">
             <a href="#" class="header__chain header__chain-steem header__chain--active" title="Steem"></a>
             <a href="#" class="header__chain header__chain-golos" title="Golos"></a>
           </div>
+          <a href="#" class="header__auth link">Get Started</a>
         </div>
       </div>
     </header>
@@ -76,6 +77,7 @@
               <li><a class="sidebar__nav-link link" href="#video"><span>Video</span></a></li>
             </ul>
           </nav>
+          <div class="sidebar__nav-toggle"></div>
         </div>
     <!-- /sidebar -->
 
@@ -625,7 +627,7 @@
 
   
 
-      $(document).on('click', '.header__nav-toggle', function () {
+      $(document).on('click', '.sidebar__nav-toggle', function () {
 
         $('.sidebar').toggleClass('sidebar-opened');
 
