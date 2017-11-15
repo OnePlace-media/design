@@ -93,7 +93,7 @@ hr {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 11px 0;
+  padding: 10px 0;
   background: #fff;
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -105,28 +105,13 @@ hr {
   left: 0;
   z-index: 20;
   height: 60px;
-  padding: 10px 0;
+  padding: 11px 0;
   border-bottom: 1px solid #f2f2f2;
-  -webkit-transform: translateY(100px);
-  transform: translateY(100px);
+  -webkit-transform: translateY(60px);
+  transform: translateY(60px);
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-}
-
-.header-visible .header__logo,.header-hidden .header__logo {
-  width: 170px;
-  height: 27px;
-  top: 6px;
-}
-
-.header-visible .header__chain-switch,.header-hidden .header__chain-switch {
-  height: 39px;
-  top: 0;
-}
-
-.header-visible .header__chain-switch span,.header-hidden .header__chain-switch span,.header-visible .header__chain-switch br,.header-hidden .header__chain-switch br {
-  display: none;
 }
 
 .header-hidden {
@@ -152,8 +137,8 @@ hr {
 
 .header__logo {
   position: relative;
-  width: 175px;
-  height: 28px;
+  width: 168px;
+  height: 27px;
 }
 
 .header__right-panel {
@@ -161,7 +146,7 @@ hr {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 825px;
+  width: 832px;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -187,11 +172,11 @@ hr {
   border-radius: 3px;
 }
 
-.header__chain-steem {
+.header__chain--steem {
   background: url("../img/steem.svg") 50% 50% no-repeat transparent;
 }
 
-.header__chain-golos {
+.header__chain--golos {
   background: url("../img/golos.svg") 50% 50% no-repeat transparent;
 }
 
@@ -371,15 +356,77 @@ hr {
 }
 
 .login__block {
-  width: 420px;
+  width: 460px;
   height: 500px;
   margin: 0 auto;
+  padding: 20px;
   background: #fff;
 }
 
-.login-form__header,width 100%,padding-top 10px,padding-bottom 2px,border-bottom 4px solid $red,margin-bottom 20px,.login-form__heading,font-size 1.875em,.login-form__item,margin-bottom .5rem,:last-of-type,margin-bottom 1rem,.login-form__input,width 280px,height 40px,font-size 15px,padding 3px 10px 5px,border 1px solid $lgray,.login-form__alert,padding-top 2px,font-size 12px,color $red,.login-form__btn,font-weight 700,text-transform uppercase,letter-spacing .05em,color #fff,background $dred,box-shadow 1px 1px 3px rgba(0,
-0,
-0),:hover,background $red {
+.login-form__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-form__tab {
+  width: 50%;
+  padding: 10px 15px;
+  border-bottom: 1px solid #383838;
+}
+
+.login-form__tab:first-child {
+  border-right: 1px solid #383838;
+}
+
+.login-form__tab--active {
+  border-top: 1px solid #383838;
+  border-bottom: none;
+}
+
+.login-form__heading {
+  font-size: 1.275em;
+}
+
+.login-form__item {
+  margin-bottom: 0.5rem;
+}
+
+.login-form__item:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.login-form__input {
+  width: 280px;
+  height: 40px;
+  font-size: 15px;
+  padding: 3px 10px 5px;
+  border: 1px solid #8b9290;
+}
+
+.login-form__alert {
+  padding-top: 2px;
+  font-size: 12px;
+  color: #db4c2a;
+}
+
+.login-form__btn {
+  width: 280px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: #b33b1e;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0);
+}
+
+.login-form__btn:hover {
+  background: #db4c2a;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
@@ -1092,7 +1139,7 @@ hr {
 
 .wrapper {
   position: relative;
-  padding-top: 90px;
+  padding-top: 60px;
   background: #f2f2f2;
 }
 
@@ -1195,10 +1242,6 @@ hr {
 }
 
 @media screen and (max-width: 1220px) {
-  .header__chain-switch {
-    right: 60px;
-  }
-
   .container {
     margin: 0 auto;
   }
@@ -1212,18 +1255,6 @@ hr {
 }
 
 @media screen and (max-width: 1020px) {
-  .header__logo {
-    width: 194px;
-    height: 31px;
-    top: 2px;
-  }
-
-  .header__slogan {
-    font-size: 13px;
-    letter-spacing: 0.032em;
-    top: 2px;
-  }
-
   .tag-block__body {
     padding: 20px 0 30px;
   }

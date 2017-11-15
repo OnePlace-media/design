@@ -3,7 +3,7 @@
   top 0
   left 0
   width 100%
-  padding 11px 0
+  padding 10px 0
   background #fff
   transform translateY(0)
 
@@ -13,22 +13,13 @@
   left 0
   z-index 20
   height 60px
-  padding 10px 0
+  padding 11px 0
   border-bottom 1px solid $bgcolor
-  transform translateY(100px)
+  transform translateY(60px)
   transition transform .3s ease-out
-  .header__logo
-    width 170px
-    height 27px
-    top 6px
-  .header__chain-switch
-    height 39px
-    top 0
-    span, br
-      display none
       
 .header-hidden
-  transform translateY(0)  
+  transform translateY(0)
   
 .header__wrapper
   position relative
@@ -38,12 +29,12 @@
     
 .header__logo
   position relative
-  width 175px
-  height 28px
+  width 168px
+  height 27px
 
 .header__right-panel
   display flex
-  width 825px
+  width 832px
   justify-content flex-end
   align-items center
   
@@ -55,10 +46,10 @@
   border 1px solid $bgcolor
   border-radius 3px
 
-.header__chain-steem
+.header__chain--steem
   background url('../img/steem.svg') 50% 50% no-repeat transparent
   
-.header__chain-golos
+.header__chain--golos
   background url('../img/golos.svg') 50% 50% no-repeat transparent
   
 .header__chain
@@ -77,7 +68,6 @@
 .header__chain--active
   opacity 1 !important
   background-color #fff
-  -webkit-filter grayscale(0%)
   filter grayscale(0%)
 
 .header__auth
@@ -86,20 +76,6 @@
   font-size 14px
   &:hover
     color $dred
-
-@media screen and (max-width: 1220px)
-  .header__chain-switch
-    right 60px
-    
-@media screen and (max-width: 1020px)
-  .header__logo
-    width 194px
-    height 31px
-    top 2px
-  .header__slogan
-    font-size 13px
-    letter-spacing 0.032em
-    top 2px 
 
 @media screen and (max-width: 620px)
   .header__wrapper
