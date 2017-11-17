@@ -814,7 +814,7 @@ hr {
 }
 
 .post-view__post-title {
-  font: 1.625em 'Noto Serif', serif;
+  font: 1.625em $font2;
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 1rem;
@@ -1285,14 +1285,6 @@ hr {
 
 @font-face {
   font-family:'Noto Sans';src:url("../fonts/notosans-regular.woff2") format('woff2'), url("../fonts/notosans-regular.woff") format('woff');font-weight:400;font-style:normal;
-}
-
-@font-face {
-  font-family:'Noto Serif';src:url("../fonts/notoserif-bold.woff2") format('woff2'), url("../fonts/notoserif-bold.woff") format('woff');font-weight:700;font-style:normal;
-}
-
-@font-face {
-  font-family:'Noto Serif';src:url("../fonts/notoserif-regular.woff2") format('woff2'), url("../fonts/notoserif-regular.woff") format('woff');font-weight:400;font-style:normal;
 }
 
 @font-face {
