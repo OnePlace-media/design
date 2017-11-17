@@ -5,12 +5,18 @@ $bgcolor = #f2f2f2
 $bglite = #f6f6f6
 $dgray = #383838
 $gray = lighten($dgray, 20%)
-$xdgray = darken($dgray, 20%)
 $tinted-gray = #bcc0bf
 $lgray = darken($tinted-gray, 25%)
 $xlgray = darken($tinted-gray, 10%)
 $xxlgray = lighten($tinted-gray, 30%)
 $red = #db4c2a
-$dred = darken($red, 20%)
+$dred = darken(#b2341b, 0%)
 $blue = #259cb7
 $dblue = darken($blue, 20%)
+
+.color-bar
+	display block
+	width 100%
+	height 40px
+	margin 40px 0
+	background linear-gradient(to right,$bgcolor,$bgcolor 10%, $bglite 10%, $bglite 20%, $lgray 20%, $lgray 30%, $xlgray 30%, $xlgray 40%, $xxlgray 40%, $xxlgray 50%, $tinted-gray 50%, $tinted-gray 60%, $gray 60%, $gray 70%, $dgray 70%, $dgray 80%)

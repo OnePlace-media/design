@@ -1,72 +1,127 @@
-.login__bg
-	position fixed
-	top 0
-	bottom 0
-	left 0
-	right 0
-	background $bgcolor
-
 .login__wrapper
 	position relative
+	width 100%
+	height 100vh
+	padding-top 30px
 
 .login__logo
-	width 175px
-	height 29px
-	margin 30px auto
+	width 168px
+	height 27px
+	margin 0 auto 25px
 
-.login__block
-	width 460px
-	height 500px
-	margin 0 auto
-	padding 20px
+.login-form
+	width 610px
+	margin 0 auto 60px
+	padding 25px 30px 30px
 	background #fff
 
 .login-form__header
 	display flex
 	width 100%
-	margin-bottom 20px
+	justify-content center
 	
 .login-form__tab
 	width 50%
-	padding 10px 15px
+	padding 5px 10px 12px
 	border-bottom 1px solid $dgray
+	border-top 1px solid #fff
+	text-align center
+	cursor pointer
 	&:first-child
 		border-right 1px solid $dgray
 
 .login-form__tab--active
 	border-top 1px solid $dgray
 	border-bottom none
+	cursor auto
   
-.login-form__heading
-	font-size 1.275em
+.login-form__title
+	text-align center
+	
+.login-form__title--em
+	color $red
 
+.login-form__tab
+	&:not(.login-form__tab--active)
+		&:hover
+			.login-form__title
+				opacity .8
+	
+.login-form__subtitle
+	font-size 13px
+	color $gray
+	
+.login-form__body
+	padding-top 30px
+	
 .login-form__item
-	margin-bottom .5rem
-	&:last-of-type
-		margin-bottom 1rem
+	position relative
+	margin-bottom 25px
   
 .login-form__input
-	width 280px
+	width 100%
 	height 40px
 	font-size 15px
 	padding 3px 10px 5px
-	border 1px solid $lgray
+	border 1px solid $xxlgray
+	outline none
+	&:focus
+		border-color $lgray
+	&:placeholder-shown
+		color $lgray
+		
+.login-form__input--error
+	border-color $red
 
 .login-form__alert
-	padding-top 2px
+	display none
+	position absolute
+	bottom -20px
 	font-size 12px
 	color $red
-
+	
+.login-form__info
+	color $gray
+	font-size 12px
+	margin-bottom 20px
+	
 .login-form__btn
+	display block
 	width 280px
 	height 40px
+	margin 0 auto
 	font-size 15px
 	font-weight 700
 	text-transform uppercase
 	letter-spacing .05em
-	color #fff
-	background $dred
-	box-shadow 1px 1px 3px rgba(0,0,0,0)
+	background $xxlgray
 	&:hover
-		background $red
-		box-shadow 1px 1px 3px rgba(0,0,0,0.4)
+		background $xlgray
+		
+.login-form__result
+	display flex
+	
+.login-form__result-key
+	width 70%
+	font-weight 700
+
+.login-form__result-btn
+	display inline-block
+	text-align center
+	width 30%
+	height 40px
+	font-size 15px
+	line-height 40px
+	border 1px solid $xxlgray
+	border-left none
+	&:hover
+		cursor pointer
+		background $xxlgray
+		
+.login-form__text
+	font-size 13px
+	margin-bottom 15px
+	
+.login-form__text--alert
+	padding 5px 20px 10px
+	border-left 2px solid $red

@@ -1,3 +1,11 @@
+.color-bar {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 40px 0;
+  background: linear-gradient(to right, #f2f2f2, #f2f2f2 10%, #f6f6f6 10%, #f6f6f6 20%, #8b9290 20%, #8b9290 30%, #a8aeac 30%, #a8aeac 40%, #d0d3d2 40%, #d0d3d2 50%, #bcc0bf 50%, #bcc0bf 60%, #606060 60%, #606060 70%, #383838 70%, #383838 80%);
+}
+
 html,body {
   height: 100%;
   margin: 0;
@@ -213,7 +221,7 @@ hr {
 }
 
 .header__auth:hover {
-  color: #b33b1e;
+  color: #b2341b;
 }
 
 .footer {
@@ -336,30 +344,23 @@ hr {
   width: 4px;
 }
 
-.login__bg {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #f2f2f2;
-}
-
 .login__wrapper {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 30px;
 }
 
 .login__logo {
-  width: 175px;
-  height: 29px;
-  margin: 30px auto;
+  width: 168px;
+  height: 27px;
+  margin: 0 auto 25px;
 }
 
-.login__block {
-  width: 460px;
-  height: 500px;
-  margin: 0 auto;
-  padding: 20px;
+.login-form {
+  width: 610px;
+  margin: 0 auto 60px;
+  padding: 25px 30px 30px;
   background: #fff;
 }
 
@@ -369,13 +370,19 @@ hr {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .login-form__tab {
   width: 50%;
-  padding: 10px 15px;
+  padding: 5px 10px 12px;
   border-bottom: 1px solid #383838;
+  border-top: 1px solid #fff;
+  text-align: center;
+  cursor: pointer;
 }
 
 .login-form__tab:first-child {
@@ -385,49 +392,122 @@ hr {
 .login-form__tab--active {
   border-top: 1px solid #383838;
   border-bottom: none;
+  cursor: auto;
 }
 
-.login-form__heading {
-  font-size: 1.275em;
+.login-form__title {
+  text-align: center;
+}
+
+.login-form__title--em {
+  color: #db4c2a;
+}
+
+.login-form__tab:not(.login-form__tab--active):hover .login-form__title {
+  opacity: 0.8;
+}
+
+.login-form__subtitle {
+  font-size: 13px;
+  color: #606060;
+}
+
+.login-form__body {
+  padding-top: 30px;
 }
 
 .login-form__item {
-  margin-bottom: 0.5rem;
-}
-
-.login-form__item:last-of-type {
-  margin-bottom: 1rem;
+  position: relative;
+  margin-bottom: 25px;
 }
 
 .login-form__input {
-  width: 280px;
+  width: 100%;
   height: 40px;
   font-size: 15px;
   padding: 3px 10px 5px;
-  border: 1px solid #8b9290;
+  border: 1px solid #d0d3d2;
+  outline: none;
+}
+
+.login-form__input:focus {
+  border-color: #8b9290;
+}
+
+.login-form__input:placeholder-shown {
+  color: #8b9290;
+}
+
+.login-form__input--error {
+  border-color: #db4c2a;
 }
 
 .login-form__alert {
-  padding-top: 2px;
+  display: none;
+  position: absolute;
+  bottom: -20px;
   font-size: 12px;
   color: #db4c2a;
 }
 
+.login-form__info {
+  color: #606060;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
 .login-form__btn {
+  display: block;
   width: 280px;
   height: 40px;
+  margin: 0 auto;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #fff;
-  background: #b33b1e;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0);
+  background: #d0d3d2;
 }
 
 .login-form__btn:hover {
-  background: #db4c2a;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  background: #a8aeac;
+}
+
+.login-form__result {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login-form__result-key {
+  width: 70%;
+  font-weight: 700;
+}
+
+.login-form__result-btn {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  height: 40px;
+  font-size: 15px;
+  line-height: 40px;
+  border: 1px solid #d0d3d2;
+  border-left: none;
+}
+
+.login-form__result-btn:hover {
+  cursor: pointer;
+  background: #d0d3d2;
+}
+
+.login-form__text {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.login-form__text--alert {
+  padding: 5px 20px 10px;
+  border-left: 2px solid #db4c2a;
 }
 
 .tag-block__header {
@@ -603,7 +683,7 @@ hr {
 }
 
 .tag-block__post-author:hover {
-  color: #b33b1e;
+  color: #b2341b;
   text-decoration: none;
 }
 
@@ -788,7 +868,7 @@ hr {
 }
 
 .post-view__author-link:hover {
-  color: #b33b1e;
+  color: #b2341b;
 }
 
 .hashtag {
@@ -1139,13 +1219,12 @@ hr {
 
 .wrapper {
   position: relative;
-  padding-top: 60px;
   background: #f2f2f2;
 }
 
 .main-content {
-  min-height: calc(100vh - 180px);
-  padding-top: 10px;
+  min-height: calc(100vh - 60px);
+  padding-top: 80px;
 }
 
 .image--mobile {
