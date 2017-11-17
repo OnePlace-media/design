@@ -1,8 +1,7 @@
 ## OnePlace.media design
 
-Compiled:
+Compiled: 
 `/public`
 
-Edit:
-`npm install`
-`gulp`
+Edit: 
+`npm install`, `gulp`
