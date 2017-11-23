@@ -1,21 +1,24 @@
-$font = 'Noto Sans', sans-serif
-$currency-font = 'PT Sans','Noto Sans', sans-serif
-$bgcolor = #f2f2f2
-$bglite = #f6f6f6
-$dgray = #383838
-$gray = lighten($dgray, 20%)
-$tinted-gray = #bcc0bf
-$lgray = darken($tinted-gray, 25%)
-$xlgray = darken($tinted-gray, 10%)
-$xxlgray = lighten($tinted-gray, 30%)
-$red = #db4c2a
-$dred = darken(#b2341b, 0%)
-$blue = #259cb7
-$dblue = darken($blue, 20%)
+// Fonts
+--font-base = 'Noto Sans', sans-serif
+--font-currency = 'PT Sans', 'Noto Sans', sans-serif
+
+// Colors
+--color-bg = #f2f2f2
+--color-bg-lite = #f6f6f6
+--color-default = #ffffff
+--color-dgray = #383838
+--color-gray-tint = #bbbfbf //--color-gray-tint was #bcc0bf, initial red hue is #bfbcbb, blue is #bbbfbf
+--color-mgray = darken(--color-gray-tint, 30%)
+--color-lgray = darken(--color-gray-tint, 10%)
+--color-xlgray = lighten(--color-gray-tint, 30%)
+--color-brand = #db4c2a
+--color-brand-hover = darken(#b2341b, 0%)
+--color-link = #259cb7
+--color-link-hover = darken(--color-link, 20%)
 
 .color-bar
 	display block
 	width 100%
 	height 40px
 	margin 40px 0
-	background linear-gradient(to right,$bgcolor,$bgcolor 10%, $bglite 10%, $bglite 20%, $lgray 20%, $lgray 30%, $xlgray 30%, $xlgray 40%, $xxlgray 40%, $xxlgray 50%, $tinted-gray 50%, $tinted-gray 60%, $gray 60%, $gray 70%, $dgray 70%, $dgray 80%)
+	background linear-gradient(to right, $bglite 0%, $bglite 10%, $bgcolor 10%, $bgcolor 20%, $xxlgray 20%, $xxlgray 30%, --color-gray-tint 30%, --color-gray-tint 40%, $xlgray 40%, $xlgray 50%, $lgray 50%, $lgray 60%, $dgray 60%, $dgray 68%, $red 68%, $red 76%, $dred 76%, $dred 84%, $blue 84%, $blue 92%, $dblue 92%)

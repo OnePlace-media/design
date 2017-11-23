@@ -35,23 +35,17 @@ absolute(t = 0, r = 0, b = 0, l = 0)
 @import 'styl/login'
 @import 'styl/tag-block'
 @import 'styl/post-view'
+@import 'styl/guides'
 
 
 
-.wrapper
-  position relative
-  background $bgcolor
-   
-.main-content
-  min-height calc(100vh - 60px)
-  padding-top 80px
 
 .image--mobile
   display none
   
 .nsfw-image
   display flex
-  color $red
+  color --color-brand
   font-size 13px
   padding 70px 0
   align-content center
@@ -67,11 +61,11 @@ absolute(t = 0, r = 0, b = 0, l = 0)
   margin-right 5px
   position relative
   top -2px
-  font 12px $font
+  font 12px --font-base
   font-weight normal
-  color $red
+  color --color-brand
   padding 0 5px
-  border 1px solid $red
+  border 1px solid --color-brand
   border-radius 3px
 
 .tag-block__top-post:first-child

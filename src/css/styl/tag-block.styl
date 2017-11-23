@@ -1,8 +1,8 @@
 .tag-block__header
   padding-top 10px
   padding-bottom 5px
-  border-bottom 2px solid $red
-  color $dgray
+  border-bottom 2px solid --color-brand
+  color --color-dgray
   
 .tag-block__title
   font-size 1.75em
@@ -44,7 +44,7 @@
   
 .tag-block__recent-post
   margin-bottom 15px
-  border-bottom 1px solid $bgcolor
+  border-bottom 1px solid --color-bg
   
 .tag-block__recent-post:last-child
   border none
@@ -54,7 +54,7 @@
   background-size cover !important
   display block
   position relative
-  border-bottom 1px solid $bgcolor
+  border-bottom 1px solid --color-bg
   
 .tag-block__primary-post-image
   width 100%
@@ -69,7 +69,7 @@
   
 .tag-block__top-post:first-child
   .tag-block__top-post-title
-    font-size 1.375em
+    font-size 1.3125em
     padding-bottom 10px
 
 .tag-block__top-post-title
@@ -86,13 +86,13 @@
   
 .tag-block__top-post-text
   font-size 14px
-  color $lgray
+  color --color-mgray
   margin-bottom 10px
   overflow hidden
   text-overflow ellipsis
   
 .tag-block__post-other
-  color $xlgray
+  color --color-lgray
   absolute (auto)
   clearfix()
 
@@ -104,7 +104,7 @@
     content ''
     absolute(0,15px,auto,15px)
     height 1px
-    background $bgcolor
+    background --color-bg
 
 .tag-block__recent-post-other
   font-size 13px
@@ -121,9 +121,9 @@
   height 40px
 
 .tag-block__post-author
-  color $red
+  color --color-brand
   &:hover
-    color $dred
+    color --color-brand-hover
     text-decoration none
   
 .tag-block__post-data
@@ -132,7 +132,7 @@
   padding 7px 0
   
 .tag-block__post-value
-  font-family $currency-font
+  font-family --font-currency
   margin-right 0
   
 .tag-block__post-replies
@@ -157,7 +157,7 @@
   background #fff
 
 .tag-block__recent-header
-  background $xxlgray
+  background --color-xlgray
   text-align center
   padding 11px 0 12px
   
@@ -227,7 +227,7 @@
     margin-right 8px
     width 39px
     height 39px
-    background-color $bgcolor
+    background-color --color-bg
     
 @media screen and (max-width: 500px)
   .tag-block__post-replies-icon

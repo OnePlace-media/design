@@ -14,7 +14,7 @@
   z-index 20
   height 60px
   padding 11px 0
-  border-bottom 1px solid $bgcolor
+  border-bottom 1px solid --color-bg
   transform translateY(60px)
   transition transform .3s ease-out
       
@@ -42,8 +42,8 @@
   width 90px
   display flex
   justify-content flex-end
-  background $bgcolor
-  border 1px solid $bgcolor
+  background --color-bg
+  border 1px solid --color-bg
   border-radius 3px
 
 .header__chain--steem
@@ -72,10 +72,10 @@
 
 .header__auth
   margin-left 20px
-  color $red
+  color --color-brand
   font-size 14px
   &:hover
-    color $dred
+    color --color-brand-hover
 
 @media screen and (max-width: 620px)
   .header__wrapper
