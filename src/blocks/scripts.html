@@ -6,21 +6,38 @@
 
     $('.sidebar__nav').singlePageNav({
       speed: 300,
+			offset: 60,
       currentClass: 'sidebar__nav-link-active'
     });
-
+		
+		var w = $(window).width();
+		if (w < 1020) {
+			$('.sidebar').removeClass('sidebar-opened');
+		}
+		
     $(document).on('click', '.sidebar__nav-toggle', function () {
       $('.sidebar').toggleClass('sidebar-opened');
     });
 
-    $(document).on('click', '.sidebar-opened .sidebar__nav-link', function () {
-      $('.sidebar').removeClass('sidebar-opened');
-    });
+//    $(document).on('click', '.sidebar-opened .sidebar__nav-link', function () {
+//      $('.sidebar').removeClass('sidebar-opened');
+//    });
 
     $('.sidebar').swipe({
       swipeLeft: function (event, direction, distance, duration, fingerCount) {
         $('.sidebar').removeClass('sidebar-opened');
       }
+    });
+		
+		$(document).on('click', '.header__user-wrapper', function () {
+			event.stopPropagation();
+      $('.header__user-menu').toggleClass('header__user-menu--opened');
+			$('.wrapper').toggleClass('dropdown--opened');
+    });
+		
+		$(document).on('click', '.dropdown--opened', function () {
+      $('.header__user-menu').removeClass('header__user-menu--opened');
+			$('.wrapper').removeClass('dropdown--opened');
     });
 
     function getDocHeight() {

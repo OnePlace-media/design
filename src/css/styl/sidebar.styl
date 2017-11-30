@@ -1,67 +1,114 @@
 .sidebar
-  position fixed
-  z-index 50
-  overflow-y auto 
-  top 0
-  bottom 0
-  left -220px
-  width 240px
-  background --color-bg-lite
-  box-shadow 2px 0 10px rgba(0,0,0,0.2)
-  padding-top 90px
-  transition all .3s ease-out
-  @media screen and (max-width: 1320px)
-    width 200px
-    left -180px
-  @media screen and (max-height: 820px)
-    padding-top 30px
+	position fixed
+	z-index 50
+	overflow-y auto 
+	top 0
+	bottom 0
+	left -220px
+	width 240px
+	background --color-bg-lite
+	box-shadow 2px 0 10px rgba(0,0,0,0.2)
+	padding-top 90px
+	transition all .3s ease-out
+	@media screen and (max-width: 1540px)
+		width 200px
+		left -180px
+	@media screen and (max-height: 820px)
+		padding-top 30px
 
 .sidebar-opened
-  left 0
+	left 0 !important
 
 .sidebar__nav
-  margin-bottom 30px
-  margin-right 20px
+	margin-bottom 30px
+	margin-right 20px
 
 .sidebar__nav-toggle
-  position absolute
-  top 0
-  bottom 0
-  right 0
-  width 20px
-  background --color-bg
-  cursor pointer
-    
+	position absolute
+	top 0
+	bottom 0
+	right 0
+	width 20px
+	background --color-bg
+	cursor pointer
+
+.sidebar__nav-toggle-btn
+	display block
+	width 10px
+	height 25px
+	position absolute
+	top calc(50% - 12px)
+	left 8px
+	transition all .2s ease
+	&:before,&:after
+		display block
+		width 3px
+		height 13px
+		border-radius 1px
+		content ''
+		position absolute
+		left 5px
+		background --color-mgray
+		transition transform .2s ease
+	&:before
+		top 0
+		transform-origin 50% 100%
+		transform rotate(-35deg)
+	&:after
+		bottom 0
+		transform-origin 50% 0%
+		transform rotate(35deg)
+	&:hover
+		&:before,&:after
+			background --color-dgray
+
+.sidebar-opened
+	.sidebar__nav-toggle-btn
+		left -1px
+		&:before
+			transform rotate(35deg)
+		&:after
+			transform rotate(-35deg)
+
 .sidebar__nav-list
-  padding-left 0
-  list-style none
-        
+	padding-left 0
+	list-style none
+
 .sidebar__nav-link
-  display block
-  position relative
-  padding 4px 40px 5px
-  overflow hidden
-  text-overflow ellipsis
-  font-size 15px
-  letter-spacing 0.025em
-  color --color-dgray
-  &:hover
-    background --color-xlgray
-  &:active
-    opacity 0.9
-  &:before
-    display block
-    content ''
-    position absolute
-    top 0
-    bottom 0
-    left 0
-    width 0
-    background --color-brand
-    transition all .3s ease
-  @media screen and (max-width: 1320px)
-    padding 5px 30px 6px
-    font-size 14px
-    
-.sidebar__nav-item--active>.sidebar__nav-link:before
-  width 4px
+	display block
+	position relative
+	padding 4px 40px 5px
+	overflow hidden
+	text-overflow ellipsis
+	font-size 15px
+	letter-spacing 0.025em
+	color --color-dgray
+	&:active
+		opacity 0.9
+	&:before,&:after
+		display block
+		content ''
+		position absolute
+		top 0
+		bottom 0
+	&:before
+		left 0
+		width 0
+		background --color-brand
+		transition all .3s ease
+	&:after
+		left 0
+		right 0
+		background --color-xlgray
+		opacity 0
+		transition all .1s ease
+		z-index -1
+	&:hover
+		&:after
+			opacity 1
+	@media screen and (max-width: 1320px)
+		padding 5px 30px 6px
+		font-size 14px
+
+.sidebar__nav-link-active:before
+	width 4px

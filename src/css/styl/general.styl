@@ -73,10 +73,41 @@ hr
 
 .bold
 	font-weight 700
-	
+
 .link
 	color inherit
 	transition all .3s ease
 	text-decoration none
 	&:hover, &:focus
-		text-decoration none	
+		text-decoration none
+
+.link--op
+	color --color-brand
+	&:hover
+		color --color-brand-hover
+
+@media screen and (max-width: 1320px)
+	.container
+		margin-left 230px
+		width 960px
+
+@media screen and (max-width: 1220px)
+	.container
+		margin 0 auto 
+
+@media screen and (max-width: 1020px)
+	body
+		font-size 15px
+	.container
+		width calc(100% - 40px)
+		max-width 950px
+
+@media screen and (max-width: 620px)
+	body
+		font-size 14px
+	.container
+		width 100%
+
+@media screen and (max-width: 500px)
+	.wrapper
+		padding-top 60px

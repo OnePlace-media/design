@@ -22,25 +22,34 @@
 
     <!-- Header -->
     <header class="header">
-      <div class="header__wrapper container">
-        <div class="header__logo"><img src="img/logo.svg" alt="OnePlace" class="img-responsive"></div>
-        <!-- <button class="header__nav-toggle btn" type="button"></button> -->
-        <div class="header__right-panel">
-          <div class="header__chain-wrapper">
-            <a href="#" class="header__chain header__chain--steem header__chain--active" title="Steem"></a>
-            <a href="#" class="header__chain header__chain--golos" title="Golos"></a>
-          </div>
-          <a href="#" class="header__auth link">Get Started</a>
-        </div>
-      </div>
+    	<div class="header__wrapper container">
+    		<div class="header__logo"><img src="img/logo.svg" alt="OnePlace" class="img-responsive"></div>
+    		<!-- <button class="header__nav-toggle btn" type="button"></button> -->
+    		<div class="header__right-panel">
+    			<div class="header__chain-wrapper">
+    				<a href="#" class="header__chain header__chain--steem header__chain--active" title="Steem"></a>
+    				<a href="#" class="header__chain header__chain--golos" title="Golos"></a>
+    			</div>
+    			<!--      <a href="#" class="header__auth link">Get Started</a>-->
+    			<div class="header__user-wrapper">
+    				<a href="#" class="header__user-avatar avatar" style="background-image: url(' https://steemitimages.com/72x72/http://i.imgur.com/84yZ7of.png');"></a>
+    				<a class="header__user-name link link--op" href="#">smotritelmayaka</a>
+    				<div class="header__user-menu">
+    					<a href="#" class="header__user-link link">Profile</a>
+    					<a href="#" class="header__user-link link">Add account</a>
+    					<a href="#" class="header__user-link header__user-link--hr link">Logout</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </header>
     <!-- /Header -->
 
     <!-- sidebar -->
-    <div class="sidebar">
+    <div class="sidebar sidebar-opened" style="display:none;">
           <nav class="sidebar__nav">
             <ul class="sidebar__nav-list">
-              <li class="sidebar__nav-item--active"><a class="sidebar__nav-link link" href="#art"><span>Art</span></a></li>
+              <li><a class="sidebar__nav-link link" href="#art"><span>Art</span></a></li>
               <li><a class="sidebar__nav-link link" href="#bitcoin"><span>Bitcoin</span></a></li>
               <li><a class="sidebar__nav-link link" href="#blockchain"><span>Blockchain</span></a></li>
               <li><a class="sidebar__nav-link link" href="#business"><span>Business</span></a></li>
@@ -63,7 +72,7 @@
               <li><a class="sidebar__nav-link link" href="#video"><span>Video</span></a></li>
             </ul>
           </nav>
-          <div class="sidebar__nav-toggle"></div>
+          <div class="sidebar__nav-toggle"><span class="sidebar__nav-toggle-btn"></span></div>
         </div>
     <!-- /sidebar -->
 
@@ -288,12 +297,10 @@
     <footer class="footer">
       <div class="container footer__wrapper">
         <div class="footer__license">
-          Created in 2017 by <a href="https://steemit.com/@oneplace.media" target="_blank">@oneplace.media</a>
-          <br>All code is open-source under the MIT license.
+          Created in 2017 by <a href="https://steemit.com/@oneplace.media" target="_blank" class="link link--op">oneplace.media</a>
         </div>
         <div class="footer__lang-switch">
-          Choose interface language:<br>
-          <span class="footer__lang footer__lang--active">English</span><span class="footer__lang">Русский</span>
+          Language: <span class="footer__lang footer__lang--active">English</span><span class="footer__lang">Русский</span>
         </div>
       </div>
     </footer>
@@ -319,11 +326,23 @@
 
         speed: 300,
 
+  			offset: 60,
+
         currentClass: 'sidebar__nav-link-active'
 
       });
 
-  
+  		
+
+  		var w = $(window).width();
+
+  		if (w < 1020) {
+
+  			$('.sidebar').removeClass('sidebar-opened');
+
+  		}
+
+  		
 
       $(document).on('click', '.sidebar__nav-toggle', function () {
 
@@ -333,11 +352,11 @@
 
   
 
-      $(document).on('click', '.sidebar-opened .sidebar__nav-link', function () {
+  //    $(document).on('click', '.sidebar-opened .sidebar__nav-link', function () {
 
-        $('.sidebar').removeClass('sidebar-opened');
+  //      $('.sidebar').removeClass('sidebar-opened');
 
-      });
+  //    });
 
   
 
@@ -348,6 +367,28 @@
           $('.sidebar').removeClass('sidebar-opened');
 
         }
+
+      });
+
+  		
+
+  		$(document).on('click', '.header__user-wrapper', function () {
+
+  			event.stopPropagation();
+
+        $('.header__user-menu').toggleClass('header__user-menu--opened');
+
+  			$('.wrapper').toggleClass('dropdown--opened');
+
+      });
+
+  		
+
+  		$(document).on('click', '.dropdown--opened', function () {
+
+        $('.header__user-menu').removeClass('header__user-menu--opened');
+
+  			$('.wrapper').removeClass('dropdown--opened');
 
       });
 
