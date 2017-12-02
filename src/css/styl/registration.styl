@@ -1,0 +1,53 @@
+.register__steps-wrapper
+	width 928px
+	padding-top 16px
+	margin 0 auto 32px
+	
+.register__steps
+	width 100%
+	display flex
+	position relative
+	&:before
+		display block
+		content ''
+		position absolute
+		top 0
+		height 1px
+		left 16%
+		right 16%
+		background --color-dgray
+	
+.register__step
+	flex-basis 33.3%
+	text-align center
+	position relative
+	padding-top 16px
+	font-size 15px
+	color --color-mgray
+	&:before,&:after
+		display block
+		content ''
+		position absolute
+		border-radius 50%
+	&:before
+		width 20px
+		height 20px
+		top -9px
+		left calc(50% - 11px)
+		background --color-bg
+		border 1px solid --color-dgray
+	&:after
+		width 8px
+		height 8px
+		top -3px
+		left calc(50% - 5px)
+		background --color-bg
+
+.register__step--done
+	&:after
+		background --color-dgray
+		
+.register__step--current
+	color --color-dgray
+	&:after
+		background --color-brand

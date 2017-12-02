@@ -2,18 +2,18 @@
 	position relative
 	width 100%
 	height 100vh
-	padding-top 30px
+	padding-top 32px
 
 .login__logo
 	width 168px
 	height 27px
-	margin 0 auto 25px
+	margin 0 auto 24px
 
 .login-form
 	width 592px
 	min-height 184px
-	margin 0 auto 60px
-	padding 24px
+	margin 0 auto 48px
+	padding 24px 24px 32px
 	background #fff
 
 .login-form__header
@@ -41,6 +41,7 @@
 
 .login-form__title
 	text-align center
+	line-height 22px
 
 .login-form__title--em
 	color --color-brand
@@ -65,8 +66,17 @@
 	padding 4px 16px 4px
 	border 1px solid --color-xlgray
 	outline none
+	&::-webkit-input-placeholder
+		color --color-lgray
+	&::-moz-placeholder
+		color --color-lgray
+	&:-moz-placeholder
+		color --color-lgray
+	&:-ms-input-placeholder
+		color --color-lgray
 	&:focus
 		border-color --color-mgray
+		border-width 1px
 		&::-webkit-input-placeholder
 			color transparent
 		&::-moz-placeholder
@@ -78,6 +88,7 @@
 
 .login-form__input--error
 	border-color --color-brand
+	border-width 2px
 
 .login-form__alert
 	display none
@@ -104,6 +115,8 @@
 	background --color-xlgray
 	&:hover
 		background --color-lgray
+	&:last-child
+		margin-bottom 0
 
 .login-form__recovery-link
 	display block
@@ -112,31 +125,34 @@
 	&:hover
 		text-decoration underline
 
-.login-form__result
-	display flex
-
-.login-form__result-key
-	width 70%
-	font-weight 700
-
-.login-form__result-btn
-	display inline-block
-	text-align center
-	width 30%
-	height 40px
-	font-size 15px
-	line-height 40px
-	border 1px solid --color-xlgray
-	border-left none
-	&:hover
-		cursor pointer
-		background --color-xlgray
+//.login-form__result
+//	display flex
+//
+//.login-form__result-key
+//	width 70%
+//	font-weight 700
+//
+//.login-form__result-btn
+//	display inline-block
+//	text-align center
+//	width 30%
+//	height 40px
+//	font-size 15px
+//	line-height 40px
+//	border 1px solid --color-xlgray
+//	border-left none
+//	&:hover
+//		cursor pointer
+//		background --color-xlgray
 
 .login-form__text
 	font-size 15px
 	padding 0 16px
-	margin-bottom 12px
+	margin-bottom 16px
+	em
+		font-style normal
+		font-weight 400
+		color --color-brand
 
 .login-form__text--alert
-	padding 4px 12px 8px
 	border-left 2px solid --color-brand
