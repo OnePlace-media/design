@@ -659,13 +659,13 @@ hr {
   margin-bottom: 0;
 }
 
-.login-form__recovery-link {
+.login-form__bottom-link {
   display: block;
   text-align: center;
   font-size: 15px;
 }
 
-.login-form__recovery-link:hover {
+.login-form__bottom-link:hover {
   text-decoration: underline;
 }
 
