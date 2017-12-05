@@ -85,9 +85,9 @@
 
 .header__user-avatar
 	display block
-	margin-right 10px
-	width 36px
-	height 36px
+	margin-right 8px
+	width 35px
+	height 35px
 	
 .header__user-name
 	font-size 14px
@@ -103,7 +103,7 @@
 	z-index 150
 	width 160px
 	top 57px
-	right -5px
+	right -10px
 	padding 0
 	border-radius 3px
 	background --color-default
@@ -112,7 +112,7 @@
 		display block
 		content ''
 		position absolute
-		right 40px
+		right 13px
 		top -16px
 		border 8px solid transparent
 	&:before
@@ -126,15 +126,35 @@
 	
 .header__user-link
 	display block
-	font-size 14px
+	font-size 13px
 	color --color-mgray
-	padding 4px 16px 5px
+	padding 5px 16px 6px
 	&:hover
 		color --color-dgray
 		background --color-bg-lite
 		
 .header__user-link--hr
 	border-top 1px solid --color-bg
+	
+.header__profile-btn
+	display block
+	position relative
+	width 25px
+	height 25px
+	background url('../img/settings.svg') 50% 50% no-repeat transparent
+	background-size cover
+	margin-left 25px
+	&:before
+		display block
+		content ''
+		position absolute
+		left -12px
+		top 3px
+		width 1px
+		height 19px
+		background --color-xlgray
+		
+
 
 @media screen and (max-width: 620px)
 	.header__wrapper

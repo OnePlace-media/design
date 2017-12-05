@@ -29,7 +29,7 @@
       }
     });
 		
-		$(document).on('click', '.header__user-wrapper', function () {
+		$(document).on('click', '.header__profile-btn', function (event) {
 			event.stopPropagation();
       $('.header__user-menu').toggleClass('header__user-menu--opened');
 			$('.wrapper').toggleClass('dropdown--opened');
