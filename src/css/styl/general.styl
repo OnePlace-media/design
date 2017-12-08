@@ -1,113 +1,114 @@
 // General styles
 
 html,body
-	height 100%
-	margin 0
-	padding 0
-	border 0
+  height 100%
+  margin 0
+  padding 0
+  border 0
 
 body
-	font 16px/1.5 --font-base 
-	color --color-dgray
-	background --color-default
+  font 16px/1.5 --font-base 
+  color --color-dgray
+  background --color-default
 
 *,
 *:after,
 *:before
-	box-sizing border-box
+  box-sizing border-box
 
 .container
-	width 1000px
-	margin 0 auto
-	transition all .3s ease
-	clearfix()
+  width 1000px
+  margin 0 auto
+  transition all .3s ease
+  clearfix()
 
 .wrapper
-	position relative
-	background --color-bg
+  position relative
+  background --color-bg
 
 .main-content
-	min-height calc(100vh - 60px)
-	padding-top 80px
+  min-height calc(100vh - 60px)
+  padding-top 80px
 
 .avatar
-	border-radius 50%
-	background-position 50% 50%
-	background-size cover
-	overflow hidden
+  border-radius 50%
+  background-position 50% 50%
+  background-size cover
+  overflow hidden
 
 .btn
-	border none
-	cursor pointer
-	outline none !important
-	box-shadow none !important
+  border none
+  cursor pointer
+  outline none !important
+  box-shadow none !important
+  transition all .3s ease
 
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,hgroup,
 ul,ol,dd,p,figure,pre,table,fieldset,hr
-		margin-top 0
-		margin-bottom 0
+    margin-top 0
+    margin-bottom 0
 
 .h1
-	font 1.75em --font-base
-	font-weight 700
-	line-height 1.2
+  font 1.75em --font-base
+  font-weight 700
+  line-height 1.2
 
 .h2
-	font 1.3125em --font-base
-	font-weight 700
-	line-height 1.2
+  font 1.3125em --font-base
+  font-weight 700
+  line-height 1.2
 
 .h3
-	font 1.125em --font-base
-	font-weight 700
-	line-height 1.2
+  font 1.125em --font-base
+  font-weight 700
+  line-height 1.2
 
 .h4
-	font 14px --font-base
-	font-weight 700
-	line-height 1.2
+  font 14px --font-base
+  font-weight 700
+  line-height 1.2
 
 hr
-	border none
-	border-bottom 1px solid --color-mgray
+  border none
+  border-bottom 1px solid --color-mgray
 
 .bold
-	font-weight 700
+  font-weight 700
 
 .link
-	color inherit
-	transition all .3s ease
-	text-decoration none
-	&:hover, &:focus
-		text-decoration none
+  color inherit
+  transition all .3s ease
+  text-decoration none
+  &:hover, &:focus
+    text-decoration none
 
 .link--op
-	color --color-brand
-	&:hover
-		color --color-brand-hover
+  color --color-brand
+  &:hover
+    color --color-brand-hover
 
 @media screen and (max-width: 1320px)
-	.container
-		margin-left 230px
-		width 960px
+  .container
+    margin-left 230px
+    width 960px
 
 @media screen and (max-width: 1220px)
-	.container
-		margin 0 auto 
+  .container
+    margin 0 auto 
 
 @media screen and (max-width: 1020px)
-	body
-		font-size 15px
-	.container
-		width calc(100% - 40px)
-		max-width 950px
+  body
+    font-size 15px
+  .container
+    width calc(100% - 40px)
+    max-width 950px
 
 @media screen and (max-width: 620px)
-	body
-		font-size 14px
-	.container
-		width 100%
+  body
+    font-size 14px
+  .container
+    width 100%
 
 @media screen and (max-width: 500px)
-	.wrapper
-		padding-top 60px
+  .wrapper
+    padding-top 60px

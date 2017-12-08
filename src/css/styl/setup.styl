@@ -1,0 +1,235 @@
+.tags-setup__title
+  text-align center
+  margin-bottom 16px
+
+.tags-setup__input-wrapper
+  display flex
+
+.tags-setup__input-name
+  flex-basis 104px
+  font-size 14px
+  line-height 17px
+  padding-top 2px
+  span:first-child
+    font-weight 700
+  span:last-child
+    font-size 12px
+    color --color-brand
+
+.tags-setup__info
+  color --color-mgray
+  font-size 13px
+  line-height 20px
+  margin 4px 0 8px
+
+.tags-list__wrapper
+  width 100%
+
+.tags-list__item
+  display inline-block
+  background --color-xlgray
+  border 1px solid --color-xlgray
+  height 24px
+  font-size 12px
+  line-height 24px
+  padding 0 8px
+  border-radius 3px
+  margin-right 8px
+  margin-bottom 8px
+  &:hover
+    cursor pointer
+
+.tags-list__remove-item
+  display inline-block
+  position relative
+  top 3px
+  width 14px
+  height 14px
+  background url('../img/remove-tag.svg') 100% 50% no-repeat transparent
+  background-size 12px 12px
+  margin-left 6px
+  opacity .6
+  &:hover
+    opacity 1
+
+.tags-setup__btn
+  display block
+  position absolute
+  bottom 24px
+  left calc(50% - 140px)
+  width 280px
+  height 40px
+  font-size 15px
+  color --color-default
+  font-weight 700
+  text-transform uppercase
+  letter-spacing 0.01em
+  background --color-link
+  &:hover
+    background --color-link-hover
+
+// Grid setup
+
+--grid-item-size = 111px
+--grid-space-size = 8px
+--grid-full-size = --grid-item-size + --grid-space-size*2
+
+.tags-setup
+  width 1016px
+  height --grid-full-size*5
+
+.tags-setup__form-wrapper
+  padding 0 --grid-space-size --grid-space-size*2
+  height --grid-full-size*3
+
+.tags-setup__form
+  position relative
+  background --color-default
+  width 100%
+  height 100%
+  margin 0
+  padding 24px 16px
+
+.tags-setup__column
+  display flex
+  flex-flow column wrap
+
+.tags-setup__row
+  display flex
+  flex-flow row wrap
+
+.tags-setup__column
+
+.tags-setup__w1
+  flex-basis --grid-full-size
+
+.tags-setup__w2
+  flex-basis --grid-full-size*2
+
+.tags-setup__w3
+  flex-basis --grid-full-size*3
+  
+.tags-setup__w4
+  flex-basis --grid-full-size*4
+
+.tags-setup__w5
+  flex-basis --grid-full-size*5
+
+.tags-setup__item-wrapper
+  width --grid-full-size
+  height --grid-full-size
+  padding 0 --grid-space-size --grid-space-size*2
+
+.tags-setup__item-wrapper--h2x
+  height --grid-full-size*2
+
+.tags-setup__item-wrapper--w2x
+  width --grid-full-size*2
+
+.tags-setup__item
+  position relative
+  width 100%
+  height 100%
+  background url('../img/tags/1.jpg') 50% 50% no-repeat transparent
+  background-size cover
+  &:before
+    display block
+    position absolute
+    content ''
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background rgba(0,0,0,0.1)
+    transition all .3s ease
+    z-index 10
+  &:hover
+    cursor pointer
+    &:before
+      background rgba(0,0,0,0)
+    .tags-setup__tag
+      transform scale(1.07)
+
+.tags-setup__item--selected
+  &:before
+    background rgba(37,156,183,.7)
+  .tags-setup__tag
+    opacity .6
+  &:hover
+    &:before
+      background rgba(37,156,183,.7)
+    .tags-setup__tag
+      transform scale(1)
+
+.tags-setup__tag
+  position absolute
+  z-index 100
+  width 100%
+  top calc(50% - 12px)
+  font-size 18px
+  line-height 24px
+  font-weight 700
+  text-transform uppercase
+  letter-spacing 0.025em
+  color --color-default
+  text-align center
+  transform scale(1)
+  transition transform .3s ease
+
+
+.tags-setup__art
+  background-image url('../img/tags/art.jpg')
+
+.tags-setup__bitcoin
+  background-image url('../img/tags/bitcoin.jpg')
+
+.tags-setup__music
+  background-image url('../img/tags/music.jpg')
+
+.tags-setup__science
+  background-image url('../img/tags/science.jpg')
+
+.tags-setup__blockchain
+  background-image url('../img/tags/blockchain.jpg')
+
+.tags-setup__food
+  background-image url('../img/tags/food.jpg')
+
+.tags-setup__funny
+  background-image url('../img/tags/funny.jpg')
+
+.tags-setup__nature
+  background-image url('../img/tags/nature.jpg')
+
+.tags-setup__travel
+  background-image url('../img/tags/travel.jpg')
+
+.tags-setup__news
+  background-image url('../img/tags/news.jpg')
+
+.tags-setup__politics
+  background-image url('../img/tags/politics.jpg')
+
+.tags-setup__video
+  background-image url('../img/tags/video.jpg')
+
+.tags-setup__health
+  background-image url('../img/tags/health.jpg')
+
+.tags-setup__introduceyourself
+  background-image url('../img/tags/introduceyourself.jpg')
+
+.tags-setup__life
+  background-image url('../img/tags/life.jpg')
+
+.tags-setup__money
+  background-image url('../img/tags/money.jpg')
+
+.tags-setup__philosophy
+  background-image url('../img/tags/philosophy.jpg')
+
+.tags-setup__photography
+  background-image url('../img/tags/photography.jpg')
+
+.tags-setup__story
+  background-image url('../img/tags/story.jpg')
