@@ -1034,7 +1034,11 @@ hr {
   background-image: url("../img/tags/art.jpg");
 }
 
-.tags-setup__bitcoin {
+.tags-setup__ru--iskusstvo {
+  background-image: url("../img/tags/iskusstvo.jpg");
+}
+
+.tags-setup__bitcoin,.tags-setup__ru--bitkoin {
   background-image: url("../img/tags/bitcoin.jpg");
 }
 
@@ -1042,11 +1046,11 @@ hr {
   background-image: url("../img/tags/music.jpg");
 }
 
-.tags-setup__science {
+.tags-setup__science,.tags-setup__ru--nauka {
   background-image: url("../img/tags/science.jpg");
 }
 
-.tags-setup__blockchain {
+.tags-setup__blockchain,.tags-setup__ru--blokcheijn {
   background-image: url("../img/tags/blockchain.jpg");
 }
 
@@ -1058,12 +1062,20 @@ hr {
   background-image: url("../img/tags/funny.jpg");
 }
 
-.tags-setup__nature {
+.tags-setup__nature,.tags-setup__ru--priroda {
   background-image: url("../img/tags/nature.jpg");
 }
 
-.tags-setup__travel {
+.tags-setup__travel,.tags-setup__ru--puteshestviya {
   background-image: url("../img/tags/travel.jpg");
+}
+
+.tags-setup__ru--istoriya {
+  background-image: url("../img/tags/istoriya.jpg");
+}
+
+.tags-setup__ru--konkurs {
+  background-image: url("../img/tags/konkurs.jpg");
 }
 
 .tags-setup__news {
@@ -1082,23 +1094,35 @@ hr {
   background-image: url("../img/tags/health.jpg");
 }
 
-.tags-setup__introduceyourself {
+.tags-setup__introduceyourself,.tags-setup__ru--znakomstvo {
   background-image: url("../img/tags/introduceyourself.jpg");
 }
 
-.tags-setup__life {
+.tags-setup__life,.tags-setup__ru--zhiznx {
   background-image: url("../img/tags/life.jpg");
+}
+
+.tags-setup__ru--obrazovanie {
+  background-image: url("../img/tags/obrazovanie.jpg");
+}
+
+.tags-setup__ru--tvorchestvo {
+  background-image: url("../img/tags/tvorchestvo.jpg");
 }
 
 .tags-setup__money {
   background-image: url("../img/tags/money.jpg");
 }
 
-.tags-setup__philosophy {
+.tags-setup__ru--biznes {
+  background-image: url("../img/tags/biznes.jpg");
+}
+
+.tags-setup__philosophy,.tags-setup__ru--mysli {
   background-image: url("../img/tags/philosophy.jpg");
 }
 
-.tags-setup__photography {
+.tags-setup__photography,.tags-setup__ru--fotografiya {
   background-image: url("../img/tags/photography.jpg");
 }
 
