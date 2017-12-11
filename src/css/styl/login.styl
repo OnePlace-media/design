@@ -103,20 +103,42 @@
   font-size 13px
   margin 0 0 16px
 
-.login-form__btn
-  display block
+.btn--large
   width 280px
   height 40px
-  margin 0 auto 16px
+  text-align center
+  line-height 40px
   font-size 15px
   font-weight 700
   text-transform uppercase
   letter-spacing .01em
+  
+.login-form__btn
+  margin 0 auto 16px
   background --color-xlgray
   &:hover
     background --color-lgray
   &:last-child
     margin-bottom 0
+
+.add-blockchain__wrapper
+  display flex
+  justify-content space-around
+    
+.add-blockchain__btn
+  width 240px
+  font-size 15px
+  margin 0 0 24px
+  color --color-default
+  opacity 1
+  &:hover
+    opacity .8
+    
+.add-blockchain__btn--golos
+  background --color-golos
+  
+.add-blockchain__btn--steem
+  background --color-steem
 
 .login-form__bottom-link
   display block

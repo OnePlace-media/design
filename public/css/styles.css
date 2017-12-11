@@ -48,6 +48,7 @@ body {
 }
 
 .btn {
+  display: block;
   border: none;
   cursor: pointer;
   outline: none !important;
@@ -109,6 +110,17 @@ hr {
 
 .link--op:hover {
   color: #b2341b;
+}
+
+.aside-header {
+  background: #cfd2d2;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.aside-header__title {
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
 }
 
 .header {
@@ -661,15 +673,19 @@ hr {
   margin: 0 0 16px;
 }
 
-.login-form__btn {
-  display: block;
+.btn--large {
   width: 280px;
   height: 40px;
-  margin: 0 auto 16px;
+  text-align: center;
+  line-height: 40px;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.01em;
+}
+
+.login-form__btn {
+  margin: 0 auto 16px;
   background: #cfd2d2;
 }
 
@@ -679,6 +695,36 @@ hr {
 
 .login-form__btn:last-child {
   margin-bottom: 0;
+}
+
+.add-blockchain__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.add-blockchain__btn {
+  width: 240px;
+  font-size: 15px;
+  margin: 0 0 24px;
+  color: #fff;
+  opacity: 1;
+}
+
+.add-blockchain__btn:hover {
+  opacity: 0.8;
+}
+
+.add-blockchain__btn--golos {
+  background: #2670b8;
+}
+
+.add-blockchain__btn--steem {
+  background: #4ca2f1;
 }
 
 .login-form__bottom-link {
@@ -1128,6 +1174,51 @@ hr {
 
 .tags-setup__story {
   background-image: url("../img/tags/story.jpg");
+}
+
+.settings__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settings__accounts {
+  width: 360px;
+  padding-right: 32px;
+}
+
+.settings__tags {
+  width: calc(100% - 360px);
+}
+
+.settings__accounts-body {
+  padding: 24px;
+  background: #fff;
+}
+
+.settings__accounts-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.settings__account {
+  font-size: 14px;
+}
+
+.account__chain {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background: url("../img/golos.svg") 50% 50% no-repeat transparent;
+  background-size: cover;
+}
+
+.golos-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
 
 .tag-block__header {
