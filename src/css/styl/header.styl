@@ -80,9 +80,26 @@
 		color --color-brand-hover
 
 .header__user-wrapper
+	position relative
 	display flex
 	align-items center
 
+.header__user-switch
+	position absolute
+	z-index 10
+	bottom 0
+	left 0
+	width 17px
+	height 17px
+	box-shadow 0 0 3px rgba(0,0,0,0.5)
+	border-radius 50%
+	background url('../img/switch.svg') 50% 50% no-repeat --color-default
+	background-size 12px 12px
+	transform scale(1)
+	transition all .3s ease
+	&:hover
+		cursor pointer
+		transform scale(1.05)
 .header__user-avatar
 	display block
 	margin-right 8px
