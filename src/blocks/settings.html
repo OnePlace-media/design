@@ -1,24 +1,78 @@
 <div class="container settings__wrapper">
-  <div class="settings__accounts">
-    <div class="settings__accounts-header aside-header">
-      <h4 class="h4 aside-header__title">Attached blockchain accounts</h4>
-      
+  <div class="settings__accounts  settings__accounts--active">
+    <div class="settings__block-header aside-header">
+      <h4 class="h4 aside-header__title">Blockchain accounts</h4>
+
     </div>
-    <div class="settings__accounts-body">
-    <ul class="settings__accounts-list">
-      <li class="settings__account"><span class="account__chain account__chain--golos"></span>awispa<span class="account__make-primary"></span><span class="account__remove"></span></li>
-      <li class="settings__account"><span class="account__chain account__chain--golos"></span>awispa<span class="account__make-primary"></span><span class="account__remove"></span></li>
-      <li class="settings__account"><span class="account__chain account__chain--golos"></span>awispa<span class="account__make-primary"></span><span class="account__remove"></span></li>
-      <li class="settings__account"><span class="account__chain account__chain--golos"></span>awispa<span class="account__make-primary"></span><span class="account__remove"></span></li>
-      <li class="settings__account"><span class="account__chain account__chain--golos"></span>awispa<span class="account__make-primary"></span><span class="account__remove"></span></li>
-    </ul>
+    <div class="settings__block-body">
+      <ul class="settings__accounts-list">
+        <li class="settings__account"><span class="settings__account-chain settings__account-chain--steem"></span><span class="settings__account-name">awispa</span><span class="settings__btn settings__btn-primary settings__btn-primary--active"></span><a class="settings__btn settings__btn-remove" title="Remove account"></a></li>
+        <li class="settings__account"><span class="settings__account-chain settings__account-chain--golos"></span><span class="settings__account-name">awispa</span><a class="settings__btn settings__btn-primary" title="Make primary"></a><a class="settings__btn settings__btn-remove" title="Remove account"></a></li>
+        <li class="settings__account"><span class="settings__account-chain settings__account-chain--golos"></span><span class="settings__account-name">awispa</span><a class="settings__btn settings__btn-primary" title="Make primary"></a><a class="settings__btn settings__btn-remove" title="Remove account"></a></li>
+        <li class="settings__account"><span class="settings__account-chain settings__account-chain--golos"></span><span class="settings__account-name">smotritelmayaka9</span><a class="settings__btn settings__btn-primary" title="Make primary"></a><a class="settings__btn settings__btn-remove" title="Remove account"></a></li>
+        <li class="settings__account"><span class="settings__account-chain settings__account-chain--golos"></span><span class="settings__account-name">awispa</span><a class="settings__btn settings__btn-primary" title="Make primary"></a><a class="settings__btn settings__btn-remove" title="Remove account"></a></li>
+      </ul>
+      <a href="#" class="btn-expand"></a>
+      <div class="settings__account-action">
+              <p class="login-form__text">Add blockchain account:</p>
+      <div class="add-blockchain__wrapper" style="display:none;">
+        <a class="btn btn--large add-blockchain__btn add-blockchain__btn--golos">golos</a>
+        <a class="btn btn--large add-blockchain__btn add-blockchain__btn--steem">steem</a>
+      </div>
+            <div class="login-form__wrapper">
+        <div class="login-form__item">
+          <input type="text" class="login-form__input" placeholder="Username" name="username">
+          <div class="login-form__alert">Please enter a valid e-mail address</div>
+        </div>
+        <div class="login-form__item">
+          <input type="password" class="login-form__input" placeholder="Active key" name="key">
+          <div class="login-form__alert">Please enter a valid e-mail address</div>
+        </div>
+        <p class="login-form__text login-form__text--small login-form__text--alert"><em>OnePlace does not store your private keys.</em> Once you sign in with your blockchain account you authorize OnePlace app to vote, post and edit comments on your behalf. You can revoke that authority at any time.</p>
+        <button type="submit" class="btn btn--large account-action__btn">Attach account</button>
+      </div>
+      </div>
     </div>
   </div>
   <div class="settings__tags">
-    <div class="settings__accounts-header aside-header">
+    <div class="settings__block-header aside-header">
       <h4 class="h4 aside-header__title">Categories list</h4>
     </div>
-    <div class="settings__accounts-body">
+    <div class="settings__block-body settings__tags-body">
+      <div class="settings__tags-panel-wrapper">
+        <div class="settings__tags-panel settings__tags-panel--active">
+          <h3 class="settings__tags-chain settings__tags-chain--steem">Steem</h3>
+          <div class="tags-list__wrapper">
+            <span class="tags-list__item">steemit<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">music<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">introduceyourself<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">blockchain<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">open-source<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">blockchain<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">open-source<span class="tags-list__remove-item"></span></span>
+          </div>
+          <a href="#" class="btn-expand"></a>
+        </div>
+        <div class="settings__tags-panel">
+          <h3 class="settings__tags-chain settings__tags-chain--golos">Golos</h3>
+          <div class="tags-list__wrapper">
+            <span class="tags-list__item">steemit<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">music<span class="tags-list__remove-item"></span></span>
+            <span class="tags-list__item">blockchain<span class="tags-list__remove-item"></span></span>
+          </div>
+          <a href="#" class="btn-expand"></a>
+        </div>
+        <div class="settings__tags-setup">
+          <div class="tags-setup__input-wrapper">
+            <div class="tags-setup__input-name">
+              <span>Add Steem tags:</span><br>
+              <span>Up to 20</span>
+            </div>
+            <input type="text" class="login-form__input" placeholder="Type tags here" name="tags">
+          </div>
+          <div class="tags-setup__info">Add a topic by typing in the field above or by clicking on one of the popular tags. Tags are displayed in the same order in your feed.</div>
+        </div>
+      </div>
 
     </div>
   </div>

@@ -1,33 +1,160 @@
 .settings__wrapper
   display flex
+  align-items stretch
   
+
 .settings__accounts
-  width 360px
-  padding-right 32px
-  
-.settings__tags
-  width calc(100% - 360px)
-  
-.settings__accounts-body
-  padding 24px
+  width 312px
+  margin-right 16px
   background --color-default
+
+.settings__tags
+  width calc(100% - 328px)
+
+.settings__block-body
+  padding 32px 24px
+  background --color-default
+
+.settings__accounts--active
+  .btn-expand
+    display none
   
 .settings__accounts-list
   list-style none
   padding-left 0
-  
+  margin-bottom 32px
+
 .settings__account
+  display flex
   font-size 14px
-  
-.account__chain
+  align-items center
+  margin-bottom 8px
+
+.settings__account-chain
   display inline-block
   width 24px
   height 24px
   margin-right 16px
+  filter grayscale(100%)
+  opacity .8
   background url('../img/golos.svg') 50% 50% no-repeat transparent
   background-size cover
-  
-.golos-icon
+
+.settings__account-chain--golos
+  background-image url('../img/golos.svg')
+
+.settings__account-chain--steem
+  background-image url('../img/steem.svg')
+
+.settings__account-name
+  flex-basis calc(100% - 104px)
+
+.settings__btn
+  position relative
   display inline-block
-  width 20px
-  height 20px
+  width 32px
+  height 28px
+  border 1px solid --color-xlgray
+  &:after
+    display block
+    content ''
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background --color-default
+    transition all .3s ease
+    opacity .3
+  &:hover
+    cursor pointer
+    &:after
+      opacity 0
+
+.settings__btn-primary
+  border-right-width 0
+  filter grayscale(100%)
+  background url('../img/primary.svg') 50% 50% no-repeat transparent
+  background-size auto 20px
+
+.settings__btn-primary--active
+  filter grayscale(0%)
+  border-color --color-default
+  &:after
+    opacity 0
+
+.settings__btn-remove
+  background url('../img/remove.svg') 50% 50% no-repeat transparent
+  background-size auto 20px
+  
+.settings__account-action
+  border-top 1px solid --color-xlgray
+  padding-top 24px
+
+.account-action__btn
+  width 100%
+  color --color-default
+  background --color-link
+  &:hover
+    background --color-link-hover
+
+.settings__tags-panel-wrapper
+  display flex
+  flex-flow row wrap
+
+.settings__tags-panel
+  flex-basis 50%
+  padding 0 24px 16px
+  padding-right 0
+  padding-left 24px
+  &:first-child
+    border-right 1px solid --color-xlgray
+    padding-right 24px
+    padding-left 0
+    
+.settings__tags-panel--active
+  min-height 280px
+  .btn-expand
+    display none
+
+.settings__tags-chain
+  display block
+  width max-content
+  margin 0 auto 24px
+  padding-left 32px
+  
+.settings__tags-chain--steem
+  background url('../img/steem.svg') 0 50% no-repeat transparent
+  background-size auto 24px
+  
+.settings__tags-chain--golos
+  background url('../img/golos.svg') 0 50% no-repeat transparent
+  background-size auto 24px
+  
+.btn-expand
+  display block
+  position relative
+  margin 0 auto
+  width 55px
+  height 55px
+  border 1px solid --color-xlgray
+  border-radius 50%
+  &:before,&:after
+    display block
+    content ''
+    position absolute
+    top 26px
+    left 11px
+    height 1px
+    width 33px
+    background --color-xlgray
+  &:after
+    transform rotate(90deg)
+  &:hover
+    border-color --color-lgray
+    &:before,&:after
+      background --color-lgray
+      
+.settings__tags-setup
+  flex-basis 100%
+  padding-top 24px

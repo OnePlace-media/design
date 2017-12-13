@@ -1,13 +1,13 @@
 .header
-	position fixed
-	top 0
-	left 0
-	width 100%
-	padding 10px 0
-	background #fff
-	border-bottom 1px solid --color-bg
-	z-index 20
-	transform translateY(0)
+  position fixed
+  top 0
+  left 0
+  width 100%
+  padding 10px 0
+  background #fff
+  border-bottom 1px solid --color-bg
+  z-index 20
+  transform translateY(0)
 
 //.header-visible, .header-hidden
 //	position fixed
@@ -21,177 +21,237 @@
 //	transition transform .3s ease-out
 
 .header-hidden
-	transform translateY(0)
+  transform translateY(0)
 
 .header__wrapper
-	position relative
-	display flex
-	justify-content space-between
-	align-items center
+  position relative
+  display flex
+  justify-content space-between
+  align-items center
 
 .header__logo
-	position relative
-	width 168px
-	height 27px
+  position relative
+  width 168px
+  height 27px
 
 .header__right-panel
-	display flex
-	width calc(100% - 168px)
-	justify-content flex-end
-	align-items center
+  display flex
+  width calc(100% - 168px)
+  justify-content flex-end
+  align-items center
 
 .header__chain-wrapper
-	width 90px
-	margin-right 20px
-	display flex
-	justify-content flex-end
-	background --color-bg
-	border 1px solid --color-bg
-	border-radius 3px
+  width 90px
+  margin-right 20px
+  display flex
+  justify-content flex-end
+  background --color-bg
+  border 1px solid --color-bg
+  border-radius 3px
 
 .header__chain--steem
-	background url('../img/steem.svg') 50% 50% no-repeat transparent
+  background url('../img/steem.svg') 50% 50% no-repeat transparent
 
 .header__chain--golos
-	background url('../img/golos.svg') 50% 50% no-repeat transparent
+  background url('../img/golos.svg') 50% 50% no-repeat transparent
 
 .header__chain
-	display inline-block
-	width 44px
-	height 36px
-	opacity .5
-	transition all .3s ease
-	background-size 24px 24px  
-	backface-visibility hidden
-	filter grayscale(100%)
-	&:hover
-		opacity 0.8
-		filter grayscale(0%)
+  display inline-block
+  width 44px
+  height 36px
+  opacity .5
+  transition all .3s ease
+  background-size 24px 24px  
+  backface-visibility hidden
+  filter grayscale(100%)
+  &:hover
+    opacity 0.8
+    filter grayscale(0%)
 
 .header__chain--active
-	opacity 1 !important
-	background-color #fff
-	filter grayscale(0%)
+  opacity 1 !important
+  background-color #fff
+  filter grayscale(0%)
 
 .header__auth
-	color --color-brand
-	font-size 14px
-	&:hover
-		color --color-brand-hover
+  color --color-brand
+  font-size 14px
+  &:hover
+    color --color-brand-hover
 
 .header__user-wrapper
-	position relative
-	display flex
-	align-items center
+  position relative
+  display flex
+  align-items center
 
 .header__user-switch
-	position absolute
-	z-index 10
-	bottom 0
-	left 0
-	width 17px
-	height 17px
-	box-shadow 0 0 3px rgba(0,0,0,0.5)
-	border-radius 50%
-	background url('../img/switch.svg') 50% 50% no-repeat --color-default
-	background-size 12px 12px
-	transform scale(1)
-	transition all .3s ease
-	&:hover
-		cursor pointer
-		transform scale(1.05)
-.header__user-avatar
-	display block
-	margin-right 8px
-	width 35px
-	height 35px
-	
-.header__user-name
-	font-size 14px
-	
-.header__user-menu
-	display none
-	opacity 0
-	
-.header__user-menu--opened
-	display block
-	opacity 1
-	position absolute
-	z-index 150
-	width 160px
-	top 57px
-	right -10px
-	padding 0
-	border-radius 3px
-	background --color-default
-	box-shadow 0 0 10px rgba(0,0,0,0.2)
-	&:before,&:after
-		display block
-		content ''
-		position absolute
-		right 13px
-		top -16px
-		border 8px solid transparent
-	&:before
-		width 16px
-		height 16px
-		border-bottom-color --color-mgray
-	&:after
-		width 15px
-		height 15px
-		border-bottom-color --color-default
-	
-.header__user-link
-	display block
-	font-size 13px
-	color --color-mgray
-	padding 5px 16px 6px
-	&:hover
-		color --color-dgray
-		background --color-bg-lite
-		
-.header__user-link--hr
-	border-top 1px solid --color-bg
-	
-.header__profile-btn
-	display block
-	position relative
-	width 25px
-	height 25px
-	background url('../img/settings.svg') 50% 50% no-repeat transparent
-	background-size cover
-	margin-left 25px
-	&:before
-		display block
-		content ''
-		position absolute
-		left -12px
-		top 3px
-		width 1px
-		height 19px
-		background --color-xlgray
-		
+  position absolute
+  z-index 10
+  bottom 0
+  left 0
+  width 19px
+  height 19px
+  border 1px solid --color-xlgray
+  border-radius 50%
+  background url('../img/refresh.svg') 50% 50% no-repeat --color-default
+  background-size 12px 12px
+  transition all .3s ease
+  filter grayscale(100%)
+  &:hover
+    filter grayscale(0%)  
+    cursor pointer
 
+.header__user-avatar
+  display block
+  margin-right 8px
+  width 36px
+  height 36px
+
+.header__user-name
+  font-size 14px
+
+.header__usermenu
+  display none
+  opacity 0
+
+.header__usermenu--opened
+  display block
+  opacity 1
+  position absolute
+  z-index 150
+  width 160px
+  top 57px
+  right -10px
+  padding 0
+  border-radius 3px
+  background --color-default
+  box-shadow 0 0 10px rgba(0,0,0,0.2)
+  &:before,&:after
+    display block
+    content ''
+    position absolute
+    right 13px
+    top -16px
+    border 8px solid transparent
+  &:before
+    width 16px
+    height 16px
+    border-bottom-color --color-mgray
+  &:after
+    width 15px
+    height 15px
+    border-bottom-color --color-default
+
+.header__usermenu-item
+  display block
+  font-size 13px
+  color --color-mgray
+  padding 5px 16px 6px
+  &:hover
+    color --color-dgray
+    background --color-bg-lite
+
+.header__usermenu-item--hr
+  border-top 1px solid --color-bg
+
+.header__usermenu-item--submenu
+  position relative
+  &:after
+    content ''
+    margin-top 6px
+    display inline-block
+    float right
+    width 4px
+    height 4px
+    border-left 4px solid --color-mgray
+    border-top 4px solid transparent
+    border-bottom 4px solid transparent
+
+.header__submenu
+  display none
+  position absolute
+  left 95%
+  top 10px
+  min-width 160px
+  width max-content
+  height auto
+  padding 0
+  border-radius 1px
+  background --color-default
+  box-shadow 0 0 10px rgba(0,0,0,0.2)
+  
+.header__submenu-item
+  display flex
+  align-items center
+  font-size 13px
+  color --color-mgray
+  padding 7px 16px 8px
+  transition all .3s ease
+  &:hover
+    color --color-brand
+    background --color-bg-lite
+    .submenu__account-chain
+      filter grayscale(10%)
+  
+.header__usermenu-item--submenu
+  &:hover
+    .header__submenu
+      display block
+
+.submenu__account-chain
+  display inline-block
+  width 18px
+  height 18px
+  margin-right 8px
+  filter grayscale(100%)
+  opacity .8
+  transition all .3s ease
+  background url('../img/golos.svg') 50% 50% no-repeat transparent
+  background-size cover
+
+.submenu__account-chain--golos
+  background-image url('../img/golos.svg')
+
+.submenu__account-chain--steem
+  background-image url('../img/steem.svg')
+
+.header__profile-btn
+  display block
+  position relative
+  width 25px
+  height 25px
+  background url('../img/settings.svg') 50% 50% no-repeat transparent
+  background-size cover
+  margin-left 25px
+  &:before
+    display block
+    content ''
+    position absolute
+    left -12px
+    top 3px
+    width 1px
+    height 19px
+    background --color-xlgray
 
 @media screen and (max-width: 620px)
-	.header__wrapper
-		width calc(100% - 30px)
+  .header__wrapper
+    width calc(100% - 30px)
 
 @media screen and (max-width: 500px)
-	.header
-		height 60px
-		padding 10px 0
-	.header__logo
-		width 126px !important
-		height 20px !important
-		top 10px !important
-	.header__slogan
-		display none
-	.header__chain-switch
-		right 50px
-		height 39px
-		top 0
-		span, br
-			display none
-	.header__chain-wrapper
-		width 84px
+  .header
+    height 60px
+    padding 10px 0
+  .header__logo
+    width 126px !important
+    height 20px !important
+    top 10px !important
+  .header__slogan
+    display none
+  .header__chain-switch
+    right 50px
+    height 39px
+    top 0
+    span, br
+      display none
+  .header__chain-wrapper
+    width 84px

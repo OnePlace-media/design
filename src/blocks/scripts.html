@@ -31,12 +31,12 @@
 		
 		$(document).on('click', '.header__profile-btn', function (event) {
 			event.stopPropagation();
-      $('.header__user-menu').toggleClass('header__user-menu--opened');
+      $('.header__usermenu').toggleClass('header__usermenu--opened');
 			$('.wrapper').toggleClass('dropdown--opened');
     });
 		
 		$(document).on('click', '.dropdown--opened', function () {
-      $('.header__user-menu').removeClass('header__user-menu--opened');
+      $('.header__usermenu').removeClass('header__usermenu--opened');
 			$('.wrapper').removeClass('dropdown--opened');
     });
 
