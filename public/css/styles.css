@@ -1447,6 +1447,7 @@ hr {
   width: 100%;
   color: #fff;
   background: #259cb7;
+  margin-bottom: 16px;
 }
 
 .account-action__btn:hover {
