@@ -991,21 +991,37 @@ hr {
   display: flex;
 }
 
-.tags-setup__input-name {
+.tags-setup__input-text {
   -webkit-flex-basis: 164px;
   -ms-flex-preferred-size: 164px;
   flex-basis: 164px;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 18px;
   padding-top: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.tags-setup__input-name span:first-child {
+.tags-setup__input-name {
   font-weight: 700;
 }
 
-.tags-setup__input-name span:last-child {
+.tags-setup__input-alert {
   font-size: 12px;
+}
+
+.tags-setup__input-alert--active {
   color: #db4c2a;
 }
 
@@ -1400,9 +1416,9 @@ hr {
 }
 
 .settings__account-name {
-  -webkit-flex-basis: calc(100% - 104px);
-  -ms-flex-preferred-size: calc(100% - 104px);
-  flex-basis: calc(100% - 104px);
+  -webkit-flex-basis: calc(100% - 72px);
+  -ms-flex-preferred-size: calc(100% - 72px);
+  flex-basis: calc(100% - 72px);
 }
 
 .settings__btn {
@@ -1410,51 +1426,17 @@ hr {
   display: inline-block;
   width: 32px;
   height: 28px;
-  border: 1px solid #cfd2d2;
-}
-
-.settings__btn:after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  transition: all 0.3s ease;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .settings__btn:hover {
   cursor: pointer;
-}
-
-.settings__btn:hover:after {
-  opacity: 0;
-}
-
-.settings__btn-primary {
-  border-right-width: 0;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  background: url("../img/primary.svg") 50% 50% no-repeat transparent;
-  background-size: auto 20px;
-}
-
-.settings__btn-primary--active {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-  border-color: #fff;
-}
-
-.settings__btn-primary--active:after {
-  opacity: 0;
+  opacity: 1;
 }
 
 .settings__btn-remove {
   background: url("../img/remove.svg") 50% 50% no-repeat transparent;
-  background-size: auto 20px;
+  background-size: auto 19px;
 }
 
 .settings__account-action {

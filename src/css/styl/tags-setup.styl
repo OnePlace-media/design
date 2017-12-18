@@ -5,16 +5,23 @@
 .tags-setup__input-wrapper
   display flex
 
-.tags-setup__input-name
+.tags-setup__input-text
   flex-basis 164px
   font-size 14px
-  line-height 17px
+  line-height 18px
   padding-top 2px
-  span:first-child
-    font-weight 700
-  span:last-child
-    font-size 12px
-    color --color-brand
+  display flex
+  flex-direction column
+  justify-content center
+
+.tags-setup__input-name
+  font-weight 700
+    
+.tags-setup__input-alert
+  font-size 12px
+  
+.tags-setup__input-alert--active
+  color --color-brand
 
 .tags-setup__info
   color --color-mgray

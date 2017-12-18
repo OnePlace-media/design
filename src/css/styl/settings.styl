@@ -47,45 +47,21 @@
   background-image url('../img/steem.svg')
 
 .settings__account-name
-  flex-basis calc(100% - 104px)
+  flex-basis calc(100% - 72px)
 
 .settings__btn
   position relative
   display inline-block
   width 32px
   height 28px
-  border 1px solid --color-xlgray
-  &:after
-    display block
-    content ''
-    position absolute
-    top 0
-    left 0
-    right 0
-    bottom 0
-    background --color-default
-    transition all .3s ease
-    opacity .3
+  opacity .8
   &:hover
     cursor pointer
-    &:after
-      opacity 0
-
-.settings__btn-primary
-  border-right-width 0
-  filter grayscale(100%)
-  background url('../img/primary.svg') 50% 50% no-repeat transparent
-  background-size auto 20px
-
-.settings__btn-primary--active
-  filter grayscale(0%)
-  border-color --color-default
-  &:after
-    opacity 0
+    opacity 1
 
 .settings__btn-remove
   background url('../img/remove.svg') 50% 50% no-repeat transparent
-  background-size auto 20px
+  background-size auto 19px
   
 .settings__account-action
   border-top 1px solid --color-xlgray
