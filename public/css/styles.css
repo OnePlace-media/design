@@ -1045,8 +1045,8 @@ hr {
   border: 1px solid #cfd2d2;
   height: 24px;
   font-size: 12px;
-  line-height: 22px;
-  padding: 0 8px;
+  line-height: 21px;
+  padding: 0 8px 1px;
   border-radius: 3px;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -2455,6 +2455,30 @@ hr {
 
 .payout-declined {
   text-decoration: line-through;
+}
+
+.error-block {
+  position: relative;
+  text-align: center;
+  margin: 32px auto;
+  width: 600px;
+  height: 600px;
+}
+
+.error-block--404 {
+  background: url("../img/404.svg") 50% 50% no-repeat transparent;
+}
+
+.error-block__back {
+  display: inline-block;
+  position: absolute;
+  font-size: 15px;
+  bottom: -40px;
+  left: calc(50% - 68px);
+}
+
+.error-block__back:hover {
+  text-decoration: underline;
 }
 
 @font-face {
