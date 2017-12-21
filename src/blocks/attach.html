@@ -15,23 +15,25 @@
     </header>
     <div class="login-form__body">
       <p class="login-form__text">Please attach Steem or Golos account. You can later add more accounts in your profile.</p>
-      <div class="add-blockchain__wrapper">
-        <a class="btn btn--large add-blockchain__btn add-blockchain__btn--golos">golos</a>
-        <a class="btn btn--large add-blockchain__btn add-blockchain__btn--steem">steem</a>
+      <div class="login-form__select-chain">
+        <input class="login-form__radio" id="steem-chain" type="radio" name="chain" checked>
+        <label class="login-form__radio-label" for="steem-chain">Steem</label>
+        <input class="login-form__radio" id="golos-chain" type="radio" name="chain">
+        <label class="login-form__radio-label" for="golos-chain">Golos</label>
       </div>
-      <div class="login-form__wrapper" style="display: none">
+      <div class="login-form__wrapper">
         <div class="login-form__item">
-          <input type="text" class="login-form__input" placeholder="Username" name="username">
+          <input type="text" class="login-form__input" placeholder="Golos username" name="username">
           <div class="login-form__alert">Please enter a valid e-mail address</div>
         </div>
         <div class="login-form__item">
-          <input type="password" class="login-form__input" placeholder="Posting key" name="key">
+          <input type="password" class="login-form__input" placeholder="Golos active key (private)" name="key">
           <div class="login-form__alert">Please enter a valid e-mail address</div>
         </div>
         <p class="login-form__text login-form__text--alert"><em>OnePlace does not store your private keys.</em> Once you sign in with your blockchain account you authorize OnePlace app to vote, post and edit comments on your behalf. You can revoke that authority at any time.</p>
         <button type="submit" class="btn btn--large login-form__btn">Attach blockchain account</button>
+        <a href="#" class="login-form__bottom-link link">Skip this step</a>
       </div>
-      <a href="#" class="login-form__bottom-link link">Skip this step</a>
     </div>
   </div>
 </div>

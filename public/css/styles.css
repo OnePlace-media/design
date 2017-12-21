@@ -56,6 +56,18 @@ body {
   transition: all 0.3s ease;
 }
 
+.btn--large {
+  width: 280px;
+  height: 40px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr {
   margin-top: 0;
   margin-bottom: 0;
@@ -799,17 +811,6 @@ hr {
   margin: 0 0 16px;
 }
 
-.btn--large {
-  width: 280px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-}
-
 .login-form__btn {
   margin: 0 auto 16px;
   background: #cfd2d2;
@@ -823,7 +824,7 @@ hr {
   margin-bottom: 0;
 }
 
-.add-blockchain__wrapper {
+.login-form__select-chain {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -832,50 +833,56 @@ hr {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  font-size: inherit;
+  margin-bottom: 16px;
 }
 
-.add-blockchain__btn {
+.login-form__radio {
+  display: none;
+}
+
+.login-form__radio-label {
   position: relative;
-  width: 160px;
-  height: 48px;
-  line-height: 48px;
-  font-size: 15px;
-  margin: 0 8px 24px;
-  padding-right: 5px;
-  background: #cfd2d2;
-  transition: all 0.3s ease;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 40px;
 }
 
-.add-blockchain__btn:before {
+.login-form__radio-label:before {
+  content: '';
   display: inline-block;
+  height: 20px;
+  width: 20px;
   position: relative;
   top: 3px;
+  border-radius: 50%;
+  border: 1px solid #818888;
+  margin: 0 24px 0 0;
+}
+
+.login-form__radio-label:after {
   content: '';
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
-  -webkit-filter: grayscale(30%);
-  filter: grayscale(30%);
+  display: block;
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  left: 6px;
+  top: 9px;
+  border-radius: 50%;
+  background: #fff;
   transition: all 0.3s ease;
 }
 
-.add-blockchain__btn:hover {
-  background: #f2f2f2;
+.login-form__radio-label:hover:before {
+  border-color: #383838;
 }
 
-.add-blockchain__btn:hover:before {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+.login-form__radio:checked+.login-form__radio-label:before {
+  border-color: #383838;
 }
 
-.add-blockchain__btn--golos:before {
-  background: url("../img/golos.svg") 50% 50% no-repeat transparent;
-  background-size: cover;
-}
-
-.add-blockchain__btn--steem:before {
-  background: url("../img/steem.svg") 50% 50% no-repeat transparent;
-  background-size: cover;
+.login-form__radio:checked+.login-form__radio-label:after {
+  background: #383838;
 }
 
 .login-form__bottom-link {
@@ -1044,9 +1051,9 @@ hr {
   background: #cfd2d2;
   border: 1px solid #cfd2d2;
   height: 24px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 21px;
-  padding: 0 8px 1px;
+  padding: 0 8px;
   border-radius: 3px;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -1362,7 +1369,6 @@ hr {
 .settings__accounts {
   width: 312px;
   margin-right: 16px;
-  background: #fff;
 }
 
 .settings__tags {
@@ -1370,12 +1376,19 @@ hr {
 }
 
 .settings__block-body {
-  padding: 32px 24px;
+  padding: 24px;
   background: #fff;
 }
 
 .settings__accounts--active .btn-expand {
   display: none;
+}
+
+.settings__no-accounts {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .settings__accounts-list {
@@ -1457,6 +1470,14 @@ hr {
   background: #2ab1cf;
 }
 
+.settings__select-chain {
+  font-size: 14px;
+}
+
+.login-form__text--settings {
+  font-size: 14px;
+}
+
 .settings__tags-panel-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1470,6 +1491,7 @@ hr {
 }
 
 .settings__tags-panel {
+  position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
@@ -1513,8 +1535,9 @@ hr {
 
 .btn-expand {
   display: block;
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 8px;
+  left: calc(50% - 28px);
   width: 55px;
   height: 55px;
   border: 1px solid #cfd2d2;
@@ -1543,6 +1566,13 @@ hr {
 
 .btn-expand:hover:before,.btn-expand:hover:after {
   background: #a8adad;
+}
+
+.btn-expand--accounts {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  margin: 0 auto 8px;
 }
 
 .settings__tags-setup {
