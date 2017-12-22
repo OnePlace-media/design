@@ -20,11 +20,11 @@
       </div>
       <div class="settings__account-action">
       <p class="login-form__text login-form__text--settings">Please attach your Steem or Golos account:</p>
-      <div class="settings__select-chain">
-        <input type="radio" name="steem" checked>
-        <label for="steem">Steem</label>
-        <input type="radio" name="golos">
-        <label for="golos">Golos</label>
+      <div class="login-form__select-chain">
+        <input class="login-form__radio" id="steem-chain" type="radio" name="chain" checked>
+        <label class="login-form__radio-label login-form__radio-label--settings" for="steem-chain">Steem</label>
+        <input class="login-form__radio" id="golos-chain" type="radio" name="chain">
+        <label class="login-form__radio-label login-form__radio-label--settings" for="golos-chain">Golos</label>
       </div>
       <div class="login-form__wrapper">
         <div class="login-form__item">
@@ -77,7 +77,8 @@
             </div>
             <input type="text" class="login-form__input" placeholder="Type tags here" name="tags">
           </div>
-          <div class="tags-setup__info">Add a topic by typing in the field above or by clicking on one of the popular tags. Tags are displayed in the same order in your feed.</div>
+          <div class="tags-setup__info">Add a topic by typing in the field above and pressing "enter". Tags will be displayed in the same order in your feed.</div>
+          <a href="#" class="settings__clear-tags-btn">Clear all Steem tags<span class="settings__approve-btn">Approve</span></a>
         </div>
       </div>
 

@@ -267,8 +267,8 @@ hr {
 .header__user-switch {
   position: absolute;
   z-index: 10;
-  bottom: 0;
-  left: 0;
+  bottom: -3px;
+  left: -3px;
   width: 19px;
   height: 19px;
   border: 1px solid #cfd2d2;
@@ -843,8 +843,8 @@ hr {
 
 .login-form__radio-label {
   position: relative;
-  font-size: 18px;
   cursor: pointer;
+  font-size: 15px;
   margin: 0 40px;
 }
 
@@ -854,10 +854,10 @@ hr {
   height: 20px;
   width: 20px;
   position: relative;
-  top: 3px;
+  top: 4px;
   border-radius: 50%;
   border: 1px solid #818888;
-  margin: 0 24px 0 0;
+  margin-right: 16px;
 }
 
 .login-form__radio-label:after {
@@ -867,7 +867,7 @@ hr {
   width: 8px;
   position: absolute;
   left: 6px;
-  top: 9px;
+  top: 10px;
   border-radius: 50%;
   background: #fff;
   transition: all 0.3s ease;
@@ -875,6 +875,14 @@ hr {
 
 .login-form__radio-label:hover:before {
   border-color: #383838;
+}
+
+.login-form__radio-label--settings {
+  margin: 0 16px;
+}
+
+.login-form__radio-label--settings:before {
+  margin-right: 8px;
 }
 
 .login-form__radio:checked+.login-form__radio-label:before {
@@ -1576,10 +1584,58 @@ hr {
 }
 
 .settings__tags-setup {
+  position: relative;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   padding-top: 24px;
+}
+
+.settings__clear-tags-btn {
+  display: block;
+  padding: 0;
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  font-size: 12px;
+  color: #259cb7;
+  text-decoration: none;
+}
+
+.settings__clear-tags-btn:hover {
+  color: #2ab1cf;
+}
+
+.settings__approve-btn {
+  display: block;
+  position: absolute;
+  bottom: -60px;
+  right: -24px;
+  padding: 8px 8px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.settings__approve-btn:before,.settings__approve-btn:after {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 32px;
+  top: -16px;
+  border: 8px solid transparent;
+}
+
+.settings__approve-btn:before {
+  width: 16px;
+  height: 16px;
+  border-bottom-color: #818888;
+}
+
+.settings__approve-btn:after {
+  width: 15px;
+  height: 15px;
+  border-bottom-color: #fff;
 }
 
 .tag-block__header {
