@@ -153,20 +153,31 @@
   padding-left 36px
   background url("../img/reply.svg") 0 50% no-repeat transparent
   
-.post-view__author
+.post-view__bottom-block
   width 100%
   min-height 130px
   display flex
   position relative
-  padding 30px 0
+  padding 32px 0
   border-top 1px solid --color-bg
   border-bottom 1px solid --color-bg
+  
+.post-view__block-title
+  margin-bottom 16px
 
+.post-view__author-wrapper
+  flex-basis 2
+  padding-right 8px
+
+.post-view__block-wrapper
+  flex-basis 1
+  padding-left 8px  
+  
 .post-view__avatar-wrapper
-  absolute(0,auto,auto,0)
-  width 70px
-  height 70px
-  margin 30px 0
+  absolute(74px,auto,auto,0)
+  width 56px
+  height 56px
+  margin 0 0 32px
   
 .post-view__author-avatar
   absolute()
@@ -187,7 +198,7 @@
   border-radius 50%
   
 .post-view__author-info
-  margin-left 90px
+  margin-left 72px
   align-self center
   
 .author-info
@@ -220,7 +231,6 @@
   margin-left 62px
   margin-bottom 5px
   color --color-lgray
-  font-weight 700
   
 .comment__body
   margin-left 62px
@@ -389,7 +399,7 @@
       display block
   .post-view__bottom-info
     flex-direction column-reverse
-  .post-view__author
+  .post-view__bottom-block
     padding 15px 0
     min-height 90px
   .post-view__avatar-wrapper

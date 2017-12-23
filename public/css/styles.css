@@ -2076,7 +2076,7 @@ hr {
   background: url("../img/reply.svg") 0 50% no-repeat transparent;
 }
 
-.post-view__author {
+.post-view__bottom-block {
   width: 100%;
   min-height: 130px;
   display: -webkit-box;
@@ -2084,20 +2084,38 @@ hr {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 30px 0;
+  padding: 32px 0;
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
 }
 
+.post-view__block-title {
+  margin-bottom: 16px;
+}
+
+.post-view__author-wrapper {
+  -webkit-flex-basis: 2;
+  -ms-flex-preferred-size: 2;
+  flex-basis: 2;
+  padding-right: 8px;
+}
+
+.post-view__block-wrapper {
+  -webkit-flex-basis: 1;
+  -ms-flex-preferred-size: 1;
+  flex-basis: 1;
+  padding-left: 8px;
+}
+
 .post-view__avatar-wrapper {
   position: absolute;
-  top: 0;
+  top: 74px;
   right: auto;
   bottom: auto;
   left: 0;
-  width: 70px;
-  height: 70px;
-  margin: 30px 0;
+  width: 56px;
+  height: 56px;
+  margin: 0 0 32px;
 }
 
 .post-view__author-avatar {
@@ -2129,7 +2147,7 @@ hr {
 }
 
 .post-view__author-info {
-  margin-left: 90px;
+  margin-left: 72px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -2173,7 +2191,6 @@ hr {
   margin-left: 62px;
   margin-bottom: 5px;
   color: #a8adad;
-  font-weight: 700;
 }
 
 .comment__body {
@@ -2883,7 +2900,7 @@ hr {
     flex-direction: column-reverse;
   }
 
-  .post-view__author {
+  .post-view__bottom-block {
     padding: 15px 0;
     min-height: 90px;
   }
