@@ -30,15 +30,24 @@
   
 .post-view__back
   display none
-  
-.post-view__post-wrapper
+
+.post-view__modal
   background #fff
-  position relative
   width 980px
   margin 20px auto
-  padding 50px 70px 60px
   box-shadow 0 0 10px rgba(0,0,0,0.4)
   z-index 100
+  
+.post-view__post-wrapper
+  position relative
+  width 100%
+  padding 50px 70px 0
+  
+.post-view__comments-wrapper
+  background --color-bg
+  position relative
+  width 100%
+  padding 30px 70px 60px
 
 .post-view__close-post
   fixed(20px,auto,auto,calc(50%+500px))
@@ -80,13 +89,14 @@
   justify-content space-between
   width 100%
 
-.post-view__top-info
+.post-view__post-info--top
   height 50px
   padding 11px 0
   
-.post-view__bottom-info
-  font-size 0.9375em
-  margin-bottom 1rem
+.post-view__post-info--bottom
+  font-size 15px
+  margin-bottom 16px
+  justify-content flex-end
   
 .post-view__post-avatar  
   absolute(0,auto,auto,0)
@@ -119,59 +129,73 @@
   color --color-lgray
   
 .post-view__post-body
-  margin-bottom 4rem
-  
-.post-view__tags-list
-  padding-left 0
-  list-style none
-  
-.post-view__tag
-  display inline-block
-  background --color-bg
-  color --color-dgray
-  padding 0 10px 3px
-  border-radius 3px
-  margin-right 10px
-  margin-top 10px
+  margin-bottom 40px
   
 .post-view__post-data
-  font-weight 700
-  color --color-lgray
+  color --color-mgray
   white-space nowrap
   align-self flex-end
-  height 1.5rem
-  margin-left 20px
+  height 20px
+  
+.comment__post-data
+  display flex
+  justify-content flex-end
+  height 18px
+  
+.post-view__post-data-item
+  margin-left 32px
 
 .post-view__post-value
   font-family --font-currency
-  margin-right 0
+  font-weight 700
+  font-size large
+  margin-right 8px
+  
+.post-view__post-reply,.post-view__post-like
+  margin-right 8px
+  
+.post-view__post-like--active
+  .post-view__icon-like
+    fill --color-brand !important
+
+.post-view__icon
+  width 20px
+  height 20px
+  transition all .3s ease
+  fill --color-lgray
+  &:hover
+    cursor pointer
+    fill --color-mgray
     
-.post-view__post-replies
-  margin-left 20px
-  display inline-block
-  line-height 1.5rem
-  padding-left 36px
-  background url("../img/reply.svg") 0 50% no-repeat transparent
+.post-view__icon-like
+  position relative
+  top 1px
+  
+.post-view__icon-comment
+  position relative
+  top 6px
+  fill --color-lgray
+  &:hover
+    cursor pointer
+    fill --color-mgray
   
 .post-view__bottom-block
   width 100%
-  min-height 130px
+  min-height 164px
   display flex
   position relative
   padding 32px 0
   border-top 1px solid --color-bg
-  border-bottom 1px solid --color-bg
   
 .post-view__block-title
   margin-bottom 16px
 
 .post-view__author-wrapper
-  flex-basis 2
-  padding-right 8px
+  width 60%
+  padding-right 24px
 
-.post-view__block-wrapper
-  flex-basis 1
-  padding-left 8px  
+.post-view__tags-wrapper
+  width 40% 
   
 .post-view__avatar-wrapper
   absolute(74px,auto,auto,0)
@@ -205,9 +229,8 @@
   font-size 14px
   color --color-lgray
 
-.post-view__comments
-  padding 30px 0 0
-  font-size 14px
+.post-view__comments-title
+  margin-bottom 16px
 
 .comments__spinner
   height 100px
@@ -215,17 +238,26 @@
   text-align center
   
 .comment__replies
-  margin-left 62px
-  margin-bottom 2rem
-  margin-top 2rem
+  margin-left 32px
+  margin-bottom 8px
+  margin-top 8px
   
-.comment__wrapper
+.post-view__thread-wrapper
   position relative
   width 100%
   height auto
-  margin-bottom 2rem
+  margin-bottom 8px
   &:last-child
     margin-bottom 0
+    
+.comment
+  background --color-default
+  border-radius 1px
+  padding 16px
+  font-size 14px
+  
+.comment__wrapper
+  position relative
   
 .comment__header
   margin-left 62px
@@ -348,16 +380,20 @@
     max-height 400px
     
 @media screen and (max-width: 1060px)
-  .post-view__post-wrapper
+  .post-view__modal
     width 900px
-    padding 50px 50px 60px
+  .post-view__post-wrapper
+    padding 50px 50px 0
+  .post-view__comments-wrapper
+    padding 30px 50px 60px
     
 @media screen and (max-width: 980px)
-  .post-view__post-wrapper
+  .post-view__modal
     width 100%
     margin 0
     box-shadow none
-    padding 70px 50px 60px
+  .post-view__post-wrapper
+    padding 70px 50px 0
   .post-view__top-bar
     fixed(0,0,auto,0)
     background #fff
@@ -378,14 +414,14 @@
   
 @media screen and (max-width: 760px)
   .post-view__post-wrapper
-    padding 70px 30px 60px
+    padding 70px 30px 0
   
 @media screen and (max-width: 450px)
   .post-view__post-wrapper
-    padding 60px 15px 60px
+    padding 60px 15px 0
   .post-view__top-bar
     padding 14px 15px 0
-  .post-view__top-info
+  .post-view__post-info--top
     height 36px
     padding 0
     line-height 1
@@ -397,7 +433,7 @@
     margin-left 44px
     br
       display block
-  .post-view__bottom-info
+  .post-view__post-info--bottom
     flex-direction column-reverse
   .post-view__bottom-block
     padding 15px 0
@@ -409,8 +445,6 @@
   .post-view__author-info
     margin-left 75px
   .author-info
-    font-size 13px
-  .post-view__comments
     font-size 13px
   .comment__header,.comment__body
     margin-left 50px
