@@ -113,14 +113,13 @@
     
 .post-view__post-author-rep
   display inline-block
-  color --color-lgray
+  color --color-dgray
   font-size 11px
   text-align center
   line-height 18px
   height 20px
   padding 0px 4px
   margin-left 4px
-  color --color-mgray
   border 1px solid --color-lgray
   border-radius 3px
     
@@ -173,7 +172,11 @@
     background --color-bg-lite
     .post-view__icon
       fill --color-mgray
-  
+      
+.post-view__post-flag--active
+  .post-view__icon
+    fill --color-brand !important
+      
 .post-view__post-body
   margin-bottom 40px
   
@@ -188,6 +191,7 @@
   justify-content flex-end
   height 18px
   color --color-mgray
+  font-size 14px
   
 .post-view__post-data-item
   line-height 20px
@@ -198,6 +202,8 @@
   font-weight 700
   font-size large
   margin-right 8px
+  position relative
+  top 1px
   
 .post-view__post-reply,.post-view__post-like
   margin-right 8px
@@ -278,7 +284,7 @@
   font-size 12px
   text-align center
   z-index 40
-  color --color-mgray
+  color --color-dgray
   background --color-default
   border 1px solid --color-lgray
   border-radius 3px
@@ -292,44 +298,70 @@
   color --color-lgray
 
 .post-view__reply-block
+  display flex
+  flex-direction column
   transition all .3s ease
-  margin-bottom 48px
+  padding-top 8px
+  margin-bottom 24px
   
 .post-view__post-reply-input
   display block
+  height 80px
   width 100%
   min-width 100%
-  height 48px
-  resize none
-  padding 10px 16px
-  font 18px --font-base
+  resize vertical
+  padding 8px 16px
+  font 15px --font-base
   border 1px solid --color-xlgray
   margin-bottom 8px
-
-.post-view__post-reply-input:focus
+  box-shadow none
+  
+.post-view__post-reply-input--special
   height 80px
-  font-size 15px
-  padding 8px 16px
-  resize vertical
-  &+.post-view__post-btn
-    display block
+  &:invalid
+    height 48px
+    resize none
+    padding 10px 16px
+    font 18px --font-base
+    &+.post-view__post-btn-group
+      display none
+  &:focus
+    height 80px
+    resize vertical
+    padding 8px 16px
+    font-size 15px
+    &+.post-view__post-btn-group
+      display block
     
 .post-view__post-reply-input:valid
-  height 80px
-  font-size 15px
-  padding 8px 16px
-  resize vertical
-  &+.post-view__post-btn
-    display block
-    background --color-brand
-    &:hover
-      background --color-brand-hover
+  &+.post-view__post-btn-group
+    .post-view__post-btn
+      background --color-brand
+      &:hover
+        background --color-brand-hover
+  
+.post-view__post-btn-group
+  margin-bottom 16px
   
 .post-view__post-btn
-  display none
-  float right
+  display inline-block
   width 160px
   color --color-default
+  
+.post-view__post-btn-link
+  display inline-block
+  font-size 15px
+  margin-left 32px
+  color --color-dgray
+  text-decoration none
+  &:hover
+    text-decoration underline
+  
+.post-view__preview-title
+  margin-bottom 8px
+  
+.post-view__reply-preview
+  display block
 
 .post-view__comments-title
   margin-bottom 16px
@@ -356,28 +388,30 @@
   background --color-default
   border-radius 1px
   padding 16px
-  font-size 14px
+  margin-bottom 8px
   
 .comment__wrapper
   position relative
   
 .comment__header
+  font-size 15px
   margin-left 62px
   margin-bottom 5px
   color --color-lgray
   
 .comment__body
   margin-left 62px
+  margin-bottom 8px
   
 .markdown
-  line-height 1.625
+  line-height 1.6
   overflow hidden
   word-wrap break-word
   ul,ol
     padding-left 0
     margin-left 2rem
     margin-bottom 1rem
-    line-height 1.625
+    line-height 1.6
   h1
     font-size 1.6em
     margin 2rem 0 1rem
@@ -398,7 +432,7 @@
     margin 0.75rem 0 0.5rem
   p
     font 1em --font-base
-    line-height 1.625
+    line-height 1.6
     margin-bottom 1rem
   strong, b
     font-weight 700
@@ -417,10 +451,10 @@
     height auto
     max-height none
   blockquote
+    color --color-mgray
     margin 0 0 1rem
     padding 0 1.5rem
-    border-left 4px solid --color-brand
-    
+    border-left 4px solid --color-xlgray
   pre>code
     display block
     padding .5rem .75rem .75rem
@@ -477,13 +511,16 @@
     margin-bottom 0
   
 .markdown--small
+  font-size 15px
   img
     max-width 400px
     max-height 400px
     
-@media screen and (max-width: 1060px)
+@media screen and (max-width: 1130px)
   .post-view__modal
     width 900px
+  .post-view__close-post
+    left calc(50% + 452px)
   .post-view__post-wrapper
     padding 50px 50px 0
   .post-view__comments-wrapper

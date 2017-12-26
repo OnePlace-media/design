@@ -18,7 +18,7 @@
               <span class="post-view__post-posted">59 minutes ago</span>
             </div>
             <span class="post-view__action-menu-btn">&bull; &bull; &bull;</span>
-            <div class="post-view__action-menu"><span class="post-view__post-flag"><svg class="post-view__icon post-view__icon-flag"><use xlink:href="img/icons-sprite.svg#flag"></use></svg>Downvote post</span></div>
+            <div class="post-view__action-menu"><span class="post-view__post-flag post-view__post-flag--active"><svg class="post-view__icon post-view__icon-flag"><use xlink:href="img/icons-sprite.svg#flag"></use></svg><span>Downvote post</span><span style="display:none;">Remove flag</span></span></div>
           </div>    
 
           <header class="post-view__post-heading">
@@ -97,8 +97,8 @@
           <div class="post-view__post-info post-view__post-info--bottom">
             <div class="post-view__post-data">
               <span class="post-view__post-data-item"><span class="post-view__post-value">$</span>4120.61</span>
-              <span class="post-view__post-data-item"><span class="post-view__post-like post-view__post-like--active"><svg class="post-view__icon post-view__icon-like"><use xlink:href="img/icons-sprite.svg#like"></use></svg></span>43</span>
-              <span class="post-view__post-data-item"><span class="post-view__post-reply"><svg class="post-view__icon post-view__icon-comment"><use xlink:href="img/icons-sprite.svg#comment"></use></svg></span>227</span>
+              <span class="post-view__post-data-item"><a class="post-view__post-like post-view__post-like--active" title="Like"><svg class="post-view__icon post-view__icon-like"><use xlink:href="img/icons-sprite.svg#like"></use></svg></a>43</span>
+              <span class="post-view__post-data-item"><a class="post-view__post-reply" title="Reply"><svg class="post-view__icon post-view__icon-comment"><use xlink:href="img/icons-sprite.svg#comment"></use></svg></a>227</span>
             </div>
           </div>
           
@@ -131,13 +131,17 @@
       </div>
       <div class="post-view__comments-wrapper">
         <div class="post-view__reply-block">
-          <textarea name="post-reply" class="post-view__post-reply-input input" placeholder="Leave a comment" required></textarea>
-          <button class="btn btn--large post-view__post-btn">Post</button>
+          <textarea name="post-reply" class="post-view__post-reply-input post-view__post-reply-input--special input" placeholder="Leave a comment..." required></textarea>
+          <div class="post-view__post-btn-group"><button class="btn btn--large post-view__post-btn">Post</button><a href="#" class="post-view__post-btn-link">Cancel</a></div>
+          <h4 class="h4 post-view__preview-title">Preview</h4>
+          <div class="post-view__reply-preview markdown markdown--small"><p>Wow! This is so really interesting and important post. Thank you so much for sharing! I am resteemed and following you.</p></div>
         </div>
         <h2 class="h2 post-view__comments-title">Comments</h2>
         <div class="comments__spinner" style="display:none;"><img src="img/spinner.gif" alt=""></div>
         <section class="post-view__comments">
+         
           <div class="post-view__thread-wrapper">
+           
             <div class="comment">
               <div class="comment__wrapper">
                 <div class="post-view__post-avatar avatar" style="background-image: url(' img/avatar.svg');"></div>
@@ -145,13 +149,15 @@
                 <div class="comment__body markdown markdown--small">Looks great so far! Have you run into any non-canonical errors while broadcasting transactions? It looks like you're using the graphene method of verifying signatures.</div>
                 <div class="comment__post-data">
                   <span class="post-view__post-data-item"><span class="post-view__post-value">$</span>1.09</span>
-                  <span class="post-view__post-data-item"><span class="post-view__post-like post-view__post-like--active"><svg class="post-view__icon post-view__icon--small post-view__icon-like"><use xlink:href="img/icons-sprite.svg#like"></use></svg></span>3</span>
-                  <span class="post-view__post-data-item"><span class="post-view__post-like"><svg class="post-view__icon post-view__icon--small post-view__icon-dislike" title="dislike"><use xlink:href="img/icons-sprite.svg#like"></use></svg></span>1</span>
-                  <a href="#" class="post-view__post-data-item link">Reply</a>
+                  <span class="post-view__post-data-item"><a class="post-view__post-like post-view__post-like--active" title="Like"><svg class="post-view__icon post-view__icon--small post-view__icon-like"><use xlink:href="img/icons-sprite.svg#like"></use></svg></a>3</span>
+                  <span class="post-view__post-data-item"><a class="post-view__post-like" title="Dislike"><svg class="post-view__icon post-view__icon--small post-view__icon-dislike"><use xlink:href="img/icons-sprite.svg#like"></use></svg></a>1</span>
+                  <a href="#" class="post-view__post-data-item link" title="Reply">Reply</a>
                 </div>
               </div>
             </div>
+            
             <div class="comment__replies">
+             
               <div class="post-view__thread-wrapper">
                 <div class="comment"><div class="comment__wrapper">
                   <div class="post-view__post-avatar avatar" style="background-image: url(' img/avatar.svg');"></div>
@@ -162,10 +168,27 @@
                     </p>
                     <p>Yes I did ... for hours. I tried several methods and checked a bunch of other apis and so far the graphenj implementation was the only one which is working.</p>
                     <p>If you start implementing this I can give you one advice: The error messages returned from the node are not always accurate. For example it returned "Missing posting authority" while the root cause was a missing timezone :/</p>
-                  </div></div>
+                  </div>
+                <div class="comment__post-data">
+                  <span class="post-view__post-data-item"><span class="post-view__post-value">$</span>1.09</span>
+                  <span class="post-view__post-data-item"><a class="post-view__post-like post-view__post-like--active" title="Like"><svg class="post-view__icon post-view__icon--small post-view__icon-like"><use xlink:href="img/icons-sprite.svg#like"></use></svg></a>3</span>
+                  <span class="post-view__post-data-item"><a class="post-view__post-like" title="Dislike"><svg class="post-view__icon post-view__icon--small post-view__icon-dislike"><use xlink:href="img/icons-sprite.svg#like"></use></svg></a>1</span>
+                  <a href="#" class="post-view__post-data-item link" title="Reply">Reply</a>
                 </div>
+                  </div>
+                </div>
+                
+                <div class="post-view__reply-block">
+                  <textarea name="post-reply" class="post-view__post-reply-input input" placeholder="Leave a comment..." required></textarea>
+                  <div class="post-view__post-btn-group"><button class="btn btn--large post-view__post-btn">Post</button><a href="#" class="post-view__post-btn-link">Cancel</a></div>
+                  <h4 class="h4 post-view__preview-title">Preview</h4>
+                  <div class="post-view__reply-preview markdown markdown--small"><p>Wow! This is so really interesting and important post. Thank you so much for sharing! I am resteemed and following you.</p></div>
+                </div>
+                
               </div>
+              
             </div>
+            
           </div>
 
           <div class="post-view__thread-wrapper">
