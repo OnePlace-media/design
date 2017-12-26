@@ -3247,3 +3247,14 @@ hr {
     padding-top: 30px;
   }
 }
+
+@media screen and (max-height: 800px) {
+  .error-block {
+    width: 70vh;
+    height: 70vh;
+  }
+
+  .error-block__back {
+    bottom: -32px;
+  }
+}

@@ -94,6 +94,9 @@ absolute(t = 0, r = 0, b = 0, l = 0)
   margin 32px auto
   width 600px
   height 600px
+  @media screen and (max-height: 800px)
+    width 70vh
+    height 70vh
 
 .error-block--404
   background url('../img/404.svg') 50% 50% no-repeat transparent
@@ -106,6 +109,8 @@ absolute(t = 0, r = 0, b = 0, l = 0)
   left calc(50% - 68px)
   &:hover
     text-decoration underline
+  @media screen and (max-height: 800px)
+    bottom -32px
     
 
 
