@@ -7,21 +7,6 @@
   background #fff
   border-bottom 1px solid --color-bg
   z-index 20
-  transform translateY(0)
-
-//.header-visible, .header-hidden
-//	position fixed
-//	top -60px
-//	left 0
-//	z-index 20
-//	height 60px
-//	padding 11px 0
-//	border-bottom 1px solid --color-bg
-//	transform translateY(60px)
-//	transition transform .3s ease-out
-
-.header-hidden
-  transform translateY(0)
 
 .header__wrapper
   position relative
@@ -173,6 +158,7 @@
   display none
   position absolute
   left 95%
+  right auto
   top 10px
   min-width 160px
   width max-content
@@ -181,6 +167,9 @@
   border-radius 1px
   background --color-default
   box-shadow 0 0 10px rgba(0,0,0,0.2)
+  @media screen and (max-width: 1360px)
+    left auto
+    right 95%
   
 .header__submenu-item
   display flex

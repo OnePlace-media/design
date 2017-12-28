@@ -39,6 +39,7 @@
   z-index 100
   
 .post-view__post-wrapper
+  background --color-default
   position relative
   width 100%
   padding 50px 70px 0
@@ -114,6 +115,7 @@
 .post-view__post-author-rep
   display inline-block
   color --color-dgray
+  background --color-default
   font-size 11px
   text-align center
   line-height 18px
@@ -209,7 +211,7 @@
   margin-right 8px
   
 .post-view__post-like--active
-  .post-view__icon-like
+  .post-view__icon-like,.post-view__icon-dislike
     fill --color-brand !important
 
 .post-view__icon
@@ -283,7 +285,7 @@
   padding 1px 4px
   font-size 12px
   text-align center
-  z-index 40
+  z-index 10
   color --color-dgray
   background --color-default
   border 1px solid --color-lgray

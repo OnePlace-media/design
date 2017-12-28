@@ -36,7 +36,7 @@ input,textarea,select,button {
 
 .wrapper {
   position: relative;
-  background: #f2f2f2;
+  background: #f3f3f3;
 }
 
 .main-content {
@@ -158,15 +158,8 @@ hr {
   width: 100%;
   padding: 10px 0;
   background: #fff;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f3f3f3;
   z-index: 20;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.header-hidden {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
 }
 
 .header__wrapper {
@@ -218,8 +211,8 @@ hr {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  background: #f2f2f2;
-  border: 1px solid #f2f2f2;
+  background: #f3f3f3;
+  border: 1px solid #f3f3f3;
   border-radius: 3px;
 }
 
@@ -366,7 +359,7 @@ hr {
 }
 
 .header__usermenu-item--hr {
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #f3f3f3;
 }
 
 .header__usermenu-item--submenu {
@@ -389,6 +382,7 @@ hr {
   display: none;
   position: absolute;
   left: 95%;
+  right: auto;
   top: 10px;
   min-width: 160px;
   width: -webkit-max-content;
@@ -568,7 +562,7 @@ hr {
   bottom: 0;
   right: 0;
   width: 20px;
-  background: #f2f2f2;
+  background: #f3f3f3;
   cursor: pointer;
 }
 
@@ -1029,7 +1023,7 @@ hr {
   height: 20px;
   top: -9px;
   left: calc(50% - 11px);
-  background: #f2f2f2;
+  background: #f3f3f3;
   border: 1px solid #383838;
 }
 
@@ -1038,7 +1032,7 @@ hr {
   height: 8px;
   top: -3px;
   left: calc(50% - 5px);
-  background: #f2f2f2;
+  background: #f3f3f3;
 }
 
 .register__step--done:after {
@@ -1472,7 +1466,7 @@ hr {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .settings__account-chain {
@@ -1501,22 +1495,27 @@ hr {
   flex-basis: calc(100% - 72px);
 }
 
-.settings__btn {
+.settings__remove-btn {
   position: relative;
   display: inline-block;
-  width: 32px;
-  height: 28px;
-  opacity: 0.8;
+  width: 20px;
+  height: 20px;
 }
 
-.settings__btn:hover {
+.settings__remove-btn:hover {
   cursor: pointer;
-  opacity: 1;
 }
 
-.settings__btn-remove {
-  background: url("../img/remove.svg") 50% 50% no-repeat transparent;
-  background-size: auto 19px;
+.settings__icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+  fill: #a8adad;
+}
+
+.settings__icon:hover {
+  cursor: pointer;
+  fill: #818888;
 }
 
 .settings__account-action {
@@ -1756,7 +1755,7 @@ hr {
 
 .tag-block__recent-post {
   margin-bottom: 15px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 .tag-block__recent-post:last-child {
@@ -1768,7 +1767,7 @@ hr {
   background-size: cover !important;
   display: block;
   position: relative;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 .tag-block__primary-post-image {
@@ -1844,7 +1843,7 @@ hr {
   bottom: auto;
   left: 15px;
   height: 1px;
-  background: #f2f2f2;
+  background: #f3f3f3;
 }
 
 .tag-block__recent-post-other {
@@ -1974,13 +1973,14 @@ hr {
 }
 
 .post-view__post-wrapper {
+  background: #fff;
   position: relative;
   width: 100%;
   padding: 50px 70px 0;
 }
 
 .post-view__comments-wrapper {
-  background: #f2f2f2;
+  background: #f3f3f3;
   position: relative;
   width: 100%;
   padding: 40px 70px 60px;
@@ -2092,6 +2092,7 @@ hr {
 .post-view__post-author-rep {
   display: inline-block;
   color: #383838;
+  background: #fff;
   font-size: 11px;
   text-align: center;
   line-height: 18px;
@@ -2217,7 +2218,7 @@ hr {
   margin-right: 8px;
 }
 
-.post-view__post-like--active .post-view__icon-like {
+.post-view__post-like--active .post-view__icon-like,.post-view__post-like--active .post-view__icon-dislike {
   fill: #db4c2a !important;
 }
 
@@ -2278,7 +2279,7 @@ hr {
   display: flex;
   position: relative;
   padding: 32px 0;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #f3f3f3;
 }
 
 .post-view__block-title {
@@ -2324,7 +2325,7 @@ hr {
   padding: 1px 4px;
   font-size: 12px;
   text-align: center;
-  z-index: 40;
+  z-index: 10;
   color: #383838;
   background: #fff;
   border: 1px solid #a8adad;
@@ -2579,7 +2580,7 @@ hr {
   font-weight: 400;
   border-radius: 3px;
   padding: 0 0.5rem;
-  background: #f2f2f2;
+  background: #f3f3f3;
 }
 
 .markdown table {
@@ -2591,11 +2592,11 @@ hr {
 }
 
 .markdown table tfoot,.markdown table thead {
-  background: #f2f2f2;
+  background: #f3f3f3;
 }
 
 .markdown table tbody,.markdown table tfoot,.markdown table thead {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #f3f3f3;
 }
 
 .markdown table tbody th,.markdown table tfoot th,.markdown table thead th {
@@ -2603,7 +2604,7 @@ hr {
 }
 
 .markdown table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f3f3f3;
 }
 
 .markdown table th,.markdown table td {
@@ -2667,6 +2668,11 @@ hr {
   max-height: 400px;
 }
 
+.post-page__wrapper {
+  margin-top: 11px;
+  background: linear-gradient(to bottom, #f3f3f3, #f3f3f3 48px, #fff 48px);
+}
+
 .guides-wrapper {
   min-height: 100vh;
 }
@@ -2683,7 +2689,7 @@ hr {
 .guides-block {
   width: 100%;
   padding: 48px 32px;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #f3f3f3;
 }
 
 .guides-block__title {
@@ -2751,7 +2757,7 @@ hr {
 }
 
 .color-bg {
-  background: #f2f2f2;
+  background: #f3f3f3;
 }
 
 .color-bg-lite {
@@ -2760,7 +2766,7 @@ hr {
 
 .color-default {
   background: #fff;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #f3f3f3;
 }
 
 .guides__item-name {
@@ -2897,6 +2903,13 @@ hr {
   }
 }
 
+@media screen and (max-width: 1360px) {
+  .header__submenu {
+    left: auto;
+    right: 95%;
+  }
+}
+
 @media screen and (max-width: 1320px) {
   .sidebar__nav-link {
     padding: 5px 30px 6px;
@@ -2995,7 +3008,7 @@ hr {
     bottom: auto;
     left: 0;
     background: #fff;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f3f3f3;
     z-index: 50;
   }
 
@@ -3061,7 +3074,7 @@ hr {
     text-align: left;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f3f3f3;
   }
 
   .footer__lang {
@@ -3116,7 +3129,7 @@ hr {
     margin-right: 8px;
     width: 39px;
     height: 39px;
-    background-color: #f2f2f2;
+    background-color: #f3f3f3;
   }
 
   .image--mobile {

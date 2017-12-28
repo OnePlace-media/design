@@ -32,7 +32,7 @@
   display flex
   font-size 14px
   align-items center
-  margin-bottom 8px
+  margin-bottom 12px
 
 .settings__account-chain
   display inline-block
@@ -53,19 +53,22 @@
 .settings__account-name
   flex-basis calc(100% - 72px)
 
-.settings__btn
+.settings__remove-btn
   position relative
   display inline-block
-  width 32px
-  height 28px
-  opacity .8
+  width 20px
+  height 20px
   &:hover
     cursor pointer
-    opacity 1
-
-.settings__btn-remove
-  background url('../img/remove.svg') 50% 50% no-repeat transparent
-  background-size auto 19px
+    
+.settings__icon
+  width 20px
+  height 20px
+  transition all .3s ease
+  fill --color-lgray
+  &:hover
+    cursor pointer
+    fill --color-mgray
   
 .settings__account-action
   border-top 1px solid --color-xlgray
