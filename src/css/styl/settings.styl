@@ -126,7 +126,7 @@
   display block
   position absolute
   bottom 8px
-  left calc(50% - 28px)
+  left calc(50% - 16px)
   width 55px
   height 55px
   border 1px solid --color-xlgray
@@ -146,6 +146,10 @@
     border-color --color-lgray
     &:before,&:after
       background --color-lgray
+      
+.settings__tags-panel:first-child
+  .btn-expand
+    left calc(50% - 40px)
       
 .btn-expand--accounts
   position relative
@@ -189,7 +193,7 @@
   &:before
     width 16px
     height 16px
-    border-bottom-color --color-mgray
+    border-bottom-color --color-lgray
   &:after
     width 15px
     height 15px

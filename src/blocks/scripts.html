@@ -10,14 +10,18 @@
       currentClass: 'sidebar__nav-link-active'
     });
 		
-		var w = $(window).width();
-		if (w < 1020) {
-			$('.sidebar').removeClass('sidebar-opened');
-		}
+//		var w = $(window).width();
+//		if (w < 1020) {
+//			$('.sidebar').removeClass('sidebar-opened');
+//		}
 		
     $(document).on('click', '.sidebar__nav-toggle', function () {
       $('.sidebar').toggleClass('sidebar-opened');
     });
+    
+//    $(document).on('click', '.header__nav-toggle', function () {
+//      $('.sidebar').toggleClass('sidebar-opened');
+//    });
 
 //    $(document).on('click', '.sidebar-opened .sidebar__nav-link', function () {
 //      $('.sidebar').removeClass('sidebar-opened');

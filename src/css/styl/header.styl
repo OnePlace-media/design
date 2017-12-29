@@ -14,10 +14,31 @@
   justify-content space-between
   align-items center
 
+.header__nav-toggle
+  display block
+  width 24px
+  height 20px
+  margin-right 16px
+  position relative
+  background --color-dgray
+  &:hover
+    opacity .8
+  &:before,&:after
+    display block
+    content ''
+    position absolute
+    left 0
+    right 0
+    height 4px
+    background --color-default
+    top 4px
+  &:after
+    top 12px
+  
 .header__logo
   position relative
   width 168px
-  height 27px
+  height 26px
 
 .header__right-panel
   display flex
