@@ -130,15 +130,22 @@
         </div>
       </div>
       <div class="post-view__comments-wrapper">
+        
+        <div class="post-view__reply-disabled" style="display:none;">Only registered users with attached {blockchain} account can leave comments. <a href="#" class="link link--op">Log in</a> or <a href="#" class="link link--op">register</a> to reply. <a href="#" class="link link--op">Add {blockchain} account</a> to reply.</div>
+
         <div class="post-view__reply-block">
           <textarea name="post-reply" class="post-view__post-reply-input post-view__post-reply-input--special input" placeholder="Leave a comment..." required></textarea>
           <div class="post-view__post-btn-group"><button class="btn btn--large post-view__post-btn">Post</button><a href="#" class="post-view__post-btn-link">Cancel</a></div>
           <h4 class="h4 post-view__preview-title">Preview</h4>
           <div class="post-view__reply-preview markdown markdown--small"><p>Wow! This is so really interesting and important post. Thank you so much for sharing! I am resteemed and following you.</p></div>
-        </div>
+        </div> 
         <div class="post-view__comments-header">
-          <h2 class="h2 post-view__comments-title">Comments</h2>
-          <span class="post-view__comments-order">Order by: Popular</span>
+          <h3 class="h3 post-view__comments-title">Comments</h3>
+          <span class="post-view__comments-order">Order by: <span class="post-view__comments-order-selected">Trending</span>
+          <ul class="post-view__comments-options">
+            <li class="post-view__comments-options-item">Trending</li><li class="post-view__comments-options-item">Popular</li><li class="post-view__comments-options-item">Recent first</li><li class="post-view__comments-options-item">Oldest first</li>
+          </ul>
+          </span>
         </div>
         <div class="comments__spinner" style="display:none;"><img src="img/spinner.gif" alt=""></div>
         <section class="post-view__comments">
@@ -209,6 +216,7 @@
             </div>
           </div>
         </section>
+
       </div>
     </div>
   </div>

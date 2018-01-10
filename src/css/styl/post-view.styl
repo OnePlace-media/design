@@ -94,7 +94,7 @@
   margin-bottom 2rem
   
 .post-view__post-title
-  font 28px --font-base
+  font 32px --font-base
   font-weight 700
   line-height 1.3
   
@@ -146,7 +146,7 @@
   font-size 13px
   border-radius 3px
   background --color-default
-  box-shadow 1px 1px 10px rgba(0,0,0,0.15)
+  box-shadow 1px 1px 10px rgba(0,0,0,0.2)
   &:before,&:after
     display block
     content ''
@@ -298,6 +298,12 @@
 .author-info
   font-size 14px
   color --color-lgray
+  
+.post-view__reply-disabled
+  font-size 15px
+  text-align center
+  padding-bottom 32px
+  border-bottom 1px solid --color-xlgray
 
 .post-view__reply-block
   display flex
@@ -305,6 +311,8 @@
   transition all .3s ease
   padding-top 8px
   margin-bottom 24px
+  &:first-child
+    margin-bottom 0
   
 .post-view__post-reply-input
   display block
@@ -368,14 +376,49 @@
 .post-view__comments-header
   display flex
   justify-content space-between
-  
-.post-view__comments-title
-  margin-bottom 16px
+  margin 24px 0 16px
   
 .post-view__comments-order
+  position relative
   font-size 13px
   color --color-mgray
-
+  
+.post-view__comments-order-selected
+  position relative
+  padding-right 12px
+  color --color-mgray
+  &:after
+    display block
+    position absolute
+    content ''
+    top 7px
+    right 0
+    width 4px
+    height 4px
+    border 4px solid transparent
+    border-top-color --color-mgray
+  &:hover
+    cursor pointer
+    
+.post-view__comments-options
+  display block
+  list-style none
+  padding 0
+  z-index 20
+  position absolute
+  top -8px
+  right -5px
+  border-radius 3px
+  background --color-default
+  box-shadow 1px 1px 10px rgba(0,0,0,0.2)
+  
+.post-view__comments-options-item
+  padding 8px 16px
+  &:hover
+    cursor pointer
+    background --color-bg-lite
+    color --color-dgray
+    
 .comments__spinner
   height 100px
   padding 20px 0 0
