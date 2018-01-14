@@ -196,10 +196,11 @@
   font-size 14px
   
 .post-view__post-data-item
+  position relative
   line-height 20px
   margin-left 32px
 
-.post-view__post-value
+.post-view__post-currency
   font-family --font-currency
   font-weight 700
   font-size large
@@ -207,13 +208,80 @@
   position relative
   top 1px
   
+.post-view__post-value-correction
+  color --color-brand
+  
 .post-view__post-reply,.post-view__post-like
+  position relative
   margin-right 8px
   
 .post-view__post-like--active
   .post-view__icon-like,.post-view__icon-dislike
     fill --color-brand !important
 
+.post-view__post-like
+  &:hover
+    .post-view__vote-slider-wrapper
+      display block
+  &--active
+    &:hover
+      .post-view__vote-slider-wrapper
+        display none  
+      
+      
+.post-view__vote-slider-wrapper
+  display none
+  position absolute
+  bottom 18px
+  left -4px
+  width 28px
+  height 88px
+  &:hover
+    display block
+      
+.post-view__vote-slider
+  position absolute
+  top 0
+  bottom 8px
+  left 0
+  right 0
+  background --color-default
+  box-shadow 1px 1px 10px rgba(0,0,0,0.2)
+  &:hover
+    cursor pointer
+    .post-view__vote-slider-handle
+      transform scale(1.2)
+  
+.post-view__vote-slider-bar
+  position relative
+  background --color-lgray
+  border-radius 2px
+  width 4px
+  height 64px
+  top 8px
+  margin 0 auto
+    
+.post-view__vote-slider-fill
+  position absolute
+  background --color-brand
+  border-radius 2px
+  width 4px
+  right 0
+  bottom 0
+  height 40px
+  
+.post-view__vote-slider-handle
+  position absolute
+  background --color-dgray
+  bottom 36px
+  left -4px
+  width 12px
+  height 12px
+  border 2px solid --color-default
+  border-radius 50%
+  transform scale(1)
+  transition transform .2s ease
+  
 .post-view__icon
   width 20px
   height 20px
