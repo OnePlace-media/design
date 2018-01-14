@@ -2,11 +2,17 @@
 <html lang="ru">
 
 <head>
+
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>OnePlace</title>
+
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
   <link href="css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -314,112 +320,219 @@
   <!-- /Wrapper -->
 
   <script src="components/jquery/dist/jquery.min.js"></script>
+
   <script src="components/singlepagenav/jquery.singlePageNav.min.js"></script>
+
   <script src="components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+
   <script>
+
     $(document).ready(function () {
+
   
+
       $('.sidebar__nav').singlePageNav({
+
         speed: 300,
+
   			offset: 60,
+
         currentClass: 'sidebar__nav-link-active'
+
       });
+
   		
+
   //		var w = $(window).width();
+
   //		if (w < 1020) {
+
   //			$('.sidebar').removeClass('sidebar-opened');
+
   //		}
+
   		
+
       $(document).on('click', '.sidebar__nav-toggle', function () {
+
         $('.sidebar').toggleClass('sidebar-opened');
+
       });
+
       
+
   //    $(document).on('click', '.header__nav-toggle', function () {
+
   //      $('.sidebar').toggleClass('sidebar-opened');
+
   //    });
+
   
+
   //    $(document).on('click', '.sidebar-opened .sidebar__nav-link', function () {
+
   //      $('.sidebar').removeClass('sidebar-opened');
+
   //    });
+
   
+
       $('.sidebar').swipe({
+
         swipeLeft: function (event, direction, distance, duration, fingerCount) {
+
           $('.sidebar').removeClass('sidebar-opened');
+
         }
+
       });
+
   		
+
   		$(document).on('click', '.header__profile-btn', function (event) {
+
   			event.stopPropagation();
+
         $('.header__usermenu').toggleClass('header__usermenu--opened');
+
   			$('.wrapper').toggleClass('dropdown--opened');
+
       });
+
   		
+
   		$(document).on('click', '.dropdown--opened', function () {
+
         $('.header__usermenu').removeClass('header__usermenu--opened');
+
   			$('.wrapper').removeClass('dropdown--opened');
+
       });
+
   
+
       function getDocHeight() {
+
         var D = document;
+
         return Math.max(
+
           D.body.scrollHeight, D.documentElement.scrollHeight,
+
           D.body.offsetHeight, D.documentElement.offsetHeight,
+
           D.body.clientHeight, D.documentElement.clientHeight
+
         );
+
       };
+
   
+
       function scrollX() {
+
         var docElem = document.documentElement;
+
         return window.pageXOffset || docElem.scrollLeft;
+
       };
+
   
+
       function scrollY() {
+
         var docElem = document.documentElement;
+
         return window.pageYOffset || docElem.scrollTop;
+
       };
+
   
+
       function fixedHeader() {
+
         var didScroll;
+
         var lastScrollTop = 0;
+
         var delta = 5;
+
         hasScrolled();
+
         window.addEventListener('scroll', didScrollTrue);
+
   
+
         function didScrollTrue() {
+
           didScroll = true;
+
         }
+
         setInterval(function () {
+
           if (didScroll) {
+
             hasScrolled();
+
             didScroll = false;
+
           }
+
         }, 150);
+
   
+
         function hasScrolled() {
+
           var st = scrollY();
+
           if (Math.abs(lastScrollTop - st) <= delta)
+
             return;
+
           if (st > lastScrollTop && scrollY() >= 90) {
+
             $('.header').removeClass('header-visible');
+
             $('.header').addClass('header-hidden');
+
           } else {
+
             if (scrollY() <= 90) {
+
               $('.header').removeClass('header-hidden');
+
               $('.header').removeClass('header-visible');
+
             } else {
+
               $('.header').removeClass('header-hidden');
+
               $('.header').addClass('header-visible');
+
             }
+
           }
+
           lastScrollTop = st;
+
         }
+
       };
+
   
+
       fixedHeader();
+
   
+
     });
+
   </script>
+
   
+
   <!--<script src="js/scripts.js"></script>-->
 
 </body>
