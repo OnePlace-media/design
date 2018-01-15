@@ -120,6 +120,30 @@ hr
 .column-wrapper
   display flex
   flex-direction column
+  
+.dropdown
+  display block
+  position absolute
+  z-index 10
+  padding 8px 8px
+  border-radius 3px
+  background --color-default
+  box-shadow 0 0 5px rgba(0,0,0,0.15)
+  &:before,&:after
+    display block
+    content ''
+    position absolute
+    right calc(50% - 8px)
+    top -16px
+    border 8px solid transparent
+  &:before
+    width 16px
+    height 16px
+    border-bottom-color --color-lgray
+  &:after
+    width 15px
+    height 15px
+    border-bottom-color --color-default
 
 @media screen and (max-width: 1040px)
   .container

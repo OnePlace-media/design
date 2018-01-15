@@ -281,6 +281,29 @@
   transform scale(1)
   transition transform .2s ease
   
+.post-view__votes
+  position relative
+  
+.post-view__voters
+  font-size 13px
+  padding 8px 16px
+  top 32px
+  left -80px
+  color --color-dgray
+  &:before,&:after
+    left 80px
+  
+.post-view__voter-list
+  list-style none
+  padding 0
+  
+.post-view__voter
+  display flex
+  justify-content space-between
+  
+.post-view__voter-name
+  padding-right 16px
+  
 .post-view__icon
   width 20px
   height 20px
