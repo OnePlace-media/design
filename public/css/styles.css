@@ -111,6 +111,10 @@ hr {
   font-weight: 700;
 }
 
+.currency {
+  font-family: 'PT Sans', 'Noto Sans', sans-serif;
+}
+
 .link {
   color: inherit;
   transition: all 0.3s ease;
@@ -2237,7 +2241,7 @@ hr {
   font-size: 13px;
   border-radius: 3px;
   background: #fff;
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
 }
 
 .post-view__action-menu:before,.post-view__action-menu:after {
@@ -2358,6 +2362,10 @@ hr {
   display: block;
 }
 
+.post-view__vote-slider-show {
+  display: block !important;
+}
+
 .post-view__vote-slider {
   position: absolute;
   top: 0;
@@ -2365,7 +2373,7 @@ hr {
   left: 0;
   right: 0;
   background: #fff;
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
 }
 
 .post-view__vote-slider:hover {
@@ -2400,10 +2408,10 @@ hr {
 .post-view__vote-slider-handle {
   position: absolute;
   background: #383838;
-  left: -4px;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #fff;
+  left: -3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
   border-radius: 50%;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -2412,12 +2420,44 @@ hr {
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
+.post-view__post-value {
+  position: relative;
+}
+
+.post-view__post-value:hover .post-view__pending-payout {
+  display: block;
+}
+
+.post-view__pending-payout {
+  display: none;
+  font-size: 13px;
+  width: 200px;
+  padding: 8px 16px;
+  top: 32px;
+  left: calc(50% - 100px);
+  color: #383838;
+}
+
+.post-view__pending-payout:before,.post-view__pending-payout:after {
+  left: calc(50% - 8px);
+}
+
+.post-view__pending-payout p {
+  white-space: normal;
+}
+
 .post-view__votes {
   position: relative;
 }
 
+.post-view__votes:hover .post-view__voters {
+  display: block;
+}
+
 .post-view__voters {
+  display: none;
   font-size: 13px;
+  min-width: 200px;
   padding: 8px 16px;
   top: 32px;
   left: -80px;
@@ -2446,6 +2486,14 @@ hr {
 
 .post-view__voter-name {
   padding-right: 16px;
+}
+
+.post-view__voter-amount {
+  color: #818888;
+}
+
+.post-view__voters-all {
+  color: #a8adad;
 }
 
 .post-view__icon {
