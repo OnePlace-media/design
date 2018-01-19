@@ -2355,7 +2355,7 @@ hr {
   bottom: 18px;
   left: -4px;
   width: 28px;
-  height: 88px;
+  height: 90px;
 }
 
 .post-view__vote-slider-wrapper:hover {
@@ -2369,7 +2369,7 @@ hr {
 .post-view__vote-slider {
   position: absolute;
   top: 0;
-  bottom: 8px;
+  bottom: 10px;
   left: 0;
   right: 0;
   background: #fff;
