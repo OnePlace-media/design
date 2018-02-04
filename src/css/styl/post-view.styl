@@ -2,7 +2,7 @@
 
 .modal-shown
   overflow hidden
-  
+
 .post-view__spinner
   display block
   width 52px
@@ -15,7 +15,7 @@
   left 50%
   margin-top -26px
   margin-left -26px
-  
+
 .post-view__overlay
   background rgba(0,0,0,0.65)
   z-index 99
@@ -27,7 +27,7 @@
   absolute(0,0,auto,0)
   height 50px
   padding 14px 30px 0
-  
+
 .post-view__back
   display none
 
@@ -37,13 +37,13 @@
   margin 20px auto
   box-shadow 0 0 10px rgba(0,0,0,0.4)
   z-index 100
-  
+
 .post-view__post-wrapper
   background --color-default
   position relative
   width 100%
   padding 50px 70px 0
-  
+
 .post-view__comments-wrapper
   background --color-bg
   position relative
@@ -86,32 +86,32 @@
 .post-view__post-info--top
   height 48px
   align-items flex-start
-  
+
 .post-view__post-info--bottom
   justify-content flex-end 
-    
+
 .post-view__post-heading
   margin-bottom 2rem
-  
+
 .post-view__post-title
   font 32px --font-base
   font-weight 700
   line-height 1.3
-  
+
 .post-view__post-avatar  
   absolute(0,auto,auto,0)
   width 48px
   height 48px
-  
+
 .post-view__post-author-tag
   line-height 24px
   margin-left 56px
   br
     display none
-  
+
 .hashtag
   color --color-brand
-    
+
 .post-view__post-author-rep
   display inline-block
   color --color-dgray
@@ -124,12 +124,12 @@
   margin-left 4px
   border 1px solid --color-lgray
   border-radius 3px
-    
+
 .post-view__post-posted
   line-height 24px
   color --color-lgray
   margin-left 56px
-  
+
 .post-view__action-menu-btn
   display inline-block
   line-height 20px
@@ -137,7 +137,7 @@
   &:hover
     cursor pointer
     color --color-mgray
-    
+
 .post-view__action-menu
   display block
   position absolute
@@ -162,7 +162,7 @@
     width 15px
     height 15px
     border-bottom-color --color-default
-    
+
 .post-view__post-flag
   display block
   padding 8px 16px
@@ -174,27 +174,27 @@
     background --color-bg-lite
     .post-view__icon
       fill --color-mgray
-      
+
 .post-view__post-flag--active
   .post-view__icon
     fill --color-brand !important
-      
+
 .post-view__post-body
   margin-bottom 40px
-  
+
 .post-view__post-data
   color --color-mgray
   white-space nowrap
   align-self flex-end
   height 20px
-  
+
 .comment__post-data
   display flex
   justify-content flex-end
   height 18px
   color --color-mgray
   font-size 14px
-  
+
 .post-view__post-data-item
   position relative
   line-height 20px
@@ -207,14 +207,14 @@
   margin-right 8px
   position relative
   top 1px
-  
+
 .post-view__post-value-correction
   color --color-brand
-  
+
 .post-view__post-reply,.post-view__post-like
   position relative
   margin-right 8px
-  
+
 .post-view__post-like--active
   .post-view__icon-like,.post-view__icon-dislike
     fill --color-brand !important
@@ -222,26 +222,35 @@
 .post-view__post-like
   &:hover
     .post-view__vote-slider-wrapper
-      display block
+      visibility visible
+      transition-delay .3s
+      bottom 18px
+      opacity 1
   &--active
     &:hover
       .post-view__vote-slider-wrapper
-        display none  
-      
-      
+        visibility hidden
+
+
 .post-view__vote-slider-wrapper
-  display none
+  visibility hidden
   position absolute
-  bottom 18px
+  bottom 28px
   left -4px
   width 28px
   height 90px
+  transition-duration .2s
+  transition-delay 0s
+  opacity 0
   &:hover
-    display block
-      
+    bottom 18px
+    transition-delay .3s
+    visibility visible
+    opacity 1
+
 .post-view__vote-slider-show
   display block !important
-    
+
 .post-view__vote-slider
   position absolute
   top 0
@@ -254,7 +263,7 @@
     cursor pointer
     .post-view__vote-slider-handle
       transform scale(1.2)
-  
+
 .post-view__vote-slider-bar
   position relative
   background --color-lgray
@@ -263,7 +272,7 @@
   height 64px
   top 8px
   margin 0 auto
-    
+
 .post-view__vote-slider-fill
   position absolute
   background --color-brand
@@ -272,7 +281,7 @@
   right 0
   bottom 0
   height 36px
-  
+
 .post-view__vote-slider-handle
   position absolute
   background --color-dgray
@@ -289,7 +298,7 @@
   &:hover
     .post-view__pending-payout
       display block
-  
+
 .post-view__pending-payout
   display none
   font-size 13px
@@ -302,13 +311,13 @@
     left calc(50% - 8px)
   p
     white-space normal
-  
+
 .post-view__votes
   position relative
   &:hover
     .post-view__voters
       display block
-  
+
 .post-view__voters
   display none
   font-size 13px
@@ -319,53 +328,54 @@
   color --color-dgray
   &:before,&:after
     left 80px
-  
+
 .post-view__voter-list
   list-style none
   padding 0
-  
+
 .post-view__voter
   display flex
   justify-content space-between
-  
+
 .post-view__voter-name
   padding-right 16px
-  
+
 .post-view__voter-amount
   color --color-mgray
-  
+
 .post-view__voters-all
   color --color-lgray
-  
+
 .post-view__icon
   width 20px
   height 20px
-  transition all .3s ease
   fill --color-lgray
+  *
+    transition all .3s ease
   &:hover
     cursor pointer
     fill --color-mgray
-    
+
 .post-view__icon--small
   width 16px
   height 16px
-    
+
 .post-view__icon-flag
   width 16px
   height 16px
   margin-right 8px
   position relative
   top 3px
-    
+
 .post-view__icon-like
   position relative
   top 1px
-  
+
 .post-view__icon-dislike
   position relative
   top 5px
   transform rotate(180deg)
-  
+
 .post-view__icon-comment
   position relative
   top 6px
@@ -373,7 +383,7 @@
   &:hover
     cursor pointer
     fill --color-mgray
-  
+
 .post-view__bottom-block
   width 100%
   min-height 164px
@@ -381,7 +391,7 @@
   position relative
   padding 32px 0
   border-top 1px solid --color-bg
-  
+
 .post-view__block-title
   margin-bottom 16px
 
@@ -391,16 +401,16 @@
 
 .post-view__tags-wrapper
   width 40% 
-  
+
 .post-view__avatar-wrapper
   absolute(74px,auto,auto,0)
   width 56px
   height 56px
   margin 0 0 32px
-  
+
 .post-view__author-avatar
   absolute()
-  
+
 .post-view__author-rep
   absolute(auto,0,0,auto)
   display block
@@ -413,15 +423,15 @@
   background --color-default
   border 1px solid --color-lgray
   border-radius 3px
-  
+
 .post-view__author-info
   margin-left 72px
   align-self center
-  
+
 .author-info
   font-size 14px
   color --color-lgray
-  
+
 .post-view__reply-disabled
   font-size 15px
   text-align center
@@ -436,7 +446,7 @@
   margin-bottom 24px
   &:first-child
     margin-bottom 0
-  
+
 .post-view__post-reply-input
   display block
   height 80px
@@ -448,7 +458,7 @@
   border 1px solid --color-xlgray
   margin-bottom 8px
   box-shadow none
-  
+
 .post-view__post-reply-input--special
   height 80px
   &:invalid
@@ -465,22 +475,22 @@
     font-size 15px
     &+.post-view__post-btn-group
       display block
-    
+
 .post-view__post-reply-input:valid
   &+.post-view__post-btn-group
     .post-view__post-btn
       background --color-brand
       &:hover
         background --color-brand-hover
-  
+
 .post-view__post-btn-group
   margin-bottom 16px
-  
+
 .post-view__post-btn
   display inline-block
   width 160px
   color --color-default
-  
+
 .post-view__post-btn-link
   display inline-block
   font-size 15px
@@ -489,10 +499,10 @@
   text-decoration none
   &:hover
     text-decoration underline
-  
+
 .post-view__preview-title
   margin-bottom 8px
-  
+
 .post-view__reply-preview
   display block
 
@@ -500,12 +510,12 @@
   display flex
   justify-content space-between
   margin 24px 0 16px
-  
+
 .post-view__comments-order
   position relative
   font-size 13px
   color --color-mgray
-  
+
 .post-view__comments-order-selected
   position relative
   padding-right 12px
@@ -522,7 +532,7 @@
     border-top-color --color-mgray
   &:hover
     cursor pointer
-    
+
 .post-view__comments-options
   display block
   list-style none
@@ -534,24 +544,24 @@
   border-radius 3px
   background --color-default
   box-shadow 1px 1px 10px rgba(0,0,0,0.2)
-  
+
 .post-view__comments-options-item
   padding 8px 16px
   &:hover
     cursor pointer
     background --color-bg-lite
     color --color-dgray
-    
+
 .comments__spinner
   height 100px
   padding 20px 0 0
   text-align center
-  
+
 .comment__replies
   margin-left 32px
   margin-bottom 8px
   margin-top 8px
-  
+
 .post-view__thread-wrapper
   position relative
   width 100%
@@ -559,26 +569,26 @@
   margin-bottom 8px
   &:last-child
     margin-bottom 0
-    
+
 .comment
   background --color-default
   border-radius 1px
   padding 16px
   margin-bottom 8px
-  
+
 .comment__wrapper
   position relative
-  
+
 .comment__header
   font-size 15px
   margin-left 62px
   margin-bottom 5px
   color --color-lgray
-  
+
 .comment__body
   margin-left 62px
   margin-bottom 8px
-  
+
 .markdown
   line-height 1.6
   overflow hidden
@@ -685,13 +695,13 @@
     max-width 100%
   >*:last-child
     margin-bottom 0
-  
+
 .markdown--small
   font-size 15px
   img
     max-width 400px
     max-height 400px
-    
+
 @media screen and (max-width: 1130px)
   .post-view__modal
     width 900px
@@ -701,7 +711,7 @@
     padding 50px 50px 0
   .post-view__comments-wrapper
     padding 40px 50px 60px
-    
+
 @media screen and (max-width: 980px)
   .post-view__modal
     width 100%
@@ -726,11 +736,11 @@
       opacity 1
   .post-view__close-post
     display none
-  
+
 @media screen and (max-width: 760px)
   .post-view__post-wrapper
     padding 70px 30px 0
-  
+
 @media screen and (max-width: 450px)
   .post-view__post-wrapper
     padding 60px 15px 0
@@ -769,4 +779,3 @@
     margin-left 0
   .comments__wrapper
     margin-bottom 1.5rem
-    

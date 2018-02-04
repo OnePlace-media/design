@@ -2342,24 +2342,33 @@ hr {
 }
 
 .post-view__post-like:hover .post-view__vote-slider-wrapper {
-  display: block;
+  visibility: visible;
+  transition-delay: 0.3s;
+  bottom: 18px;
+  opacity: 1;
 }
 
 .post-view__post-like--active:hover .post-view__vote-slider-wrapper {
-  display: none;
+  visibility: hidden;
 }
 
 .post-view__vote-slider-wrapper {
-  display: none;
+  visibility: hidden;
   position: absolute;
-  bottom: 18px;
+  bottom: 28px;
   left: -4px;
   width: 28px;
   height: 90px;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+  opacity: 0;
 }
 
 .post-view__vote-slider-wrapper:hover {
-  display: block;
+  bottom: 18px;
+  transition-delay: 0.3s;
+  visibility: visible;
+  opacity: 1;
 }
 
 .post-view__vote-slider-show {
@@ -2499,8 +2508,11 @@ hr {
 .post-view__icon {
   width: 20px;
   height: 20px;
-  transition: all 0.3s ease;
   fill: #a8adad;
+}
+
+.post-view__icon * {
+  transition: all 0.3s ease;
 }
 
 .post-view__icon:hover {
