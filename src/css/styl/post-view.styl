@@ -230,7 +230,11 @@
     &:hover
       .post-view__vote-slider-wrapper
         visibility hidden
-
+  &--processing
+    .post-view__icon
+      visibility hidden
+    .spinner-rolling
+      display inline
 
 .post-view__vote-slider-wrapper
   visibility hidden
@@ -292,6 +296,27 @@
   border-radius 50%
   transform scale(1)
   transition transform .2s ease
+  
+@keyframes spinner-rolling
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%
+    transform translate(-50%, -50%) rotate(360deg)
+
+.spinner-rolling
+  display none
+  position relative
+  div
+    position absolute
+    width 16px
+    height 16px
+    border 2px solid #818888
+    border-top-color transparent
+    border-radius 50%
+    animation spinner-rolling 1s linear infinite
+    top 10px
+    left 10px
 
 .post-view__post-value
   position relative
