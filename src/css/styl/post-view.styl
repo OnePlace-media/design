@@ -307,11 +307,13 @@
 .spinner-rolling
   display none
   position relative
+  overflow visible
   div
     position absolute
+    overflow visible
     width 16px
     height 16px
-    border 2px solid #818888
+    border 2px solid --color-lgray
     border-top-color transparent
     border-radius 50%
     animation spinner-rolling 1s linear infinite
