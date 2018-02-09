@@ -2537,10 +2537,6 @@ hr {
   fill: #a8adad;
 }
 
-.post-view__icon * {
-  transition: all 0.3s ease;
-}
-
 .post-view__icon:hover {
   cursor: pointer;
   fill: #818888;
@@ -3597,7 +3593,7 @@ hr {
 }
 
 .payout-declined {
-  color: #cfd2d2;
+  text-decoration: line-through;
 }
 
 .error-block {
