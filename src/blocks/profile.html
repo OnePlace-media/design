@@ -1,35 +1,54 @@
-<div class="profile__header" style="background-image:url('https://steemitimages.com/2048x512/http://i.imgur.com/JvHJxAY.png');"></div>
-<div class="profile__wrapper">
-  <div class="profile__avatar" style="background-image:url('https://steemitimages.com/u/netuoso/avatar');"></div>
-  <div class="profile__user">
-    <div class="profile__top-wrapper">
-      <h2 class="h2 profile__name">Netuoso [SteemDevs]<span class="profile__reputation">68</span></h2>
-      <div class="profile__btn-group"><span class="profile__btn-follow">Follow</span><span class="profile__btn-following" style="display:none;">Following</span><span class="profile__btn-more"><ul class="profile__follow-options">
-            <li class="profile__follow-options-item">Unfollow</li><li class="profile__follow-options-item">Block&nbsp;user</li></ul></span></div>
-    </div>
-    <p class="profile__about">STEEM Witness, SteemDevs Founder, Owner of https://rpc.steemliberator.com</p>
-    <div class="profile__info-wrapper">
-      <div class="profile__info-tab"><span class="profile__info-item">Location:</span>United States</div>
-      <div class="profile__info-tab"><span class="profile__info-item">Website:</span><a class="link" href="#" target="_blank">https://github.com/netuoso</a></div>
-    </div>
-    <div class="profile__bottom-wrapper">
-      <div class="profile__user-data"><span class="profile__data-value">3087</span>Публикаций</div><div class="profile__user-data"><span class="profile__data-value">2959</span>Подписчиков</div><div class="profile__user-data"><span class="profile__data-value">147</span>Подписок</div>
-    </div>
+<div class="blog__wrapper">
+  <div class="profile__header" style="background-image:url('https://steemitimages.com/2048x512/http://i.imgur.com/JvHJxAY.png');"></div>
+  <div class="profile__wrapper">
+    <div class="profile__avatar" style="background-image:url('https://steemitimages.com/u/netuoso/avatar');"></div>
+      <div class="profile__top-block">
+        <span class="profile__reputation">68</span>
+        <h2 class="h2 profile__name">Netuoso [SteemDevs]</h2>
+        <p class="profile__about">STEEM Witness, SteemDevs Founder, Owner of https://rpc.steemliberator.com</p>
+        <div class="profile__btn-follow profile__btn-follow--active">
+          <span>Follow</span><span style="display:none;">Following</span><span class="profile__btn-more"><ul class="profile__follow-options" style="display:none;">
+          <li class="profile__follow-options-item">Unfollow</li><li class="profile__follow-options-item">Block&nbsp;user</li></ul></span>
+        </div>
+        <div class="profile__info-block">
+          <span class="profile__info-item profile__info-item--location">United States</span>
+          <span class="profile__info-item profile__info-item--website"><a class="link" href="#" target="_blank">github.com/netuoso</a></span>
+        </div>
+      </div>
+      
+
+      
+      <div class="profile__bottom-block">
+        <div class="profile__user-data">
+          <span class="profile__data-value">3087</span>Публикаций
+        </div>
+        <div class="profile__user-data">
+          <span class="profile__data-value">2959</span>Подписчиков
+        </div>
+        <div class="profile__user-data">
+          <span class="profile__data-value">147</span>Подписок
+        </div>
+      </div>
+
   </div>
-</div>
 
-<section class="blog">
-<div class="blog__header">
-  <div class="blog__header-tab blog__header-tab--active">Все записи</div>
-  <div class="blog__header-tab">Записи Netuoso</div>
-</div>
-
-//= include blog-post.html
+  <section class="blog">
+  <div class="blog__header">
+    <div class="blog__header-tab blog__header-tab--active">Все записи</div>
+    <div class="blog__header-tab">Записи Netuoso</div>
+  </div>
   
-//= include blog-post.html
+  <div class="blog__no-posts" style="display:none;">
+    This user has not posted anything yet.
+  </div>
 
-//= include blog-post.html
-  
-//= include blog-post.html
+  //= include blog-post.html
 
-</section>
+  //= include blog-post.html
+
+  //= include blog-post.html
+
+  //= include blog-post.html
+
+  </section>
+</div>

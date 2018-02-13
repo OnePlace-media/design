@@ -1,53 +1,127 @@
 .register__steps-wrapper
-	width 928px
-	padding-top 16px
-	margin 0 auto 32px
-	
+  width 928px
+  padding-top 16px
+  margin 0 auto 32px
+
 .register__steps
-	width 100%
-	display flex
-	position relative
-	&:before
-		display block
-		content ''
-		position absolute
-		top 0
-		height 1px
-		left 16%
-		right 16%
-		background --color-dgray
-	
+  width 100%
+  display flex
+  position relative
+  &:before
+    display block
+    content ''
+    position absolute
+    top 0
+    height 1px
+    left 16%
+    right 16%
+    background --color-dgray
+
 .register__step
-	flex-basis 33.3%
-	text-align center
-	position relative
-	padding-top 16px
-	font-size 15px
-	color --color-mgray
-	&:before,&:after
-		display block
-		content ''
-		position absolute
-		border-radius 50%
-	&:before
-		width 20px
-		height 20px
-		top -9px
-		left calc(50% - 11px)
-		background --color-bg
-		border 1px solid --color-dgray
-	&:after
-		width 8px
-		height 8px
-		top -3px
-		left calc(50% - 5px)
-		background --color-bg
+  flex-basis 33.33%
+  text-align center
+  position relative
+  padding-top 16px
+  font-size 15px
+  color --color-mgray
+  &:before,&:after
+    display block
+    content ''
+    position absolute
+    border-radius 50%
+  &:before
+    width 20px
+    height 20px
+    top -9px
+    left calc(50% - 11px)
+    background --color-bg
+    border 1px solid --color-dgray
+  &:after
+    width 8px
+    height 8px
+    top -3px
+    left calc(50% - 5px)
+    background --color-bg
 
 .register__step--done
-	&:after
-		background --color-dgray
-		
+  &:after
+    background --color-dgray
+
 .register__step--current
-	color --color-dgray
-	&:after
-		background --color-brand
+  color --color-dgray
+  &:after
+    background --color-brand
+
+@media screen and (max-width: 960px)
+  .register__steps-wrapper
+    width 592px
+  .register__steps
+    &:before
+      left 1px
+      right 1px
+  .register__step
+    font-size 13px
+    &:first-child
+      text-align left
+      padding-right 16px
+      &:before
+        left 0
+      &:after
+        left 6px
+    &:last-child
+      text-align right
+      padding-left 16px
+      &:before
+        left auto
+        right 0
+      &:after
+        left auto
+        right 6px
+        
+@media screen and (max-width: 640px)
+  .register__steps-wrapper
+    width max-content
+    max-width calc(100% - 32px)
+    padding-top 8px
+  .register__steps
+    flex-direction column
+    &:before
+      left 9px
+      right auto
+      top 0
+      height 100%
+      width 1px
+  .register__step
+    text-align left
+    padding 0 0 0 32px
+    &:before
+      top 0
+      left 0
+    &:after
+      top 6px
+      left 6px
+    &:first-child
+      padding-bottom 16px
+      &:before
+        top 0
+        left 0
+      &:after
+        top 6px
+        left 6px
+    &:last-child
+      padding 16px 0 0 32px
+      text-align left
+      &:before
+        top auto
+        bottom 0
+        left 0
+      &:after
+        top auto
+        bottom 6px
+        left 6px
+        
+@media screen and (max-width: 450px)
+  .login-form__radio-label
+    font-size 14px
+    margin 0 24px
+  

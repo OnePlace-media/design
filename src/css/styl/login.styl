@@ -136,45 +136,6 @@
   &:last-child
     margin-bottom 0
 
-//.add-blockchain__wrapper
-//  display flex
-//  justify-content center
-//    
-//.add-blockchain__btn
-//  position relative
-//  width 160px
-//  height 48px
-//  line-height 48px
-//  font-size 15px
-//  margin 0 8px 24px
-//  padding-right 5px
-//  background --color-xlgray
-//  transition all .3s ease
-//  &:before
-//    display inline-block
-//    position relative
-//    top 3px
-//    content ''
-//    width 17px
-//    height 17px
-//    margin-right 8px
-//    filter grayscale(30%)
-//    transition all .3s ease
-//  &:hover
-//    background --color-bg
-//    &:before
-//      filter grayscale(0%)
-//    
-//.add-blockchain__btn--golos
-//  &:before
-//    background url('../img/golos.svg') 50% 50% no-repeat transparent
-//    background-size cover
-//  
-//.add-blockchain__btn--steem
-//  &:before
-//    background url('../img/steem.svg') 50% 50% no-repeat transparent
-//    background-size cover
-
 .login-form__select-chain
   display flex
   justify-content center
@@ -233,26 +194,6 @@
   &:hover
     text-decoration underline
 
-//.login-form__result
-//	display flex
-//
-//.login-form__result-key
-//	width 70%
-//	font-weight 700
-//
-//.login-form__result-btn
-//	display inline-block
-//	text-align center
-//	width 30%
-//	height 40px
-//	font-size 15px
-//	line-height 40px
-//	border 1px solid --color-xlgray
-//	border-left none
-//	&:hover
-//		cursor pointer
-//		background --color-xlgray
-
 .login-form__text
   font-size 15px
   padding 0 16px
@@ -270,3 +211,29 @@
   
 .login-form__text--error
   color --color-brand
+  
+@media screen and (max-width: 640px)
+  .login-form
+    width calc(100% - 48px)
+    
+@media screen and (max-width: 450px)
+  .login-form
+    width 100%
+    padding 24px 16px 32px
+    margin-bottom 32px
+  .login__wrapper
+    padding-top 24px
+  .login__logo
+    width 144px
+    height 23px
+  .login-form__title
+    font-size 15px
+  .login-form__input
+    font-size 15px
+  .login-form__bottom-link
+    font-size 14px
+  .login-form__btn
+    width 100%
+  .login-form__text
+    font-size 13px
+  
