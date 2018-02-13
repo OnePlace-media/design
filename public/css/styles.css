@@ -3293,6 +3293,7 @@ hr {
 
 .blog {
   width: calc(100% - 240px);
+  margin-bottom: 24px;
 }
 
 .blog__header {
@@ -3344,6 +3345,10 @@ hr {
   display: flex;
   background: #fff;
   margin-bottom: 12px;
+}
+
+.blog__post:last-child {
+  margin-bottom: 0;
 }
 
 .blog__post-image {
