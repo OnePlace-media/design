@@ -2653,6 +2653,11 @@ hr {
 .author-info {
   font-size: 14px;
   color: #a8adad;
+  margin-bottom: 8px;
+}
+
+.author-info:last-child {
+  margin-bottom: 0;
 }
 
 .post-view__reply-disabled {
@@ -3093,6 +3098,7 @@ hr {
 
 .profile__name {
   text-align: left;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 
@@ -3105,7 +3111,7 @@ hr {
   line-height: 18px;
   height: 20px;
   padding: 0 4px;
-  margin-left: 8px;
+  margin-left: 4px;
   margin-top: 4px;
   border: 1px solid #a8adad;
   border-radius: 3px;
@@ -3136,6 +3142,10 @@ hr {
   cursor: auto;
   border-color: #a8adad;
   color: #818888;
+}
+
+.btn-follow--post {
+  width: 50%;
 }
 
 .btn-follow__more {
@@ -3230,7 +3240,7 @@ hr {
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-wrap: break-word;
+  word-break: break-word;
   margin-bottom: 8px;
 }
 
@@ -3347,7 +3357,7 @@ hr {
   margin-bottom: 12px;
 }
 
-.blog__post:last-child {
+.blog__post:last-of-type {
   margin-bottom: 0;
 }
 

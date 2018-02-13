@@ -35,6 +35,7 @@ $imageH = $imageW/1.618
   
 .profile__name
   text-align left
+  font-size 20px
   margin-bottom 8px
   
 .profile__reputation
@@ -46,7 +47,7 @@ $imageH = $imageW/1.618
   line-height 18px
   height 20px
   padding 0 4px
-  margin-left 8px
+  margin-left 4px
   margin-top 4px
   border 1px solid --color-lgray
   border-radius 3px
@@ -71,7 +72,10 @@ $imageH = $imageW/1.618
     cursor auto
     border-color --color-lgray
     color --color-mgray
-  
+
+.btn-follow--post
+  width 50%
+    
 .btn-follow__more
   display inline-block
   position relative
@@ -144,7 +148,7 @@ $imageH = $imageW/1.618
   position relative
   overflow hidden
   text-overflow ellipsis
-  word-wrap break-word
+  word-break break-word
   margin-bottom 8px
   &:last-child
     margin-bottom 0
@@ -223,7 +227,7 @@ $imageH = $imageW/1.618
   display flex
   background --color-default
   margin-bottom 12px
-  &:last-child
+  &:last-of-type
     margin-bottom 0
   
 .blog__post-image
