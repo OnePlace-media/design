@@ -3136,10 +3136,14 @@ hr {
   margin-bottom: 8px;
 }
 
+.profile__name:last-child {
+  margin-bottom: 0;
+}
+
 .profile__reputation {
   display: inline-block;
   position: absolute;
-  top: 14px;
+  top: 16px;
   right: 16px;
   background: #fff;
   font-size: 12px;
