@@ -1,33 +1,45 @@
-.login-form__item--publish
-  position relative
-
-.publish__input--title
-  width calc(100% - 40px)
+.publish__input-wrapper
+  display flex
+  align-items baseline
+  
+.publish__input-name
+  width 86px
   font-size 18px
   font-weight 700
+  text-align right
+  padding-right 16px
   
-.info-button
-  float right
-  width 20px
-  height 20px
-  margin 10px
-  background url('../img/info-button.svg') 50% 50% no-repeat transparent
-  background-size 20px 20px
-  opacity .75
+.publish__input-field
+  position relative
+  width 914px
+  padding-right 40px
+  padding-bottom 16px
+
+.login-form__item--publish
+  position relative
+  
+.publish__info-button
+  position absolute
+  top 0
+  right 0
+  font-size 18px
+  color --color-lgray
+  width 16px
+  height 18px
+  margin 8px 12px
   transition all .3s ease
   &:hover
     cursor pointer
-    opacity 1
+    color --color-mgray
   
 .publish__info-alert
   width max-content
   margin-top 8px
   font-size 12px
-  color --color-mgray
-  padding 4px 16px
-  background --color-bg-lite
-  border 1px solid --color-lgreen
-  border-radius 5px
+  color --color-dgray
+  padding 8px 16px
+  background --color-xlgreen
+  border-radius 3px
   
 #post-body
   width 100%
@@ -41,3 +53,34 @@
   
 .publish__setup-block
   width 50%
+  
+.publish__post-btn-group
+  padding-left 86px
+  
+// SimpleMDE Editor styles overwrite
+
+.editor-toolbar
+  border-radius 0 !important
+  border-top 1px solid --color-xlgray !important
+  border-left 1px solid --color-xlgray !important
+  border-right 1px solid --color-xlgray !important
+  &:before
+    margin-bottom 3px !important
+  &:after
+    margin-top 3px !important
+  &.fullscreen
+    top 59px !important
+  a
+    outline none
+    
+.CodeMirror
+  color --color-dgray !important
+  border 1px solid --color-xlgray !important
+  border-radius 0 !important
+  
+.CodeMirror-fullscreen,.editor-preview-side
+  top 109px !important
+  
+.editor-preview,.editor-preview-side
+    padding 16px !important
+    background --color-default !important

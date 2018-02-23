@@ -4,7 +4,11 @@
 //= include blocks/head.html
 
 <body>
+  
+  <!-- Styles from simpleMDE -->
+  <style type="text/css">@import url("https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css");</style>
 
+  
   <!-- Wrapper -->
   <div class="wrapper">
 
@@ -35,6 +39,26 @@
 
   </div>
   <!-- /Wrapper -->
+  
+  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  <script>
+    var simplemde = new SimpleMDE({
+      autoDownloadFontAwesome: true,
+      autofocus: true,
+      autosave: {
+          enabled: true,
+          uniqueId: "MyUniqueID",
+          delay: 1000,
+      },
+      blockStyles: {
+          bold: "__",
+          italic: "_"
+      },
+      element: document.getElementById("postBody"),
+      hideIcons: ["fullscree"],
+      spellChecker: false
+    });
+  </script>
 
 </body>
 

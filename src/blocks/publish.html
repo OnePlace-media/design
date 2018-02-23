@@ -1,41 +1,29 @@
 <div class="container">
   
-  <div class="login-form__item login-form__item--publish">
+  <div class="publish__input-wrapper">
+    <div class="publish__input-name">Title</div>
+    <div class="publish__input-field">
+      
       <input type="text" class="login-form__input publish__input--title" placeholder="Post title">
-      <div class="info-button"></div>
+      <div class="publish__info-button"><span class="fa fa-info-circle"></span></div>
       <div class="login-form__alert" style="display:block;">Please enter post title</div>
       <div class="publish__info-alert">Enter title of your post in this field. Please avoid unnecessary CAPS and try to keep the title under 80 symbols.   X</div>
+
+    </div>
   </div>
-  
-  
-  <textarea id="post-body"># Intro
-    Go ahead, play around with the editor! Be sure to check out **bold** and *italic* styling, or even [links](https://google.com). You can type the Markdown syntax, use the toolbar, or use shortcuts like `cmd-b` or `ctrl-b`.
+  <div class="publish__input-wrapper">
+    <div class="publish__input-name">Content</div>
+    <div class="publish__input-field">
+      <textarea id="postBody"># Intro
 
-    ## Lists
-    Unordered lists can be started using the toolbar or by typing `* `, `- `, or `+ `. Ordered lists can be started by typing `1. `.
-
-    #### Unordered
-    * Lists are a piece of cake
-    * They even auto continue as you type
-    * A double enter will end them
-    * Tabs and shift-tabs work too
-
-    #### Ordered
-    1. Numbered lists...
-    2. ...work too!
-
-    ## What about images?
-    ![Yes](https://i.imgur.com/sZlktY7.png)</textarea>
-
-  <div class="publish__setup-wrapper">
-    <div class="publish__setup-block">
-      <div class="tags-setup__input-wrapper">
-        <div class="tags-setup__input-text">
-          <span class="tags-setup__input-name">Add tags:</span>
-          <span class="tags-setup__input-alert">Up to 8</span>
-        </div>
-        <input type="text" class="login-form__input" placeholder="Type tags here" name="tags">
-      </div>
+      ## What about images?
+      ![Yes](https://i.imgur.com/sZlktY7.png)</textarea>
+    </div>
+  </div>
+  <div class="publish__input-wrapper">
+    <div class="publish__input-name">Tags</div>
+    <div class="publish__input-field">
+      <input type="text" class="login-form__input" placeholder="Type tags here" name="tags">
       <div class="tags-setup__info">Add a topic by typing in the field above and pressing "enter".</div>
       <div class="tags-list__wrapper">
         <span class="tags-list__item">steemit<span class="tags-list__remove-item"></span></span>
@@ -43,20 +31,18 @@
         <span class="tags-list__item">introduceyourself<span class="tags-list__remove-item"></span></span>
         <span class="tags-list__item">blockchain<span class="tags-list__remove-item"></span></span>
         <span class="tags-list__item">open-source<span class="tags-list__remove-item"></span></span>
-      </div>  
+      </div>
     </div>
-    <div class="publish__setup-block">
-          <span class="post-view__comments-order">Payout: <span class="post-view__comments-order-selected">50/50 (Default)</span>
+  </div>
+  <div class="publish__input-wrapper">
+    <div class="publish__input-name">Payout</div>
+    <div class="publish__input-field">
+           <span class="post-view__comments-order-selected">50/50 (Default)</span>
             <ul class="post-view__comments-options" style="display:none;">
               <li class="post-view__comments-options-item">50/50</li><li class="post-view__comments-options-item">100% Steem Power</li><li class="post-view__comments-options-item">Decline payout</li>
             </ul>
-          </span>
     </div>
-
-
-
-
-
   </div>
+  <div class="publish__post-btn-group"><button class="btn btn--large post-view__post-btn">Post</button><a href="#" class="post-view__post-btn-link">Cancel</a></div>
 
 </div>
