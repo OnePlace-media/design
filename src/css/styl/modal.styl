@@ -1,0 +1,62 @@
+.modal__overlay
+  background rgba(0,0,0,0.65)
+  z-index 99
+  fixed()
+  overflow-x hidden
+  overflow-y scroll
+  
+.modal__dialog
+  position relative
+  width 600px
+  padding 16px 24px 16px
+  height auto
+  color --color-dgray
+  background --color-default
+  margin 96px auto 32px
+  
+.modal__close-modal
+  position absolute
+  top 0
+  right -36px
+  display block
+  width 20px
+  height 20px
+  opacity 0.8
+  transition all .3s ease
+  &:before,&:after
+    display block
+    content ''
+    background --color-default
+    position absolute
+    width 24px
+    height 3px
+    border-radius 1px
+    top 8px
+    left -2px
+  &:before
+    transform rotate(45deg)
+  &:after
+    transform rotate(-45deg)
+  &:hover
+    cursor pointer
+    opacity 1
+  
+.modal__dialog-header
+  padding 0 0 16px
+  border-bottom 1px solid --color-xlgray
+  margin-bottom 16px
+  
+.modal__confirm-btn
+  display inline-block
+  width auto
+  padding 0 32px
+  color --color-default
+  background --color-brand
+  &:hover
+    background --color-brand-hover
+    
+.modal__btn-link
+    font-size 15px
+    margin-left 32px
+    color --color-dgray
+    text-decoration none

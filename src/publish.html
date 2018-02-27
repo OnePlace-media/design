@@ -23,6 +23,7 @@
       <section class="tag-block">
         <header class="tag-block__header container">
           <h1 class="h1 tag-block__title">Create new post</h1>
+          <span href="#" class="tag-block__header-btn">Load draft</span>
         </header>
         <section class="tag-block__body">        
             //= include blocks/publish.html
@@ -56,7 +57,9 @@
       },
       element: document.getElementById("postBody"),
       hideIcons: ["fullscree"],
-      spellChecker: false
+      promptURLs: true,
+      spellChecker: false,
+      status: false
     });
   </script>
 

@@ -4,7 +4,12 @@
     <div class="comment__header"><a class="link link--op" href="#" target="_blank">steemitblog</a>
     <span class="post-view__post-author-rep">71</span> &middot; yesterday</div>
     <div class="comment__body">
-      <div class="markdown markdown--small">Looks great so far! Have you run into any non-canonical errors while broadcasting transactions? It looks like you're using the graphene method of verifying signatures.</div>
+      <div class="post-view__reply-block">
+        <textarea name="post-reply" class="post-view__post-reply-input input" required></textarea>
+        <div class="post-view__post-btn-group"><button class="btn btn--large post-view__post-btn">Update</button><a href="#" class="post-view__post-btn-link">Cancel</a></div>
+        <h4 class="h4 post-view__preview-title">Preview</h4>
+        <div class="post-view__reply-preview markdown markdown--small"><p>Looks great so far! Have you run into any non-canonical errors while broadcasting transactions? It looks like you're using the graphene method of verifying signatures.</p></div>
+      </div>
     </div>
     <div class="comment__post-data">
       <span class="post-view__post-data-item"><span class="post-view__post-currency">$</span><span class="post-view__post-value">4.20<div class="post-view__pending-payout dropdown"><p>Pending payout is <span class="currency">$&nbsp;145.34</span> in 3 days.</p></div></span></span>
@@ -15,6 +20,14 @@
       <a href="#" class="post-view__post-data-item link" title="Reply">Reply</a>
       <a href="#" class="post-view__post-data-item link" title="Reply">Edit</a>
       <a href="#" class="post-view__post-data-item link" title="Reply">Delete</a>
+      <div class="modal__overlay" style="display:none;">
+        <div class="modal__dialog">
+          <div class="modal__dialog-header">
+            <h2 class="h2">Confirm delete comment</h2><span class="modal__close-modal"></span>
+          </div>
+          <div><button class="btn btn--large modal__confirm-btn">Delete</button><a href="#" class="modal__btn-link link--ul">Cancel</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

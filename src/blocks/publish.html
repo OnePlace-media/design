@@ -6,8 +6,8 @@
       
       <input type="text" class="login-form__input publish__input--title" placeholder="Post title">
       <div class="publish__info-button"><span class="fa fa-info-circle"></span></div>
-      <div class="login-form__alert" style="display:block;">Please enter post title</div>
-      <div class="publish__info-alert">Enter title of your post in this field. Please avoid unnecessary CAPS and try to keep the title under 80 symbols.   X</div>
+      <div class="login-form__alert" style="display:none;">Please enter post title</div>
+      <div class="publish__info-alert" style="display:none;">Enter title of your post in this field. Please avoid unnecessary CAPS and try to keep the title under 80 symbols.   X</div>
 
     </div>
   </div>
@@ -18,13 +18,14 @@
 
       ## What about images?
       ![Yes](https://i.imgur.com/sZlktY7.png)</textarea>
+      <div class="publish__image-upload">Insert images by dragging & dropping, pasting from the clipboard, or by <a class="link link--ul" href="#">selecting them</a>.</div>
     </div>
   </div>
   <div class="publish__input-wrapper">
     <div class="publish__input-name">Tags</div>
     <div class="publish__input-field">
       <input type="text" class="login-form__input" placeholder="Type tags here" name="tags">
-      <div class="tags-setup__info">Add a topic by typing in the field above and pressing "enter".</div>
+      <div class="tags-setup__info" style="display:none;">Add a topic by typing in the field above and pressing "enter".</div>
       <div class="tags-list__wrapper">
         <span class="tags-list__item">steemit<span class="tags-list__remove-item"></span></span>
         <span class="tags-list__item">music<span class="tags-list__remove-item"></span></span>
