@@ -7,34 +7,24 @@
   
   <!-- Styles from simpleMDE -->
   <style type="text/css">@import url("https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css");</style>
-
+  <style type="text/css">@import url("css/styles.css");</style>
   
   <!-- Wrapper -->
   <div class="wrapper">
 
     <!-- Header -->
-    //= include blocks/header.html
+<!--    //= include blocks/header.html-->
     <!-- /Header -->
 
 
     <!-- Main page -->
-    <section class="main-content">
 
-      <section class="tag-block">
-        <header class="tag-block__header container">
-          <h1 class="h1 tag-block__title">Create new post</h1>
-          <span href="#" class="tag-block__header-btn">Load draft</span>
-        </header>
-        <section class="tag-block__body">        
             //= include blocks/publish.html
-        </section>
-      </section>
 
-    </section>
     <!-- /Main page -->
 
     <!-- Footer -->
-    //= include blocks/footer.html
+<!--    //= include blocks/footer.html-->
     <!-- /Footer -->
 
 
@@ -50,16 +40,18 @@
           enabled: true,
           uniqueId: "MyUniqueID",
           delay: 1000,
-      },
+      }, 
       blockStyles: {
           bold: "__",
           italic: "_"
       },
       element: document.getElementById("postBody"),
       hideIcons: ["fullscree"],
+      showIcons: ["heading-smaller","heading-bigger","horizontal-rule","code"],
       promptURLs: true,
       spellChecker: false,
-      status: false
+      status: false,
+      styleSelectedText: false
     });
   </script>
 

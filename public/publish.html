@@ -15,121 +15,117 @@
   
   <!-- Styles from simpleMDE -->
   <style type="text/css">@import url("https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css");</style>
-
+  <style type="text/css">@import url("css/styles.css");</style>
   
   <!-- Wrapper -->
   <div class="wrapper">
 
     <!-- Header -->
-    <header class="header">
-    	<div class="header__wrapper container">
-    <!--	  <a class="header__nav-toggle btn"></a>-->
-    		<div class="header__logo"><img src="img/logo.svg" alt="OnePlace" class="img-responsive"></div>
-    		<div class="header__right-panel">
-    			<div class="header__chain-wrapper">
-    				<a href="#" class="header__chain header__chain--steem header__chain--active" title="Steem"></a>
-    				<a href="#" class="header__chain header__chain--golos" title="Golos"></a>
-    			</div>
-    			<!--      <a href="#" class="header__auth link">Get Started</a>-->
-    			<div class="header__user-wrapper">
-    				<a href="#" class="header__user-avatar avatar" style="background-image: url(' https://steemitimages.com/72x72/http://i.imgur.com/84yZ7of.png');"></a>
-    				<a class="header__user-switch" title="Switch account"></a>
-    				<a class="header__user-name link link--op" href="#">smotritelmayaka</a>
-    
-    			</div>
-    							<a href="#" class="header__profile-btn"></a>
-    				<div class="header__usermenu">
-    					<a href="#" class="header__usermenu-item link">Settings</a>
-    					<a href="#" class="header__usermenu-item header__usermenu-item--submenu link">Switch account
-                <div class="header__submenu">
-                  <span class="header__submenu-item"><span class="submenu__account-chain submenu__account-chain--golos"></span>awispa</span>
-                  <span class="header__submenu-item"><span class="submenu__account-chain submenu__account-chain--golos"></span>smotritelmayaka</span>
-                  <span class="header__submenu-item"><span class="submenu__account-chain submenu__account-chain--steem"></span>www</span>
-                </div>
-    					</a>
-    					<a href="#" class="header__usermenu-item header__usermenu-item--hr link">Logout</a>
-    				</div>
-    		</div>
-    	</div>
-    </header>
+<!--    //= include blocks/header.html-->
     <!-- /Header -->
 
 
     <!-- Main page -->
-    <section class="main-content">
 
-      <section class="tag-block">
-        <header class="tag-block__header container">
-          <h1 class="h1 tag-block__title">Create new post</h1>
-          <span href="#" class="tag-block__header-btn">Load draft</span>
-        </header>
-        <section class="tag-block__body">        
-            <div class="container">
-              
-              <div class="publish__input-wrapper">
-                <div class="publish__input-name">Title</div>
-                <div class="publish__input-field">
-                  
-                  <input type="text" class="login-form__input publish__input--title" placeholder="Post title">
-                  <div class="publish__info-button"><span class="fa fa-info-circle"></span></div>
-                  <div class="login-form__alert" style="display:none;">Please enter post title</div>
-                  <div class="publish__info-alert" style="display:none;">Enter title of your post in this field. Please avoid unnecessary CAPS and try to keep the title under 80 symbols.   X</div>
-            
-                </div>
-              </div>
-              <div class="publish__input-wrapper">
-                <div class="publish__input-name">Content</div>
-                <div class="publish__input-field">
-                  <textarea id="postBody"># Intro
-            
-                  ## What about images?
-                  ![Yes](https://i.imgur.com/sZlktY7.png)</textarea>
-                  <div class="publish__image-upload">Insert images by dragging & dropping, pasting from the clipboard, or by <a class="link link--ul" href="#">selecting them</a>.</div>
-                </div>
-              </div>
-              <div class="publish__input-wrapper">
-                <div class="publish__input-name">Tags</div>
-                <div class="publish__input-field">
-                  <input type="text" class="login-form__input" placeholder="Type tags here" name="tags">
-                  <div class="tags-setup__info" style="display:none;">Add a topic by typing in the field above and pressing "enter".</div>
-                  <div class="tags-list__wrapper">
-                    <span class="tags-list__item">steemit<span class="tags-list__remove-item"></span></span>
-                    <span class="tags-list__item">music<span class="tags-list__remove-item"></span></span>
-                    <span class="tags-list__item">introduceyourself<span class="tags-list__remove-item"></span></span>
-                    <span class="tags-list__item">blockchain<span class="tags-list__remove-item"></span></span>
-                    <span class="tags-list__item">open-source<span class="tags-list__remove-item"></span></span>
+            <section class="main-content publish">
+              <header class="publish__header">
+                <div class="publish__header-wrapper">
+            <!--      <a href="#" class="publish__logo"></a>-->
+                  <div class="publish__post-author">
+                    <div class="publish__avatar avatar" style="background-image: url('https://steemitimages.com/72x72/http://i.imgur.com/84yZ7of.png');"></div>
+                    <a class="header__user-switch header__user-switch--publish" title="Switch account"></a>
+                    <div class="column-wrapper">
+                      <a class="link link--op" href="#">smotritelmayaka</a>
+                      <span class="">New post</span>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="publish__btn publish__btn--drafts">Drafts
+                      <span class="icon--arrow-down"></span>
+                      <div class="dropdown publish__drafts">
+                        <div class="publish__drafts-new">Create new draft</div>
+                        <div class="publish__no-drafts" style="display:none;">You have no drafts.</div>
+                        <div class="publish__drafts-list">
+                          <div class="publish__drafts-item">
+                            <div class="column-wrapper">
+                              <span class="publish__drafts-name">New release</span>
+                              <span class="publish__drafts-time">just now</span>
+                            </div>
+                            <a href="#" title="Delete draft"><svg class="publish__icon"><use xlink:href="img/icons-sprite.svg#delete"></use></svg></a>
+                          </div>
+                          <div class="publish__drafts-item">
+                            <div class="column-wrapper">
+                              <span class="publish__drafts-name">Untitled</span>
+                              <span class="publish__drafts-time">yesterday at 18:37</span>
+                            </div>
+                            <a href="#" title="Delete draft"><svg class="publish__icon"><use xlink:href="img/icons-sprite.svg#delete"></use></svg></a>
+                          </div>
+                          <div class="publish__drafts-item">
+                            <div class="column-wrapper">
+                              <span class="publish__drafts-name">Untitled</span>
+                              <span class="publish__drafts-time">yesterday at 18:37</span>
+                            </div>
+                            <a href="#" title="Delete draft"><svg class="publish__icon"><use xlink:href="img/icons-sprite.svg#delete"></use></svg></a>
+                          </div>
+                          <div class="publish__drafts-item">
+                            <div class="column-wrapper">
+                              <span class="publish__drafts-name">Travellers are free to visit Bali in moonsoon season</span>
+                              <span class="publish__drafts-time">27 feb at 18:37</span>
+                            </div>
+                            <a href="#" title="Delete draft"><svg class="publish__icon"><use xlink:href="img/icons-sprite.svg#delete"></use></svg></a>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
+                    <span class="publish__btn publish__btn--publish">Publish
+                      <span class="icon--arrow-down"></span>
+                      <div class="dropdown publish__setup">
+                        <span class="publish__setup-header"><h2 class="h2">Ready to publish?</h2></span>
+                        <div class="publish__setup-tags">
+                          <h4 class="h4">Add tags (up to 5):</h4>
+                          <input type="text" class="publish__tags-input input" placeholder="Type tags here..." name="tags">
+                          <div class="publish__tags-wrapper">
+                            <span class="tags-list__item">steemit <span class="tags-list__remove-item"></span></span>
+                            <span class="tags-list__item">music <span class="tags-list__remove-item"></span></span>
+                            <span class="tags-list__item">blockchain <span class="tags-list__remove-item"></span></span>
+                            <span class="tags-list__item">open-source <span class="tags-list__remove-item"></span></span> 
+                          </div>
+                        </div>
+                        <div class="publish__setup-payout">
+                          <h4 class="h4 publish__setup-payout-title">Payout settings:</h4>
+                          <input class="publish__radio" id="option-1" type="radio" name="chain" checked>
+                          <label class="publish__radio-label" for="option-1">50% / 50% (Recommended)</label>
+                          <input class="publish__radio" id="option-2" type="radio" name="chain">
+                          <label class="publish__radio-label" for="option-2">100% STEEM POWER</label>
+                          <input class="publish__radio" id="option-3" type="radio" name="chain">
+                          <label class="publish__radio-label" for="option-3">Decline rewards</label>
+                        </div>
+                        <div class="publish__final">
+                            <input type="checkbox" value="1" id="checkbox-1" class="publish__checkbox">
+                            <label for="checkbox-1" class="publish__checkbox-label">Upvote post</label>
+                            <div class="publish__post-btn-group"><button class="btn btn--large publish__btn-post publish__btn-post--active">Publish</button><a href="#" class="post-view__post-btn-link">Cancel</a></div>
+                        </div>
+                      </div>
+                    </span>
                   </div>
                 </div>
-              </div>
-              <div class="publish__input-wrapper">
-                <div class="publish__input-name">Payout</div>
-                <div class="publish__input-field">
-                       <span class="post-view__comments-order-selected">50/50 (Default)</span>
-                        <ul class="post-view__comments-options" style="display:none;">
-                          <li class="post-view__comments-options-item">50/50</li><li class="post-view__comments-options-item">100% Steem Power</li><li class="post-view__comments-options-item">Decline payout</li>
-                        </ul>
-                </div>
-              </div>
-              <div class="publish__post-btn-group"><button class="btn btn--large post-view__post-btn">Post</button><a href="#" class="post-view__post-btn-link">Cancel</a></div>
+              </header>
             
-            </div>
-        </section>
-      </section>
+              <section class="publish__post-editor"> 
+            
+                <textarea class="publish__input-title input" placeholder="Enter post title"></textarea>
+            
+                <textarea id="postBody" placeholder="Type your story here..."></textarea>
+            
+              </section>
+            
+            
+            </section>
 
-    </section>
     <!-- /Main page -->
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer__wrapper">
-        <div class="footer__license">
-          Created in 2017 by <a href="https://steemit.com/@oneplace.media" target="_blank" class="link link--op">oneplace.media</a>
-        </div>
-        <div class="footer__lang-switch">
-          Language: <span class="footer__lang footer__lang--active">English</span><span class="footer__lang">Русский</span>
-        </div>
-      </div>
-    </footer>
+<!--    //= include blocks/footer.html-->
     <!-- /Footer -->
 
 
@@ -145,16 +141,18 @@
           enabled: true,
           uniqueId: "MyUniqueID",
           delay: 1000,
-      },
+      }, 
       blockStyles: {
           bold: "__",
           italic: "_"
       },
       element: document.getElementById("postBody"),
       hideIcons: ["fullscree"],
+      showIcons: ["heading-smaller","heading-bigger","horizontal-rule","code"],
       promptURLs: true,
       spellChecker: false,
-      status: false
+      status: false,
+      styleSelectedText: false
     });
   </script>
 

@@ -518,6 +518,11 @@
   width 160px
   color --color-default
   background --color-xlgray
+  
+.post-view__post-btn--active
+  background --color-brand
+  &:hover
+    background --color-brand-hover
 
 .post-view__post-btn-link
   display inline-block
@@ -666,7 +671,7 @@
     width auto
     max-width 100%
     height auto
-    max-height none
+    max-height 600px
   blockquote
     color --color-mgray
     margin 0 0 1rem
@@ -674,7 +679,7 @@
     border-left 4px solid --color-xlgray
   pre>code
     display block
-    padding .5rem .75rem .75rem
+    padding .5rem .75rem
     margin-bottom 1rem
   code
     display inline-block
