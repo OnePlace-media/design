@@ -22,6 +22,7 @@
     <!--	  <a class="header__nav-toggle btn"></a>-->
     		<div class="header__logo"><img src="img/logo.svg" alt="OnePlace" class="img-responsive"></div>
     		<div class="header__right-panel">
+    		    <a href="#" class="header__publish" title="Create new post"><svg class="icon--publish"><use xlink:href="img/pencil.svg#icon"></use></svg></a>
     			<div class="header__chain-wrapper">
     				<a href="#" class="header__chain header__chain--steem header__chain--active" title="Steem"></a>
     				<a href="#" class="header__chain header__chain--golos" title="Golos"></a>
@@ -35,7 +36,8 @@
     			</div>
     							<a href="#" class="header__profile-btn"></a>
     				<div class="header__usermenu">
-    					<a href="#" class="header__usermenu-item link">Settings</a>
+    				    <a href="#" class="header__usermenu-item link">Create new post</a>
+    					<a href="#" class="header__usermenu-item header__usermenu-item--hr link">Settings</a>
     					<a href="#" class="header__usermenu-item header__usermenu-item--submenu link">Switch account
                 <div class="header__submenu">
                   <span class="header__submenu-item"><span class="submenu__account-chain submenu__account-chain--golos"></span>awispa</span>
@@ -317,6 +319,21 @@
     <div class="post-view">
       <div class="post-view__spinner" style="display:none;"><img src="img/spinner-dark.gif" alt=""></div>
       <div class="post-view__overlay">
+           <div class="share-icons__wrapper share-icons__wrapper--visible">
+               <span data-link="#share-facebook">
+               <i class="share-icon share-icon--facebook"></i>
+               </span>
+               <span data-link="#share-twitter">
+                 <i class="share-icon share-icon--twitter"></i>
+               </span>
+               <span data-link="#share-googleplus">
+                 <i class="share-icon share-icon--google-plus"></i>
+               </span>
+               <span data-link="#share-vk">
+                 <i class="share-icon share-icon--vk"></i>
+               </span>
+           </div>
+        
         <div class="post-view__modal">
           <div class="post-view__post-wrapper">
            
@@ -459,6 +476,8 @@
                     <span class="post-view__voters-all">and 175 more...</span>
                   </div></span></span>
                   <span class="post-view__post-data-item"><a class="post-view__post-reply" title="Reply"><svg class="post-view__icon post-view__icon-comment"><use xlink:href="img/icons-sprite.svg#comment"></use></svg></a>227</span>
+                  <a href="#" class="post-view__post-data-item link" title="Edit">Edit</a>
+                  <a href="#" class="post-view__post-data-item link" title="Delete">Delete</a>
                 </div>
               </div>
               
@@ -792,8 +811,8 @@
                       </span></span>
                       <span class="post-view__post-data-item"><a class="post-view__post-like" title="Dislike"><div class="spinner-rolling"><div></div></div><svg class="post-view__icon post-view__icon--small post-view__icon-dislike"><use xlink:href="img/icons-sprite.svg#like"></use></svg></a>1</span>
                       <a href="#" class="post-view__post-data-item link" title="Reply">Reply</a>
-                      <a href="#" class="post-view__post-data-item link" title="Reply">Edit</a>
-                      <a href="#" class="post-view__post-data-item link" title="Reply">Delete</a>
+                      <a href="#" class="post-view__post-data-item link" title="Edit">Edit</a>
+                      <a href="#" class="post-view__post-data-item link" title="Delete">Delete</a>
                       <div class="modal__overlay" style="display:none;">
                         <div class="modal__dialog">
                           <div class="modal__dialog-header">

@@ -43,10 +43,24 @@
 .header__right-panel
   display flex
   align-items center
+  
+.header__publish
+  display block
+  height 32px
+  margin-right 20px
+  
+.icon--publish
+  position relative
+  transition all .3s ease
+  width 32px
+  height 32px
+  fill --color-xlgray
+  &:hover
+    fill --color-lgray
 
 .header__chain-wrapper
   width 90px
-  margin-right 20px
+  margin-right 23px
   display flex
   justify-content flex-end
   background --color-bg
@@ -152,7 +166,7 @@
   display block
   font-size 13px
   color --color-mgray
-  padding 5px 16px 6px
+  padding 8px 16px
   &:hover
     color --color-dgray
     background --color-bg-lite
@@ -228,11 +242,11 @@
 .header__profile-btn
   display block
   position relative
-  width 25px
-  height 25px
+  width 24px
+  height 24px
   background url('../img/settings.svg') 50% 50% no-repeat transparent
   background-size cover
-  margin-left 25px
+  margin-left 24px
   &:before
     display block
     content ''
