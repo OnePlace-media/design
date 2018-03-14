@@ -145,10 +145,10 @@ hr
     border-radius 100%
     display inline-block
     animation sk-bouncedelay 1.2s infinite ease-in-out both
-  .bounce1
-    animation-delay -0.32s
-  .bounce2
-    animation-delay -0.16s
+    &:first-child
+      animation-delay -0.32s
+    &:nth-child(2)
+      animation-delay -0.16s
 
 @-webkit-keyframes sk-bouncedelay {
   0%, 80%, 100% { -webkit-transform: scale(0) }

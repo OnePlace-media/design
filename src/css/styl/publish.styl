@@ -1,5 +1,12 @@
 .publish
   background --color-default
+  
+.publish--edit
+  .header__user-switch
+    display none
+  .tags-list__item:first-child
+    .tags-list__remove-item
+      display none
 
 .publish__header
   position fixed
@@ -282,6 +289,7 @@
     color --color-brand
     &:hover
       border-color --color-brand-hover
+      color --color-brand-hover
       cursor pointer
 
 .publish__post-editor
@@ -305,15 +313,74 @@
 #postBody
   width 100%
 
-.publish__image-upload
-  display none
-  text-align center
-  font-size 13px
-  padding 4px 16px
-  background --color-bg-lite
+.publish__modal
+  padding 0 !important
+  
+.publish__modal-header
+  text-transform capitalize
+  padding 12px 16px
+  background --color-bg
+  
+.publish__upload-wrapper
+  display flex
+  width 100%
+  padding 16px
+  
+.publish__link-input
+  height 40px
+  flex-basis calc(100% - 128px)
+  flex-grow 1
   border 1px solid --color-xlgray
-  border-top-style dashed
+  padding 4px 12px
+  font-size 15px
+  
+.publish__file-input
+  width 1px
+  height 1px
+  opacity 0
+  overflow hidden
+  position absolute
+  z-index -1
+  
+.publish__file-input-label
+  height 40px
+  font-size 15px
+  line-height 32px
+  width 128px
+  padding 4px 8px
+  text-align center
+  background --color-xlgray
+  &:hover
+    cursor pointer
+    background --color-lgray
 
+.publish__modal-bottom
+  display flex
+  justify-content flex-end
+  padding 0 16px 16px
+  text-align right
+    
+.publish__image-insert-btn
+  border 1px solid --color-lgray
+  color --color-mgray
+  background transparent
+  height 40px
+  width 128px
+  padding 0 16px
+  font-size 15px
+  text-align center
+  text-transform capitalize
+  &:hover
+    cursor auto
+  
+.publish__image-insert-btn--active
+  border 1px solid --color-brand
+  color --color-brand
+  &:hover
+    cursor pointer
+    border 1px solid --color-brand-hover
+    color --color-brand-hover
+  
   
 // SimpleMDE Editor styles overwrite
 
@@ -351,11 +418,11 @@
   .fa
     background none !important
     border none
-    color --color-dgray
+    color --color-dgray !important
     transition all .3s ease
     outline none
     &:hover
-      color --color-mgray
+      color --color-mgray !important
   i.separator
     display inline-block
     width 100%
@@ -366,14 +433,18 @@
     color transparent
     text-indent -10px
     margin 6px 0
-
+  &.disabled-for-preview
+    a:not(.no-disable)
+      color --color-xlgray !important
+    
 
 .CodeMirror
+  height auto
   min-height 200px
   padding 0 16px
   border none
   .CodeMirror-scroll
-    padding 16px 0
+    padding 0
   .CodeMirror-placeholder
     color --color-mgray
   pre
@@ -413,8 +484,9 @@
   padding 0
 
 .editor-preview
-  padding 16px
+  padding 0 16px
   background --color-default
+  overflow-y auto
 
 .CodeMirror-fullscreen,.editor-preview-side
   top 0
@@ -431,3 +503,4 @@
   width calc(50% - 32px)
   border none
   border-left 1px solid --color-bg
+  overflow-y auto

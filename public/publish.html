@@ -20,10 +20,6 @@
   <!-- Wrapper -->
   <div class="wrapper">
 
-    <!-- Header -->
-<!--    //= include blocks/header.html-->
-    <!-- /Header -->
-
 
     <!-- Main page -->
 
@@ -33,7 +29,7 @@
             <!--      <a href="#" class="publish__logo"></a>-->
                   <div class="publish__post-author">
                     <div class="publish__avatar avatar" style="background-image: url('https://steemitimages.com/72x72/http://i.imgur.com/84yZ7of.png');"></div>
-                    <a class="header__user-switch header__user-switch--publish" title="Switch account"></a>
+                    <a class="header__user-switch" title="Switch account"></a>
                     <div class="column-wrapper">
                       <a class="link link--op" href="#">smotritelmayaka</a>
                       <span class="">New post</span>
@@ -118,15 +114,48 @@
                 <textarea id="postBody" placeholder="Type your story here..."></textarea>
             
               </section>
+              
+                <div class="modal__overlay" style="display:none;">
+                  <div class="modal__dialog publish__modal">
+                    <div class="publish__modal-header">
+                      <h3 class="h3">Insert image</h3>
+                      <span class="modal__close-modal"></span>
+                    </div>
+                    <div class="publish__upload-wrapper">
+                      <input type="text" class="publish__link-input input" placeholder="Paste image link or upload image from your device..." name="link">
+                      <input type="file" class="publish__file-input input" name="image" id="image-file">
+                      <label for="image-file" class="publish__file-input-label"><span>Upload</span>
+                      <div class="spinner" style="display:none;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                    </label>
+                    </div>
+                    <div class="publish__modal-bottom">
+                      <button class="btn publish__image-insert-btn publish__image-insert-btn--active">Insert image</button>
+                    </div>
+                  </div>
+                  
+                  <div class="modal__dialog publish__modal">
+                    <div class="publish__modal-header">
+                      <h3 class="h3">Insert link</h3>
+                      <span class="modal__close-modal"></span>
+                    </div>
+                    <div class="publish__upload-wrapper">
+                      <input type="text" class="publish__link-input input" placeholder="Paste link URL here..." name="link">
+                    </div>
+                    <div class="publish__modal-bottom">
+                      <button class="btn publish__image-insert-btn publish__image-insert-btn--active">Insert link</button>
+                    </div>
+                  </div>
+                          
+                </div>
             
             
             </section>
 
     <!-- /Main page -->
-
-    <!-- Footer -->
-<!--    //= include blocks/footer.html-->
-    <!-- /Footer -->
 
 
   </div>
