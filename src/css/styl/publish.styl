@@ -386,22 +386,32 @@
   &:hover
     cursor pointer
     border 1px solid --color-brand-hover
-    color --color-brand-hover
-
-    
+    color --color-brand-hover 
     
 .publish__toolbar-dropdown
   display flex
+  width max-content
   flex-direction column
   font-family --font-base
   position absolute
   top 0
-  left 32px
-  z-index 10
+  left 40px
   background --color-default
-  padding 16px
-  border 1px solid --color-xlgray
+  box-shadow 0 0 5px rgba(0,0,0,0.15)
   border-radius 3px
+  
+.publish__toolbar-dropdown-btn
+  padding 8px 12px
+  font-size 13px
+  text-align left
+  color --color-dgray !important
+  width 100%
+  .fa
+    display inline
+    margin-right 8px
+  &:hover
+    cursor pointer
+    background --color-bg-lite
 
   
 // SimpleMDE Editor styles overwrite
@@ -416,6 +426,7 @@
 
 .editor-toolbar
   position fixed
+  z-index 3
   top 89px
   left calc(50% - 500px)
   display flex
@@ -436,7 +447,11 @@
     left 16px
     width auto
     height auto
-    z-index 700
+    z-index 100
+    overflow-x visible
+    overflow-y visible
+    .fa-eye
+      display none
   .fa
     position relative
     background none !important
@@ -446,6 +461,26 @@
     outline none
     &:hover
       color --color-mgray !important
+  .has-dropdown
+    padding-right 8px
+    &:after
+      position absolute
+      top 11px
+      right 4px
+      content ''
+      display inline-block
+      width 5px
+      height 5px
+      border-bottom-width: initial;
+      border-left-width: initial;
+      transform rotate(135deg)
+      border-style solid solid none none
+      border-color --color-dgray
+      border-right 2px solid
+      border-top 2px solid
+  .fa.has-dropdown--active
+    background --color-dgray !important
+    color --color-default !important
   i.separator
     display inline-block
     width 100%
@@ -513,10 +548,12 @@
 
 .CodeMirror-fullscreen,.editor-preview-side
   top 0
-  z-index 500
+  z-index 99
 
 .CodeMirror-fullscreen
   height auto
+  .CodeMirror-scroll
+    padding 16px 0 0
   
 .CodeMirror.CodeMirror-sided 
   width calc(50% - 32px) !important
