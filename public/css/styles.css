@@ -4131,6 +4131,7 @@ hr {
 }
 
 .publish__upload-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4177,6 +4178,13 @@ hr {
   background: #a8adad;
 }
 
+.publish__upload-alert {
+  position: absolute;
+  top: calc(100% - 12px);
+  font-size: 13px;
+  color: #db4c2a;
+}
+
 .publish__modal-bottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4215,6 +4223,27 @@ hr {
   cursor: pointer;
   border: 1px solid #b2341b;
   color: #b2341b;
+}
+
+.publish__toolbar-dropdown {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: 'Noto Sans', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 32px;
+  z-index: 10;
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #cfd2d2;
+  border-radius: 3px;
 }
 
 .CodeMirror-code * {
@@ -4264,6 +4293,7 @@ hr {
 }
 
 .editor-toolbar .fa {
+  position: relative;
   background: none !important;
   border: none;
   color: #383838 !important;

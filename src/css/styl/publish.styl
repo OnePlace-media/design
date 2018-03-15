@@ -322,6 +322,7 @@
   background --color-bg
   
 .publish__upload-wrapper
+  position relative
   display flex
   width 100%
   padding 16px
@@ -353,6 +354,12 @@
   &:hover
     cursor pointer
     background --color-lgray
+    
+.publish__upload-alert
+  position absolute
+  top calc(100% - 12px)
+  font-size 13px
+  color --color-brand
 
 .publish__modal-bottom
   display flex
@@ -380,7 +387,22 @@
     cursor pointer
     border 1px solid --color-brand-hover
     color --color-brand-hover
-  
+
+    
+    
+.publish__toolbar-dropdown
+  display flex
+  flex-direction column
+  font-family --font-base
+  position absolute
+  top 0
+  left 32px
+  z-index 10
+  background --color-default
+  padding 16px
+  border 1px solid --color-xlgray
+  border-radius 3px
+
   
 // SimpleMDE Editor styles overwrite
 
@@ -416,6 +438,7 @@
     height auto
     z-index 700
   .fa
+    position relative
     background none !important
     border none
     color --color-dgray !important
