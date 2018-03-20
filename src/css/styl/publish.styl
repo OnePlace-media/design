@@ -498,11 +498,16 @@
 
 .CodeMirror
   height auto
-  min-height 200px
+  min-height 248px
   padding 0 16px
   border none
+  border-radius 0
+  transition all .3s ease
+  &.drop-image
+    border 2px dashed --color-xlgray
   .CodeMirror-scroll
-    padding 0
+    min-height 248px
+    padding 0 0 30px
   .CodeMirror-placeholder
     color --color-mgray
   pre
@@ -517,26 +522,7 @@
     .cm-comment
       background --color-bg !important
     .cm-header
-      line-height 1.6
       display inline-block
-    .cm-header-1
-      font-size 1.6em
-      margin 2rem 0 1rem
-    .cm-header-2
-      font-size 1.4em
-      margin 2rem 0 1rem
-    .cm-header-3
-      font-size 1.2em
-      margin 1.5rem 0 0.75rem
-    .cm-header-4
-      font-size 1.1em
-      margin 1.5rem 0 0.75rem
-    .cm-header-5
-      font-size 1em
-      margin 1rem 0 0.5rem
-    .cm-header-6
-      font-size 0.9em
-      margin 0.75rem 0 0.5rem
       
 .CodeMirror-lines
   padding 0
