@@ -406,7 +406,11 @@
   color --color-dgray !important
   width 100%
   .fa
-    display inline
+    display inline-block
+    top 2px
+    width 15px
+    height 15px
+    font-size 15px
     margin-right 8px
   &:hover
     cursor pointer
@@ -530,23 +534,113 @@
   padding 0 16px
   background --color-default
   overflow-y auto
-
+  
 .CodeMirror-fullscreen,.editor-preview-side
   top 0
   z-index 99
 
 .CodeMirror-fullscreen
   height auto
+  padding 0 31px 0 15px
   .CodeMirror-scroll
     padding 15px 0 0
   
 .CodeMirror.CodeMirror-sided 
-  width calc(50% - 32px) !important
+  width calc(50% - 64px) !important
   margin-left 64px
   
 .editor-preview-side
-  width calc(50% - 32px)
-  padding 16px
+  width 50%
+  padding 16px 32px
   border none
-  border-left 1px solid --color-bg
+  background --color-bg-lite
   overflow-y auto
+  
+// FA-icons
+
+.fa
+  font-family 'fa-icons' !important
+  speak none
+  font-style normal
+  font-weight normal
+  font-variant normal
+  text-transform none
+  line-height 1
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+.fa-minus:before
+  content "\e900"
+
+.fa-align-center:before
+  content "\e901"
+
+.fa-align-justify:before
+  content "\e902"
+
+.fa-align-left:before
+  content "\e903"
+
+.fa-bold:before
+  content "\e904"
+
+.fa-chain:before
+  content "\e905"
+
+.fa-code:before
+  content "\e906"
+
+.fa-columns:before
+  content "\e907"
+  
+.fullscreen
+  .fa-columns:before
+    content "\e911"
+
+.fa-eye:before
+  content "\e908"
+
+.fa-facebook:before
+  content "\e909"
+
+.fa-google:before
+  content "\e90a"
+
+.fa-header:before
+  content "\e90b"
+
+.fa-indent:before
+  content "\e90c"
+
+.fa-italic:before
+  content "\e90d"
+
+.fa-link:before
+  content "\e90e"
+
+.fa-list-ol:before
+  content "\e90f"
+
+.fa-list-ul:before
+  content "\e910"
+
+.fa-picture-o:before
+  content "\e912"
+
+.fa-pull-left:before
+  content "\e913"
+
+.fa-pull-right:before
+  content "\e914"
+
+.fa-question-circle:before
+  content "\e915"
+
+.fa-quote-left:before
+  content "\e916"
+
+.fa-twitter:before
+  content "\e917"
+
+.fa-vk:before
+  content "\e918"
