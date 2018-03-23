@@ -33,6 +33,11 @@
 .tag-block__body
   padding 20px 0 30px
   min-height 75px
+  &:before, &:after
+    content ''
+    display table
+  &:after
+    clear both
 
 .tag-block__info
   position absolute
