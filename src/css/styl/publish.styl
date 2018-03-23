@@ -296,7 +296,7 @@
 
 .publish__post-editor
   width 872px
-  padding-top 24px
+  padding 24px 0 32px
   margin 0 auto
 
 .publish__input-title
@@ -415,6 +415,14 @@
   &:hover
     cursor pointer
     background --color-bg-lite
+    
+@media screen and (max-width: 1140px)
+  .publish__setup
+    right calc(50% - 94px)
+    &:before,&:after
+      right calc(50% - 62px)
+  
+  
 
   
 // SimpleMDE Editor styles overwrite
@@ -440,6 +448,8 @@
   opacity 1 !important
   border-radius 3px
   border none
+  @media screen and (max-width: 1040px)
+    left calc(50% - 496px)
   &:before
     margin-bottom 4px
   &:after
@@ -502,13 +512,12 @@
 .CodeMirror
   height auto
   min-height 450px
-  padding 0 15px
+  padding 0 16px
   border-radius 0
-  border 1px dashed transparent
+  border none !important
   transition all .3s ease
-  &.drop-image
-    border-color --color-xlgray
   .CodeMirror-scroll
+    position relative
     min-height 450px
     padding 4px 0 30px
   .CodeMirror-placeholder
@@ -527,6 +536,21 @@
     .cm-header
       display inline-block
       
+#drag-zone
+  display none
+  position absolute
+  width 100%
+  z-index 10
+  top 0
+  left 0
+  bottom 0
+  border 1px dashed transparent
+  &.drop-image
+    border-color --color-xlgray
+    background rgba(255,255,255,0.75)
+  &.drag-zone-visible
+    display block !important
+    
 .CodeMirror-lines
   padding 0
 
@@ -541,9 +565,9 @@
 
 .CodeMirror-fullscreen
   height auto
-  padding 0 31px 0 15px
+  padding 0 32px 0 16px
   .CodeMirror-scroll
-    padding 15px 0 0
+    padding 16px 0 0
   
 .CodeMirror.CodeMirror-sided 
   width calc(50% - 64px) !important
