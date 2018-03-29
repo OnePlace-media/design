@@ -429,6 +429,7 @@
 
 .CodeMirror-code
   *
+    font-family --font-currency
     font-size inherit !important
     line-height 1.6 !important
     margin 0 !important
@@ -468,12 +469,14 @@
   .fa
     position relative
     background none !important
-    border none
+    border 1px solid transparent !important
     color --color-dgray !important
     transition all .3s ease
     outline none
     &:hover
       color --color-mgray !important
+    &.active
+      border-color --color-lgray !important
   .has-dropdown
     padding-right 8px
     &:after
@@ -532,7 +535,6 @@
     .cm-comment
       border-radius 0 !important
       background --color-bg !important
-      font-family sans-serif
     .cm-header
       display inline-block
       

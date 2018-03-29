@@ -1,0 +1,48 @@
+<section class="feed container">
+
+  <div class="blog__header">
+    <div class="blog__header-tab blog__header-tab--active">Following</div>
+    <div class="blog__header-tab">Recommended</div>
+  </div>
+
+  <div class="feed__wrapper">
+    <div class="feed__posts">
+      //= include feed-post.html
+      //= include feed-post.html
+      //= include feed-post.html
+      //= include feed-post.html
+      //= include feed-post.html
+      //= include feed-post.html
+    </div>
+
+    <aside>
+      <div class="feed__filters">
+        <header class="feed__filters-header">
+          <h4 class="h4 feed__filters-title"><svg class="icon--filter"><use xlink:href="img/filter.svg#icon"></use></svg>Filter by tags</h4>  
+        </header>
+        <div class="feed__filters-body">
+          <div class="tags-filter__spinner" style="display:none;">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+          <div class="tags-list__wrapper">
+            <span class="tags-list__item tags-list__item--filter tags-list__item--selected">steemit<span class="tags-list__remove-item" alt="Remove tag"></span></span>
+            <span class="tags-list__item tags-list__item--filter" alt="Select tag">music<span class="tags-list__remove-item"  alt="Remove tag"></span></span>
+            <span class="tags-list__item tags-list__item--filter tags-list__item--removed">introduceyourself<span class="tags-list__remove-item" alt="Remove tag"></span></span>
+            <span class="tags-list__item tags-list__item--filter" alt="Select tag">blockchain<span class="tags-list__remove-item" alt="Remove tag"></span></span>
+            <span class="tags-list__item tags-list__item--filter" alt="Select tag">open-source<span class="tags-list__remove-item" alt="Remove tag"></span></span>
+          </div>
+          <div class="profile__tags-more">
+            <a href="#" class="link link--inactive">Clear filters</a>
+            <a href="#" class="link">Show all tags</a>
+          </div>
+        </div>    
+      </div>
+    </aside>
+
+  </div>
+
+</section>
