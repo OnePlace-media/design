@@ -4649,6 +4649,10 @@ hr {
   display: inline-block;
 }
 
+.CodeMirror-vscrollbar {
+  display: none;
+}
+
 #drag-zone {
   display: none;
   position: absolute;
@@ -4676,7 +4680,7 @@ hr {
 .editor-preview {
   padding: 0 16px;
   background: #fff;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .CodeMirror-fullscreen,.editor-preview-side {
