@@ -56,13 +56,10 @@ $image2H = 170px
   background-color --color-default
   background-size cover
 
-//.feed__post-abstract
-//  display flex
-//  flex-direction column
-
 .feed__post-title
-  font-size 18px
-  line-height 24px
+  font-size 17px
+  line-height 23px
+  max-height 46px
   margin-top -5px
   margin-bottom 8px
   overflow hidden
@@ -78,9 +75,15 @@ $image2H = 170px
   text-overflow ellipsis
   display -webkit-box
   line-height 21px
-  max-height 42px
-  -webkit-line-clamp 2
+  max-height 63px
+  -webkit-line-clamp 3
   -webkit-box-orient vertical
+  &.lines-2x
+    max-height 42px
+    -webkit-line-clamp 2
+  &.lines-1x
+    max-height 21px
+    -webkit-line-clamp 1
   
 .feed__post-info
   position absolute

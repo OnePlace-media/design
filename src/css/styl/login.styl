@@ -127,6 +127,12 @@
   color --color-dgray
   font-size 13px
   margin 0 0 16px
+
+.login-form__btn-wrapper
+  display flex
+  justify-content space-between
+  align-items baseline
+  font-size 13px
   
 .login-form__btn
   margin 0 auto 16px
@@ -135,7 +141,20 @@
     background --color-lgray
   &:last-child
     margin-bottom 0
-
+  &--bchain
+    margin 0 0 16px
+    text-transform capitalize
+  &--sc
+    max-width 256px
+    text-transform none
+    font-weight 400
+    color #4ba2f2
+    background --color-default
+    border 1px solid #4ba2f2
+    &:hover
+      border 1px solid #4ba2f2
+      background #f7faff
+      
 .login-form__select-chain
   display flex
   justify-content center
