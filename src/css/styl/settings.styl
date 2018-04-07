@@ -76,11 +76,20 @@
 
 .account-action__btn
   width 100%
+  text-transform none
   color --color-default
   background --color-link
   margin-bottom 16px
   &:hover
     background --color-link-hover
+  &--sc
+    font-weight 400
+    color --color-link
+    background --color-default
+    border 1px solid --color-link
+    &:hover
+      border 1px solid --color-link-hover
+      background rgba(37, 156, 183, .05)
     
 .settings__select-chain
   font-size 14px

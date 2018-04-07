@@ -130,7 +130,7 @@
 
 .login-form__btn-wrapper
   display flex
-  justify-content space-between
+  justify-content center
   align-items baseline
   font-size 13px
   
@@ -146,14 +146,15 @@
     text-transform capitalize
   &--sc
     max-width 256px
+    margin-left 8px
     text-transform none
     font-weight 400
-    color #4ba2f2
+    color --color-link
     background --color-default
-    border 1px solid #4ba2f2
+    border 1px solid --color-link
     &:hover
-      border 1px solid #4ba2f2
-      background #f7faff
+      border 1px solid --color-link-hover
+      background rgba(37, 156, 183, .05)
       
 .login-form__select-chain
   display flex

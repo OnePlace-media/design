@@ -998,10 +998,10 @@ hr {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: baseline;
   -webkit-align-items: baseline;
   -ms-flex-align: baseline;
@@ -1029,16 +1029,17 @@ hr {
 
 .login-form__btn--sc {
   max-width: 256px;
+  margin-left: 8px;
   text-transform: none;
   font-weight: 400;
-  color: #4ba2f2;
+  color: #259cb7;
   background: #fff;
-  border: 1px solid #4ba2f2;
+  border: 1px solid #259cb7;
 }
 
 .login-form__btn--sc:hover {
-  border: 1px solid #4ba2f2;
-  background: #f7faff;
+  border: 1px solid #2ab1cf;
+  background: rgba(37,156,183,0.05);
 }
 
 .login-form__select-chain {
@@ -1716,6 +1717,7 @@ hr {
 
 .account-action__btn {
   width: 100%;
+  text-transform: none;
   color: #fff;
   background: #259cb7;
   margin-bottom: 16px;
@@ -1723,6 +1725,18 @@ hr {
 
 .account-action__btn:hover {
   background: #2ab1cf;
+}
+
+.account-action__btn--sc {
+  font-weight: 400;
+  color: #259cb7;
+  background: #fff;
+  border: 1px solid #259cb7;
+}
+
+.account-action__btn--sc:hover {
+  border: 1px solid #2ab1cf;
+  background: rgba(37,156,183,0.05);
 }
 
 .settings__select-chain {
