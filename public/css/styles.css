@@ -1022,6 +1022,10 @@ hr {
   margin-bottom: 0;
 }
 
+.login-form__btn:first-child {
+  margin-bottom: 16px;
+}
+
 .login-form__btn--bchain {
   margin: 0 0 16px;
   text-transform: capitalize;
@@ -1138,13 +1142,18 @@ hr {
 }
 
 .login-form__text--alert {
+  font-size: 14px;
   border-left: 2px solid #db4c2a;
+  text-align: justify;
 }
 
 .login-form__text--security {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   color: #818888;
   font-size: 14px;
-  margin: -16px 0 24px;
+  margin: 0 auto 24px;
   padding-left: 21px;
   background: url("../img/padlock.svg") 0 50% no-repeat transparent;
   background-size: 13px 16px;
@@ -1152,6 +1161,17 @@ hr {
 
 .login-form__text--error {
   color: #db4c2a;
+}
+
+.login-form__advanced {
+  float: right;
+  font-size: 12px;
+  margin-top: -18px;
+  color: #a8adad;
+}
+
+.login-form__advanced:hover {
+  text-decoration: underline;
 }
 
 .register__steps-wrapper {

@@ -141,6 +141,8 @@
     background --color-lgray
   &:last-child
     margin-bottom 0
+  &:first-child
+    margin-bottom 16px
   &--bchain
     margin 0 0 16px
     text-transform capitalize
@@ -227,18 +229,29 @@
   font-size 13px
 
 .login-form__text--alert
+  font-size 14px
   border-left 2px solid --color-brand
+  text-align justify
   
 .login-form__text--security
+  width max-content
   color --color-mgray
   font-size 14px
-  margin -16px 0 24px
+  margin 0 auto 24px
   padding-left 21px
   background url('../img/padlock.svg') 0 50% no-repeat transparent
   background-size 13px 16px
   
 .login-form__text--error
   color --color-brand
+  
+.login-form__advanced
+  float right
+  font-size 12px
+  margin-top -18px
+  color --color-lgray
+  &:hover
+    text-decoration underline
   
 @media screen and (max-width: 640px)
   .login-form
