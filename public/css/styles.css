@@ -1768,6 +1768,30 @@ hr {
   background: rgba(37,156,183,0.05);
 }
 
+.account-action__bottom-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.account-action__bottom-link:hover {
+  text-decoration: underline;
+}
+
+.account-action__advanced {
+  color: #a8adad;
+}
+
+.account-action__advanced:hover {
+  text-decoration: underline;
+}
+
 .settings__select-chain {
   font-size: 14px;
 }
