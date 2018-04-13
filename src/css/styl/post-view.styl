@@ -347,6 +347,7 @@
 
 .post-view__votes
   position relative
+  display inline-block
   &:hover
     .post-view__voters
       display block
@@ -354,13 +355,14 @@
 .post-view__voters
   display none
   font-size 13px
-  min-width 200px
-  padding 8px 16px
+  width max-content
+  padding 8px 12px
   top 32px
-  left -80px
+  left 50%
+  transform translatex(-50%)
   color --color-dgray
   &:before,&:after
-    left 80px
+    left calc(50% - 8px)
 
 .post-view__voter-list
   list-style none
@@ -369,12 +371,14 @@
 .post-view__voter
   display flex
   justify-content space-between
+  align-items baseline
 
 .post-view__voter-name
-  padding-right 16px
+  padding 0
 
 .post-view__voter-amount
   color --color-mgray
+  margin-left 16px
 
 .post-view__voters-all
   color --color-lgray
