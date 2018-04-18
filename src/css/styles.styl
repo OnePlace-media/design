@@ -61,16 +61,16 @@ absolute(t = 0, r = 0, b = 0, l = 0)
   display flex
   color --color-brand
   font-size 13px
-  padding 70px 16px
+  padding 16px
   text-align center
-  align-content center
+  align-items center
   justify-content center
   position absolute
   top 0
   bottom 0
   left 0
   right 0
-  background #fff
+  background --color-bg-lite
 
 .nsfw-warning
   margin-right 5px
@@ -79,7 +79,7 @@ absolute(t = 0, r = 0, b = 0, l = 0)
   font 12px --font-base
   font-weight normal
   color --color-brand
-  padding 0 5px
+  padding 0 4px
   border 1px solid --color-brand
   border-radius 3px
 
@@ -87,6 +87,10 @@ absolute(t = 0, r = 0, b = 0, l = 0)
   .nsfw-warning
     font-size 13px
     top -4px
+    
+.feed__post-title
+  .nsfw-warning
+    top -1px
 
 .nsfw-warning--recent
   top 0px

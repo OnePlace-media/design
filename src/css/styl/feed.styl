@@ -5,6 +5,12 @@
 .feed__posts
   width 776px
   padding-right 16px
+
+.feed__no-posts
+  width 100%
+  background --color-default
+  font-size 15px
+  padding 16px
   
 .feed__post
   width 100%
@@ -20,6 +26,7 @@ $image2H = 170px
     
 .feed__post-image
   display block
+  position relative
   flex-basis auto
   width $image2W
   flex none
@@ -41,7 +48,7 @@ $image2H = 170px
   margin-top -6px
   font-size 13px
   color --color-mgray
-  margin-bottom 8px
+  margin-bottom 10px
   
 .feed__repost-avatar
   display inline-block
@@ -50,7 +57,7 @@ $image2H = 170px
   border-radius 50%
   width 20px
   height 20px
-  margin 0 4px
+  margin 0 1px
   background-position 50% 50%
   background-repeat no-repeat
   background-color --color-default
@@ -90,7 +97,7 @@ $image2H = 170px
   width 100%
   bottom 0
   padding 12px 0 0
-  border-top 1px solid --color-bg-dark
+  border-top 1px solid --color-bg
   display flex
   justify-content space-between
   align-items center
