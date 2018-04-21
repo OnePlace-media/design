@@ -2121,6 +2121,7 @@ hr {
 
 .tag-block__top-post:first-child .tag-block__top-post-title {
   font-size: 1.3125em;
+  line-height: 25px;
   max-height: 25px;
   -webkit-line-clamp: 1;
 }
