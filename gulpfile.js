@@ -65,7 +65,7 @@ gulp.task('styles', function () {
 		//    .pipe(rename({
 		//      suffix: '.min'
 		//    }))
-		.pipe(gulp.dest(params.distPath + 'css/'))
+		.pipe(gulp.dest(params.distPath + 'static/css/'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
