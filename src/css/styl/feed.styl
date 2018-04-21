@@ -3,8 +3,11 @@
   padding-bottom 24px
 
 .feed__posts
-  width 776px
-  padding-right 16px
+  width 720px
+
+.feed__aside
+  width 240px
+  padding-left 16px
 
 .feed__no-posts
   width 100%
@@ -57,17 +60,17 @@ $image2H = 170px
   border-radius 50%
   width 20px
   height 20px
-  margin 0 1px
+  margin 0 4px
   background-position 50% 50%
   background-repeat no-repeat
-  background-color --color-default
+  background-color transparent
   background-size cover
 
 .feed__post-title
-  font-size 17px
+  font-size 18px
   line-height 23px
   max-height 46px
-  margin-top -5px
+  margin-top -2px
   margin-bottom 8px
   overflow hidden
   text-overflow ellipsis
@@ -103,6 +106,8 @@ $image2H = 170px
   align-items center
   font-size 13px
   color --color-lgray
+  .post-view__post-currency
+    font-size 17px
   
 .feed__post-avatar
   display block
@@ -130,6 +135,8 @@ $image2H = 170px
   &--fixed
     position fixed
     top 70px
+
+
     
 .icon--filter
   position relative

@@ -167,7 +167,7 @@ $imageH = 167px
     left 0
     width 18px
     height 20px
-    background url('../img/profile-icons.svg') 0 0 no-repeat transparent
+    background url('/static/img/profile-icons.svg') 0 0 no-repeat transparent
     background-size 36px 20px
     
 .profile__info-item--website
@@ -210,11 +210,9 @@ $imageH = 167px
   padding 8px 0 16px
   
 .tags-list__item--filter
-  display inline-block
-  border-color --color-xlgray
-  background --color-bg
-  width max-content
   transition all .3s ease
+  &:hover
+    cursor pointer
   
 .tags-list__item--selected
   background --color-xlgreen
@@ -367,7 +365,7 @@ $imageH = 167px
   margin 0 4px
   background-position 50% 50%
   background-repeat no-repeat
-  background-color --color-bg
+  background-color transparent
   background-size cover
 
 .blog__post-title
@@ -395,7 +393,7 @@ $imageH = 167px
 .blog__post-time
   padding-left 23px
   line-height 16px
-  background url('../img/time.svg') 0 1px no-repeat transparent
+  background url('/static/img/time.svg') 0 1px no-repeat transparent
   background-size 15px 15px
   
 .blog__post-data

@@ -75,11 +75,14 @@
   margin-bottom 0
  
 .tag-block__post-image
-  background-size cover !important
   display block
   position relative
   width 100%
   height 140px
+  background-position 50% 50%
+  background-repeat no-repeat
+  background-color transparent
+  background-size cover
   
 .tag-block__top-post:first-child
   .tag-block__post-image
@@ -91,7 +94,7 @@
 .tag-block__top-post:first-child
   .tag-block__top-post-title
     font-size 1.3125em
-    max-height 24px
+    max-height 25px
     -webkit-line-clamp 1
 
 .tag-block__top-post-title
@@ -104,7 +107,7 @@
   -webkit-line-clamp 2
   -webkit-box-orient vertical
 
-.tag-block__recent-post-heading
+.tag-block__recent-post-title
   line-height 19px
   max-height 38px
   overflow hidden
@@ -194,16 +197,7 @@
     width 320px
   
 .tag-block__recent
-  background #fff
-
-.tag-block__recent-header
-  background --color-xlgray
-  text-align center
-  padding 11px 0 12px
-  
-.tag-block__recent-heading
-  text-transform uppercase
-  letter-spacing 0.025em
+  background --color-default
 
 .tag-block__recent-body
   padding 16px 20px 8px

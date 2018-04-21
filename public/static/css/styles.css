@@ -151,7 +151,7 @@ hr {
 }
 
 .aside-header {
-  background: #e0e2e2;
+  background: #cfd2d2;
   text-align: center;
   padding: 12px 0;
 }
@@ -2101,14 +2101,11 @@ hr {
 }
 
 .tag-block__post-image {
+  background-size: cover !important;
   display: block;
   position: relative;
   width: 100%;
   height: 140px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-size: cover;
 }
 
 .tag-block__top-post:first-child .tag-block__post-image {
@@ -2121,7 +2118,7 @@ hr {
 
 .tag-block__top-post:first-child .tag-block__top-post-title {
   font-size: 1.3125em;
-  max-height: 25px;
+  max-height: 24px;
   -webkit-line-clamp: 1;
 }
 
@@ -2136,7 +2133,7 @@ hr {
   -webkit-box-orient: vertical;
 }
 
-.tag-block__recent-post-title {
+.tag-block__recent-post-heading {
   line-height: 19px;
   max-height: 38px;
   overflow: hidden;
@@ -2257,6 +2254,17 @@ hr {
 
 .tag-block__recent {
   background: #fff;
+}
+
+.tag-block__recent-header {
+  background: #cfd2d2;
+  text-align: center;
+  padding: 11px 0 12px;
+}
+
+.tag-block__recent-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
 }
 
 .tag-block__recent-body {
@@ -3590,11 +3598,13 @@ hr {
 }
 
 .tags-list__item--filter {
+  display: inline-block;
+  border-color: #cfd2d2;
+  background: #f2f2f2;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   transition: all 0.3s ease;
-}
-
-.tags-list__item--filter:hover {
-  cursor: pointer;
 }
 
 .tags-list__item--selected {
@@ -3822,7 +3832,7 @@ hr {
   margin: 0 4px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-color: #f2f2f2;
   background-size: cover;
 }
 
@@ -3891,12 +3901,8 @@ hr {
 }
 
 .feed__posts {
-  width: 720px;
-}
-
-.feed__aside {
-  width: 240px;
-  padding-left: 16px;
+  width: 776px;
+  padding-right: 16px;
 }
 
 .feed__no-posts {
@@ -3964,18 +3970,18 @@ hr {
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  margin: 0 4px;
+  margin: 0 1px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-color: #fff;
   background-size: cover;
 }
 
 .feed__post-title {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 23px;
   max-height: 46px;
-  margin-top: -2px;
+  margin-top: -5px;
   margin-bottom: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -4026,10 +4032,6 @@ hr {
   align-items: center;
   font-size: 13px;
   color: #a8adad;
-}
-
-.feed__post-info .post-view__post-currency {
-  font-size: 17px;
 }
 
 .feed__post-avatar {
@@ -5411,23 +5413,23 @@ hr {
 }
 
 @font-face {
-  font-family:'Noto Sans';src:url("/static/fonts/notosans-bold.woff2") format('woff2'), url("/static/fonts/notosans-bold.woff") format('woff');font-weight:700;font-style:normal;
+  font-family:'Noto Sans';src:url("../fonts/notosans-bold.woff2") format('woff2'), url("../fonts/notosans-bold.woff") format('woff');font-weight:700;font-style:normal;
 }
 
 @font-face {
-  font-family:'Noto Sans';src:url("/static/fonts/notosans-regular.woff2") format('woff2'), url("/static/fonts/notosans-regular.woff") format('woff');font-weight:400;font-style:normal;
+  font-family:'Noto Sans';src:url("../fonts/notosans-regular.woff2") format('woff2'), url("../fonts/notosans-regular.woff") format('woff');font-weight:400;font-style:normal;
 }
 
 @font-face {
-  font-family:'fa-icons';src:url("/static/fonts/fa-icons.ttf?z2aobn") format('truetype'), url("/static/fonts/fa-icons.woff?z2aobn") format('woff'), url("/static/fonts/fa-icons.svg?z2aobn#fa-icons") format('svg');font-weight:normal;font-style:normal;
+  font-family:'fa-icons';src:url("../fonts/fa-icons.ttf?z2aobn") format('truetype'), url("../fonts/fa-icons.woff?z2aobn") format('woff'), url("../fonts/fa-icons.svg?z2aobn#fa-icons") format('svg');font-weight:normal;font-style:normal;
 }
 
 @font-face {
-  font-family:'PTS';src:url("/static/fonts/pts-regular.woff2") format('woff2'), url("/static/fonts/pts-regular.woff") format('woff');font-weight:400;font-style:normal;
+  font-family:'PTS';src:url("../fonts/pts-regular.woff2") format('woff2'), url("../fonts/pts-regular.woff") format('woff');font-weight:400;font-style:normal;
 }
 
 @font-face {
-  font-family:'PTS';src:url("/static/fonts/pts-bold.woff2") format('woff2'), url("/static/fonts/pts-bold.woff") format('woff');font-weight:700;font-style:normal;
+  font-family:'PTS';src:url("../fonts/pts-bold.woff2") format('woff2'), url("../fonts/pts-bold.woff") format('woff');font-weight:700;font-style:normal;
 }
 
 @media screen and (max-width: 1540px) {
