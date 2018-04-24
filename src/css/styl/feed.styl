@@ -3,7 +3,9 @@
   padding-bottom 24px
 
 .feed__posts
-  width 720px
+  width 760px
+  @media screen and (max-width: 1040px)
+    width 720px
 
 .feed__aside
   width 240px
@@ -81,6 +83,7 @@ $image2H = 170px
 .feed__post-text
   font-size 14px
   color --color-mgray
+  margin-bottom 16px
   overflow hidden
   text-overflow ellipsis
   display -webkit-box
