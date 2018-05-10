@@ -41,21 +41,6 @@ $imageH = 167px
   &:last-child
     margin-bottom 0
   
-.profile__reputation
-  display inline-block
-  position absolute
-  top 16px
-  right 16px
-  background --color-default
-  font-size 12px
-  font-weight 400
-  text-align center
-  line-height 18px
-  height 20px
-  padding 0 4px
-  border 1px solid --color-lgray
-  border-radius 3px
-  
 .btn-follow
   width 100%
   height 40px
@@ -210,6 +195,7 @@ $imageH = 167px
   padding 8px 0 16px
   
 .tags-list__item--filter
+  padding-right 24px
   transition all .3s ease
   &:hover
     cursor pointer
@@ -223,7 +209,9 @@ $imageH = 167px
   color --color-brand
   border-color --color-lred
   background --color-xlred
-  text-decoration line-through
+  padding-right 8px
+  span
+    text-decoration line-through
   .tags-list__remove-item
     display none
     

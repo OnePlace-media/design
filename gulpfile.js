@@ -27,6 +27,8 @@ var watchPaths = {
 // Browser-sync
 gulp.task('browser-sync', function () {
 	browserSync.init({
+		port : 3200,
+		ui: false,
 		server: {
 			baseDir: params.distPath
 		}
@@ -55,7 +57,7 @@ gulp.task('styles', function () {
 		.src([params.srcPath + 'css/*.styl'])
 		.pipe(stylus())
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions', '> 1%', 'Safari >= 7'],
+			browsers: ['> 1%', 'Safari >= 7'],
 			cascade: false
 		}))
 		.pipe(combineMq({
