@@ -4210,10 +4210,6 @@ hr {
   margin-bottom: 8px;
 }
 
-.tags-list__item--publish {
-  padding-right: 24px;
-}
-
 .publish__setup-payout {
   padding: 16px 0 8px;
   display: -webkit-box;
