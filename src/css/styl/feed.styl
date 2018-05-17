@@ -43,12 +43,15 @@ $image2H = 170px
   background-size cover
   
 .feed__post-content
-  flex-basis auto
-  width 100%
+  width 437px
   position relative
   padding-bottom 44px
   &--blog
     padding-bottom 33px
+
+@media screen and (max-width: 1040px)
+  .feed__post-content
+    width 397px
   
 .feed__post-reposted
   position relative
