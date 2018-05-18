@@ -43,15 +43,11 @@ $image2H = 170px
   background-size cover
   
 .feed__post-content
-  width 437px
+  width 100%
   position relative
   padding-bottom 44px
   &--blog
     padding-bottom 33px
-
-@media screen and (max-width: 1040px)
-  .feed__post-content
-    width 397px
   
 .feed__post-reposted
   position relative
@@ -80,6 +76,7 @@ $image2H = 170px
   margin-top -2px
   margin-bottom 8px
   overflow hidden
+  word-break break-word
   text-overflow ellipsis
   display -webkit-box
   -webkit-line-clamp 2
@@ -90,6 +87,7 @@ $image2H = 170px
   color --color-mgray
   margin-bottom 16px
   overflow hidden
+  word-break break-word
   text-overflow ellipsis
   display -webkit-box
   line-height 21px
